@@ -192,3 +192,52 @@
 .user-dropdown a:hover {
   text-decoration: underline;
 }
+.cookie-popup {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    max-width: 400px;
+    background: #370A2C;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    z-index: 10000;
+    padding: 20px;
+    animation: animate__fadeInUp 0.3s ease-in-out;
+}
+.cookie-content h5 {
+    font-size: 1.2rem;
+    color: #FFC827;
+    margin: 0 0 10px;
+    font-family: 'Josefin Sans', sans-serif;
+}
+.cookie-content p {
+    font-size: 0.9rem;
+    color: #fff;
+    margin: 0 0 15px;
+    font-family: 'Josefin Sans', sans-serif;
+}
+.cookie-buttons {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+.cookie-buttons .cmn--btn {
+    padding: 8px 20px;
+    font-size: 0.9rem;
+    border-radius: 5px;
+    font-family: 'Josefin Sans', sans-serif;
+}
+.cookie-buttons .cmn--btn.active {
+    background: #FFC827;
+    color: #370A2C;
+}
+.cookie-buttons .cmn--btn:not(.active) {
+    background: #555;
+    color: #fff;
+}
+.cookie-buttons .cmn--btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(255, 200, 39, 0.4);
+}

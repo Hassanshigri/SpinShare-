@@ -1,21 +1,30 @@
-<!DOCTYPE html>
-<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Casino - Online Casino Platform</title>
+
+    <!-- Meta SEO -->
+    <title>Contact Us | Spinnshare - Get in Touch</title>
+    <meta name="description" content="Reach out to Spinnshare for support, questions, or feedback. We’re here to help with your online casino gaming experience.">
+    <meta name="keywords" content="Spinnshare contact, online casino support, get in touch, casino help, customer service, casino queries, support team">
+    <link rel="canonical" href="https://spinnshare.org/contact">
+
+    <!-- Favicon -->
     <link rel="icon" type="image/png" href="assets/images/favicon.png" sizes="16x16">
-    <!-- bootstrap 5  -->
+
+    <!-- bootstrap 5 -->
     <link rel="stylesheet" href="assets/css/lib/bootstrap.min.css">
-    <!-- Icon Link  -->
+
+    <!-- Icon Link -->
     <link rel="stylesheet" href="assets/css/all.min.css"> 
     <link rel="stylesheet" href="assets/css/line-awesome.min.css"> 
     <link rel="stylesheet" href="assets/css/lib/animate.css"> 
+
     <!-- Plugin Link -->
     <link rel="stylesheet" href="assets/css/lib/slick.css">
+
     <!-- Main css -->
     <link rel="stylesheet" href="assets/css/main.css">
-    <!-- Modal CSS -->
+    <link rel="stylesheet" href="/style.css">
     <style>
         .custom--modal {
             position: fixed;
@@ -235,6 +244,26 @@
 </head>
 <body data-bs-spy="scroll" data-bs-offset="170" data-bs-target=".privacy-policy-sidebar-menu">
     <div class="overlay"></div>
+         <div class="cookie-popup" id="cookiePopup" style="display: none">
+    <div class="cookie-content">
+      <h5>We Use Cookies</h5>
+      <p>
+        We use cookies to enhance your experience. By continuing, you agree to
+        our
+        <a
+          href="/cookies-policy/"
+          style="color: #ffc827; text-decoration: underline"
+          >Cookies Policy</a
+        >.
+      </p>
+      <div class="cookie-buttons">
+        <button class="cmn--btn active" onclick="acceptCookies()">
+          Accept
+        </button>
+        <button class="cmn--btn" onclick="declineCookies()">Decline</button>
+      </div>
+    </div>
+  </div>
     <div class="preloader">
         <div class="scene" id="scene">
             <input type="checkbox" id="andicator" />
@@ -423,16 +452,17 @@
     </div>
     <!-- Contact Section Ends Here -->
 
-    <!-- Footer Section Starts Here -->
-    <footer class="footer-section bg_img" style="background: url(assets/images/footer/bg.jpg) center;">
+    <footer class="footer-section bg_img" style="background: url(/assets/images/footer/bg.jpg) center;">
         <div class="footer-top">
             <div class="container">
                 <div class="footer-wrapper d-flex flex-wrap align-items-center justify-content-md-between justify-content-center">
-                    <div class="logo mb-3 mb-md-0"><a href="/"><img src="assets/images/logo.png" alt="logo"></a></div>
+                    <div class="logo mb-3 mb-md-0"><a href="/"><img src="/assets/images/logo.png" alt="logo"></a></div>
                     <ul class="footer-links d-flex flex-wrap justify-content-center">
                         <li><a href="/games/">Games</a></li>
-                        <li><a href="/terms-conditions/">Terms & Conditions</a></li>
-                        <li><a href="/policy/">Privacy Policy</a></li>
+                        <li><a href="/terms-conditions/">Terms of Service</a></li>
+                        <li><a href="/policy/" class="active">Privacy Policy</a></li>
+                        <li><a href="/cookies-policy/">Cookies Policy</a></li>
+                        <li><a href="/responsible-gaming/">Responsible Gaming</a></li>
                     </ul>
                 </div>
             </div>
@@ -440,15 +470,14 @@
         <div class="footer-bottom">
             <div class="container">
                 <div class="footer-wrapper d-flex flex-wrap justify-content-center align-items-center text-center">
-                    <p class="copyright text-white">Copyrights 2025 All Rights Reserved.| Virtual coins have no cash value | For entertainment purposes only | info@spinnshare.org</p>
+                    <p class="copyright text-white">Copyrights &copy; 2025 All Rights Reserved. | Virtual coins have no cash value | For entertainment purposes only | info@spinnshare.org</p>
                 </div>
             </div>
         </div>
         <div class="shapes">
-            <img src="assets/images/footer/shape.png" alt="footer" class="shape1">
+            <img src="/assets/images/footer/bg.jpg" alt="footer" class="shape1">
         </div>
     </footer>
-    <!-- Footer Section Ends Here -->
 
     <!-- jQuery library -->
     <script src="assets/js/lib/jquery-3.6.0.min.js"></script>
@@ -458,6 +487,7 @@
     <script src="assets/js/lib/slick.min.js"></script>
     <!-- main js -->
     <script src="assets/js/main.js"></script>
+    <script src="/script.js"></script>
     <!-- Modal and Form JavaScript -->
     <script>
         'use strict';

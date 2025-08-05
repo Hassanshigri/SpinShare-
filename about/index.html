@@ -2,23 +2,31 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Casino - Online Casino Platform</title>
-    <link
-      rel="icon"
-      type="image/png"
-      href="assets/images/favicon.png"
-      sizes="16x16"
-    />
-    <!-- bootstrap 5  -->
-    <link rel="stylesheet" href="assets/css/lib/bootstrap.min.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us | Spinnshare - Social Casino Gaming Platform</title>
+  <meta name="description" content="Discover who we are at Spinnshare – your ultimate social casino gaming platform. Learn about our mission, values, and what sets us apart in online entertainment.">
+  <meta name="keywords" content="Spinnshare, About Spinnshare, Casino Gaming, Social Casino, Online Casino, Game Platform">
+  <meta name="author" content="Spinnshare Team">
+
+
+  <meta property="og:title" content="About Us | Spinnshare - Social Casino Gaming Platform">
+  <meta property="og:description" content="Explore Spinnshare and find out what makes us a trusted name in online social casino games.">
+  <meta property="og:image" content="https://yourdomain.com/images/logo.png">
+  <meta property="og:url" content="https://yourdomain.com/about">
+  <meta property="og:type" content="website">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="About Us | Spinnshare - Social Casino Gaming Platform">
+  <meta name="twitter:description" content="Explore Spinnshare and find out what makes us a trusted name in online social casino games.">
+  <meta name="twitter:image" content="https://yourdomain.com/images/logo.png">
+
+  <link rel="icon" href="images/favicon.png" type="image/png">
+
+<link rel="stylesheet" href="assets/css/lib/bootstrap.min.css" />
     <!-- Icon Link  -->
     <link rel="stylesheet" href="assets/css/all.min.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/line-awesome/1.3.0/line-awesome/css/line-awesome.min.css"
-    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/line-awesome/1.3.0/line-awesome/css/line-awesome.min.css" integrity="sha512-3rQwQpQnKQ+gQvQvQwQpQnKQ+gQvQvQwQpQnKQ+gQvQvQwQpQnKQ+gQvQvQwQpQnKQ+gQvQvQwQpQnKQ+gQvQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="assets/css/lib/animate.css" />
 
     <!-- Plugin Link -->
@@ -27,14 +35,39 @@
     <!-- Main css -->
     <link rel="stylesheet" href="assets/css/main.css" />
     <link rel="stylesheet" href="/style.css" />
-    
-  </head>
+</head>
+
   <body
     data-bs-spy="scroll"
     data-bs-offset="170"
     data-bs-target=".privacy-policy-sidebar-menu"
   >
     <div class="overlay"></div>
+         <div class="cookie-popup" id="cookiePopup" style="display: none">
+    <div class="cookie-content">
+      <h5>We Use Cookies</h5>
+      <p>
+        We use cookies to enhance your experience. By continuing, you agree to
+        our
+        <a
+          href="/cookies-policy/"
+          style="color: #ffc827; text-decoration: underline"
+          >Cookies Policy</a
+        >.
+      </p>
+      <div class="cookie-buttons">
+        <button class="cmn--btn active" onclick="acceptCookies()">
+          Accept
+        </button>
+        <button class="cmn--btn" onclick="declineCookies()">Decline</button>
+      </div>
+    </div>
+  </div>
+  <body
+    data-bs-spy="scroll"
+    data-bs-offset="170"
+    data-bs-target=".privacy-policy-sidebar-menu"
+  >
     <div class="preloader">
       <div class="scene" id="scene">
         <input type="checkbox" id="andicator" />
@@ -575,40 +608,31 @@
     </section>
     <!-- Testimonial Section Ends Here -->
 
-    <!-- Footer Section Starts Here -->
-    <footer
-      class="footer-section bg_img"
-      style="background: url(assets/images/footer/bg.jpg) center"
-    >
-      <div class="footer-top">
-        <div class="container">
-          <div
-            class="footer-wrapper d-flex flex-wrap align-items-center justify-content-md-between justify-content-center"
-          >
-            <div class="logo mb-3 mb-md-0">
-              <a href="/"><img src="assets/images/logo.png" alt="logo" /></a>
+  <footer class="footer-section bg_img" style="background: url(/assets/images/footer/bg.jpg) center;">
+        <div class="footer-top">
+            <div class="container">
+                <div class="footer-wrapper d-flex flex-wrap align-items-center justify-content-md-between justify-content-center">
+                    <div class="logo mb-3 mb-md-0"><a href="/"><img src="/assets/images/logo.png" alt="logo"></a></div>
+                    <ul class="footer-links d-flex flex-wrap justify-content-center">
+                        <li><a href="/games/">Games</a></li>
+                        <li><a href="/terms-conditions/">Terms of Service</a></li>
+                        <li><a href="/policy/" class="active">Privacy Policy</a></li>
+                        <li><a href="/cookies-policy/">Cookies Policy</a></li>
+                        <li><a href="/responsible-gaming/">Responsible Gaming</a></li>
+                    </ul>
+                </div>
             </div>
-            <ul class="footer-links d-flex flex-wrap justify-content-center">
-              <li><a href="/games/">Games</a></li>
-              <li><a href="/terms-conditions/">Terms & Conditions</a></li>
-              <li><a href="/policy/">Privacy Policy</a></li>
-            </ul>
-          </div>
         </div>
-      </div>
-      <div class="footer-bottom">
-        <div class="container">
-          <div
-            class="footer-wrapper d-flex flex-wrap justify-content-center align-items-center text-center"
-          >
-            <p class="copyright text-white">
-              Copyrights &copy;2025 All Rights Reserved.| Virtual coins have no cash value | For entertainment purposes only | info@spinnshare.org</p>
-          </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="footer-wrapper d-flex flex-wrap justify-content-center align-items-center text-center">
+                    <p class="copyright text-white">Copyrights &copy; 2025 All Rights Reserved. | Virtual coins have no cash value | For entertainment purposes only | info@spinnshare.org</p>
+                </div>
+            </div>
         </div>
-      </div>
-      <div class="shapes">
-        <img src="assets/images/footer/shape.png" alt="footer" class="shape1" />
-      </div>
+        <div class="shapes">
+            <img src="/assets/images/footer/bg.jpg" alt="footer" class="shape1">
+        </div>
     </footer>
     <!-- Footer Section Ends Here -->
 

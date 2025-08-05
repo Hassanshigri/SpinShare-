@@ -117,3 +117,17 @@ $(document).ready(function () {
     }
   });
 });
+function acceptCookies() {
+    localStorage.setItem('cookieConsent', 'accepted');
+    $('#cookiePopup').fadeOut(300);
+}
+function declineCookies() {
+    localStorage.setItem('cookieConsent', 'declined');
+    $('#cookiePopup').fadeOut(300);
+}
+$(document).ready(function() {
+    const consent = localStorage.getItem('cookieConsent');
+    if (!consent) {
+        $('#cookiePopup').fadeIn(300);
+    }
+});
