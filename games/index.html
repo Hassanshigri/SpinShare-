@@ -38,10 +38,7 @@
             width: 90%; max-width: 500px; padding: 25px; 
             animation: animate__zoomIn 0.4s ease-in-out; 
             font-family: 'Josefin Sans', sans-serif; 
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
+            position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); 
         }
         .game-modal-content { 
             background: linear-gradient(180deg, #370A2C 0%, #2A0722 100%); 
@@ -135,10 +132,10 @@
         .user-dropdown { 
             display: none; position: absolute; top: 50px; right: 0; 
             background: #370A2C; padding: 15px; border-radius: 8px; 
-            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3); z-index: 1000; 
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3); z-index: 1001; 
             min-width: 220px; 
         }
-        .user-circle.show .user-dropdown { display: block; }
+        .user-circle.show .user-dropdown { display: block !important; }
         .user-dropdown div, .user-dropdown a { 
             color: #FFC827; font-size: 0.9rem; margin-bottom: 10px; 
             transition: color 0.2s ease; 
@@ -382,7 +379,7 @@
                                 <img src="/assets/images/game/gates-of-olympus.avif" alt="Gates of Olympus 1000" />
                             </div>
                             <div class="game-item__content">
-                                <h4 class="title">Gates of Olympus</h4>
+                                <h4 class="title">Gates of Olympus </h4>
                                 <p class="invest-info">Pragmatic Play</p>
                                 <p class="invest-amount"></p>
                                 <a href="javascript:void(0)" class="cmn--btn active btn--md radius-0" onclick="playGame('https://demogames.pragmaticplay.net/casino/ContainerLauncher?game=gates-of-olympus-1000&demo=2&brand=spinnshare&lobby=https%3A%2F%2Fspinnshare.org%2Fgames&practice=1', 'Gates of Olympus 1000')">Play Now</a>
@@ -462,7 +459,7 @@
                                 <img src="/assets/images/game/hounds-of-hell-boosted.png" alt="Hounds of Hell Boosted" />
                             </div>
                             <div class="game-item__content">
-                                <h4 class="title">Hounds of Hell </h4>
+                                <h4 class="title">Hounds of Hell</h4>
                                 <p class="invest-info">Hacksaw Gaming</p>
                                 <p class="invest-amount"></p>
                                 <a href="javascript:void(0)" class="cmn--btn active btn--md radius-0" onclick="playGame('https://demo.hacksawgaming.com/casino/ContainerLauncher?game=hounds-of-hell-boosted&demo=2&brand=spinnshare&lobby=https%3A%2F%2Fspinnshare.org%2Fgames&practice=1', 'Hounds of Hell Boosted')">Play Now</a>
@@ -554,78 +551,95 @@
         'use strict';
         function iframeLoaded() {
             console.log('Game iframe loaded successfully');
-            // Add custom logic here if needed
         }
-        function showAuthModal() { $('#authModal').fadeIn(300); $('.overlay').addClass('active'); }
-        function closeModal() { $('#authModal').fadeOut(300); $('.overlay').removeClass('active'); }
-        function showAlertModal(message) { 
-            $('#alertMessage').text(message); 
-            $('#alertModal').fadeIn(300); 
-            $('.overlay').addClass('active'); 
+        function showAuthModal() {
+            $('#authModal').fadeIn(300);
+            $('.overlay').addClass('active');
+            openTab('login'); // Default to login tab
         }
-        function closeAlertModal() { 
-            $('#alertModal').fadeOut(300); 
-            $('.overlay').removeClass('active'); 
+        function closeModal() {
+            $('#authModal').fadeOut(300);
+            $('.overlay').removeClass('active');
         }
-        function openTab(tabName) { 
-            $('.tab-link').removeClass('active'); 
-            $('.tab-content').removeClass('active'); 
-            $(`.tab-link[onclick="openTab('${tabName}')"]`).addClass('active'); 
-            $(`#${tabName}`).addClass('active'); 
+        function showAlertModal(message) {
+            $('#alertMessage').text(message);
+            $('#alertModal').fadeIn(300);
+            $('.overlay').addClass('active');
+        }
+        function closeAlertModal() {
+            $('#alertModal').fadeOut(300);
+            $('.overlay').removeClass('active');
+        }
+        function openTab(tabName) {
+            $('.tab-link').removeClass('active');
+            $('.tab-content').removeClass('active');
+            $(`.tab-link[onclick="openTab('${tabName}')"]`).addClass('active');
+            $(`#${tabName}`).addClass('active');
         }
         function login() {
-            const email = $('#loginEmail').val(); 
+            const email = $('#loginEmail').val();
             const password = $('#loginPassword').val();
             if (email && password) {
-                localStorage.setItem('userState', JSON.stringify({ isLoggedIn: true, username: email.split('@')[0], email: email, coins: 5000 }));
-                $('#user-name').text(email.split('@')[0]); 
+                localStorage.setItem('userState', JSON.stringify({
+                    isLoggedIn: true,
+                    username: email.split('@')[0],
+                    email: email,
+                    coins: 5000
+                }));
+                $('#user-name').text(email.split('@')[0]);
                 $('#user-details').text(`Name: ${email.split('@')[0]}\nEmail: ${email}\nCoins: 5000`);
-                $('#auth-container').addClass('d-none'); 
-                $('#user-circle').removeClass('d-none'); 
+                $('#auth-container').addClass('d-none');
+                $('#user-circle').removeClass('d-none');
                 closeModal();
-            } else { 
-                showAlertModal('Please enter both email and password.'); 
+            } else {
+                showAlertModal('Please enter both email and password.');
             }
         }
         function register() {
-            const username = $('#registerUsername').val(); 
-            const email = $('#registerEmail').val(); 
+            const username = $('#registerUsername').val();
+            const email = $('#registerEmail').val();
             const password = $('#registerPassword').val();
             if (username && email && password) {
-                localStorage.setItem('userState', JSON.stringify({ isLoggedIn: true, username: username, email: email, coins: 5000 }));
-                $('#user-name').text(username); 
+                localStorage.setItem('userState', JSON.stringify({
+                    isLoggedIn: true,
+                    username: username,
+                    email: email,
+                    coins: 5000
+                }));
+                $('#user-name').text(username);
                 $('#user-details').text(`Name: ${username}\nEmail: ${email}\nCoins: ${5000}`);
-                $('#auth-container').addClass('d-none'); 
-                $('#user-circle').removeClass('d-none'); 
+                $('#auth-container').addClass('d-none');
+                $('#user-circle').removeClass('d-none');
                 closeModal();
-            } else { 
-                showAlertModal('Please fill in all fields.'); 
+            } else {
+                showAlertModal('Please fill in all fields.');
             }
         }
         function logout() {
-            localStorage.removeItem('userState'); 
-            $('#user-name').text(''); 
+            localStorage.removeItem('userState');
+            $('#user-name').text('');
             $('#user-details').text('');
-            $('#auth-container').removeClass('d-none'); 
+            $('#auth-container').removeClass('d-none');
             $('#user-circle').addClass('d-none').removeClass('show');
         }
         function restoreUserState() {
             const userState = JSON.parse(localStorage.getItem('userState'));
             if (userState && userState.isLoggedIn) {
-                $('#user-name').text(userState.username); 
+                $('#user-name').text(userState.username);
                 $('#user-details').text(`Name: ${userState.username}\nEmail: ${userState.email}\nCoins: ${userState.coins}`);
-                $('#auth-container').addClass('d-none'); 
+                $('#auth-container').addClass('d-none');
                 $('#user-circle').removeClass('d-none');
             } else {
-                $('#user-name').text(''); 
-                $('#user-details').text(''); 
-                $('#auth-container').removeClass('d-none'); 
+                $('#user-name').text('');
+                $('#user-details').text('');
+                $('#auth-container').removeClass('d-none');
                 $('#user-circle').addClass('d-none').removeClass('show');
             }
         }
-        function toggleDropdown(event) { 
-            event.stopPropagation(); 
-            $('#user-circle').toggleClass('show'); 
+        function toggleDropdown(event) {
+            event.stopPropagation();
+            console.log('User circle clicked, toggling dropdown');
+            $('#user-circle').toggleClass('show');
         }
         function playGame(url, title) {
             const userState = JSON.parse(localStorage.getItem('userState'));
@@ -655,10 +669,11 @@
         $(document).ready(function() {
             restoreUserState();
             $('#user-circle').on('click', toggleDropdown);
-            $(document).on('click', function(event) { 
-                if (!$(event.target).closest('#user-circle').length) { 
-                    $('#user-circle').removeClass('show'); 
-                } 
+            $(document).on('click', function(event) {
+                if (!$(event.target).closest('#user-circle').length) {
+                    console.log('Clicked outside user-circle, hiding dropdown');
+                    $('#user-circle').removeClass('show');
+                }
             });
             const consent = localStorage.getItem('cookieConsent');
             if (!consent) {
