@@ -1,601 +1,213 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Spinnshare Terms of Service</title>
-    <meta
-      name="description"
-      content="Review Spinnshare's Terms of Service for our social casino platform."
-    />
-    <meta
-      name="keywords"
-      content="casino, terms, social gaming, virtual currency, user agreement, privacy, gameplay, eligibility, account, gambling"
-    />
-    <link rel="canonical" href="https://spinnshare.org/terms-conditions/" />
-    <link
-      rel="icon"
-      type="image/png"
-      href="/assets/images/favicon.png"
-      sizes="16x16"
-    />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terms of Service | Spinnshare - Social Casino Gaming Platform</title>
+    <meta name="description" content="Review the Terms of Service for Spinnshare, your social casino gaming platform. Understand the rules and guidelines for using our services.">
+    <meta name="keywords" content="Spinnshare, Terms of Service, Social Casino, Casino Games, Online Gaming">
+    <meta name="author" content="Spinnshare Team">
+    <meta property="og:title" content="Terms of Service | Spinnshare - Social Casino Gaming Platform">
+    <meta property="og:description" content="Understand the terms and conditions for using Spinnshare’s free casino gaming platform.">
+    <meta property="og:image" content="/assets/images/logo.png">
+    <meta property="og:url" content="https://spinnshare.org/terms-conditions">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Terms of Service | Spinnshare - Social Casino Gaming Platform">
+    <meta name="twitter:description" content="Understand the terms and conditions for using Spinnshare’s free casino gaming platform.">
+    <meta name="twitter:image" content="/assets/images/logo.png">
+    <link rel="icon" href="/assets/images/favicon.png" type="image/png">
     <link rel="stylesheet" href="/assets/css/lib/bootstrap.min.css" />
     <link rel="stylesheet" href="/assets/css/all.min.css" />
-    <link rel="stylesheet" href="/assets/css/line-awesome.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/line-awesome@1.3.0/dist/line-awesome/css/line-awesome.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="/assets/css/lib/animate.css" />
     <link rel="stylesheet" href="/assets/css/lib/slick.css" />
     <link rel="stylesheet" href="/assets/css/main.css" />
     <link rel="stylesheet" href="/style.css" />
-    <style>
-      .custom--modal {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: rgba(0, 0, 0, 0.7);
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        z-index: 9999;
-      }
-      .modal-content {
-        background: #370a2c;
-        border-radius: 10px;
-        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-        width: 90%;
-        max-width: 500px;
-        padding: 20px;
-        animation: animate__fadeIn 0.3s ease-in-out;
-      }
-      .modal-header {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding-bottom: 15px;
-        border-bottom: 1px solid #ffc827;
-      }
-      .modal-header h5 {
-        font-size: 1.5rem;
-        color: #ffc827;
-        margin: 0;
-        font-family: "Josefin Sans", sans-serif;
-      }
-      .modal-header .btn-close {
-        background: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23FFC827'%3e%3cpath d='M.293.293a1 1 0 011.414 0L8 6.586 14.293.293a1 1 0 111.414 1.414L9.414 8l6.293 6.293a1 1 0 01-1.414 1.414L8 9.414l-6.293 6.293a1 1 0 01-1.414-1.414L6.586 8 .293 1.707A1 1 0 01.293.293z'/%3e%3c/svg%3e");
-        background-size: 16px;
-        background-color: #333;
-        border-radius: 50%;
-        width: 30px;
-        height: 30px;
-        opacity: 1;
-        transition: opacity 0.2s ease;
-      }
-      .modal-header .btn-close:hover {
-        opacity: 0.7;
-      }
-      .modal-body {
-        padding: 20px 0;
-      }
-      .auth-tabs {
-        display: flex;
-        justify-content: center;
-        margin-bottom: 20px;
-      }
-      .tab-link {
-        background: #f1f1f1;
-        border: none;
-        padding: 10px 20px;
-        font-size: 1rem;
-        color: #333;
-        cursor: pointer;
-        transition: all 0.3s ease;
-        border-radius: 5px 5px 0 0;
-        margin: 0 5px;
-        font-family: "Josefin Sans", sans-serif;
-      }
-      .tab-link.active {
-        background: #ffc827;
-        color: #370a2c;
-      }
-      .tab-content {
-        display: none;
-        padding: 20px;
-        background: #f9f9f9;
-        border-radius: 0 0 5px 5px;
-      }
-      .tab-content.active {
-        display: block;
-      }
-      .tab-content input {
-        width: 100%;
-        padding: 12px;
-        margin-bottom: 15px;
-        border: 1px solid #ddd;
-        border-radius: 5px;
-        font-size: 1rem;
-        color: #333;
-        background: #fff;
-        transition: border-color 0.3s ease;
-      }
-      .tab-content input:focus {
-        outline: none;
-        border-color: #ffc827;
-        box-shadow: 0 0 5px rgba(255, 200, 39, 0.3);
-      }
-      .tab-content input::placeholder {
-        color: #999;
-      }
-      .cmn--btn.active {
-        background: #ffc827;
-        color: #370a2c;
-        border: none;
-        padding: 12px 20px;
-        width: 100%;
-        font-size: 1rem;
-        border-radius: 5px;
-        cursor: pointer;
-        transition: transform 0.2s ease, box-shadow 0.2s ease;
-        font-family: "Josefin Sans", sans-serif;
-      }
-      .cmn--btn.active:hover {
-        transform: translateY(-2px);
-        box-shadow: 0 5px 15px rgba(255, 200, 39, 0.4);
-      }
-      .form-link {
-        text-align: center;
-        margin-top: 10px;
-      }
-      .form-link a {
-        color: #ffc827;
-        text-decoration: none;
-        font-size: 0.9rem;
-        font-family: "Josefin Sans", sans-serif;
-      }
-      .form-link a:hover {
-        text-decoration: underline;
-      }
-      .user-circle {
-        position: relative;
-        cursor: pointer;
-      }
-      .user-circle span {
-        display: inline-block;
-        width: 40px;
-        height: 40px;
-        line-height: 40px;
-        text-align: center;
-        background: #ffc827;
-        color: #370a2c;
-        border-radius: 50%;
-        font-size: 1rem;
-        font-family: "Josefin Sans", sans-serif;
-      }
-      .user-dropdown {
-        display: none;
-        position: absolute;
-        top: 50px;
-        right: 0;
-        background: #370a2c;
-        color: #ffc827;
-        padding: 10px;
-        border-radius: 5px;
-        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-        z-index: 1000;
-        min-width: 200px;
-      }
-      .user-circle.show .user-dropdown {
-        display: block;
-      }
-      .user-dropdown div,
-      .user-dropdown a {
-        color: #ffc827;
-        font-size: 0.9rem;
-        margin-bottom: 5px;
-        font-family: "Josefin Sans", sans-serif;
-      }
-      .user-dropdown a:hover {
-        text-decoration: underline;
-      }
-    </style>
-  </head>
-  <body
-    data-bs-spy="scroll"
-    data-bs-offset="170"
-    data-bs-target=".privacy-policy-sidebar-menu"
-  >
+</head>
+<body data-bs-spy="scroll" data-bs-offset="170" data-bs-target=".privacy-policy-sidebar-menu">
     <div class="overlay"></div>
+    <div class="cookie-popup" id="cookiePopup" style="display: none">
+        <div class="cookie-content">
+            <h5>We Use Cookies</h5>
+            <p>We use cookies to enhance your experience. By continuing, you agree to our <a href="/cookies-policy/" style="color: #FFC827; text-decoration: underline;">Cookies Policy</a>.</p>
+            <div class="cookie-buttons">
+                <button class="cmn--btn active" onclick="acceptCookies()">Accept</button>
+                <button class="cmn--btn" onclick="declineCookies()">Decline</button>
+            </div>
+        </div>
+    </div>
     <div class="preloader">
-      <div class="scene" id="scene">
-        <input type="checkbox" id="andicator" />
-        <div class="cube">
-          <div class="cube__face cube__face--front"><i></i></div>
-          <div class="cube__face cube__face--back"><i></i><i></i></div>
-          <div class="cube__face cube__face--right">
-            <i></i><i></i><i></i><i></i><i></i>
-          </div>
-          <div class="cube__face cube__face--left">
-            <i></i><i></i><i></i><i></i><i></i><i></i>
-          </div>
-          <div class="cube__face cube__face--top"><i></i><i></i><i></i></div>
-          <div class="cube__face cube__face--bottom">
-            <i></i><i></i><i></i><i></i>
-          </div>
+        <div class="scene" id="scene">
+            <input type="checkbox" id="andicator" />
+            <div class="cube">
+                <div class="cube__face cube__face--front"><i></i></div>
+                <div class="cube__face cube__face--back"><i></i><i></i></div>
+                <div class="cube__face cube__face--right"><i></i><i></i><i></i><i></i><i></i></div>
+                <div class="cube__face cube__face--left"><i></i><i></i><i></i><i></i><i></i><i></i></div>
+                <div class="cube__face cube__face--top"><i></i><i></i><i></i></div>
+                <div class="cube__face cube__face--bottom"><i></i><i></i><i></i><i></i></div>
+            </div>
         </div>
-      </div>
     </div>
-
-    <!-- Authentication Modal -->
     <div class="custom--modal" id="authModal" style="display: none">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5>Sign In</h5>
-          <button
-            type="button"
-            class="btn-close"
-            onclick="closeModal()"
-          ></button>
-        </div>
-        <div class="modal-body">
-          <div class="auth-tabs">
-            <button class="tab-link active" onclick="openTab('login')">
-              Login
-            </button>
-            <button class="tab-link" onclick="openTab('register')">
-              Register
-            </button>
-          </div>
-          <div id="login" class="tab-content active">
-            <input type="email" id="loginEmail" placeholder="Email" required />
-            <input
-              type="password"
-              id="loginPassword"
-              placeholder="Password"
-              required
-            />
-            <button class="cmn--btn active" onclick="login()">Login</button>
-            <div class="form-link">
-              <a href="javascript:void(0)" onclick="openTab('register')"
-                >Don't have an account? Register here</a
-              >
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 id="modalTitle">Sign In</h5>
+                <button type="button" class="btn-close" onclick="closeModal()"></button>
             </div>
-          </div>
-          <div id="register" class="tab-content">
-            <input
-              type="text"
-              id="registerUsername"
-              placeholder="Username"
-              required
-            />
-            <input
-              type="email"
-              id="registerEmail"
-              placeholder="Email"
-              required
-            />
-            <input
-              type="password"
-              id="registerPassword"
-              placeholder="Password"
-              required
-            />
-            <button class="cmn--btn active" onclick="register()">
-              Register
-            </button>
-            <div class="form-link">
-              <a href="javascript:void(0)" onclick="openTab('login')"
-                >Already have an account? Login here</a
-              >
+            <div class="modal-body">
+                <div class="auth-tabs">
+                    <button class="tab-link active" onclick="openTab('login')">Login</button>
+                    <button class="tab-link" onclick="openTab('register')">Register</button>
+                </div>
+                <div id="login" class="tab-content active">
+                    <input type="email" id="loginEmail" placeholder="Email" required />
+                    <input type="password" id="loginPassword" placeholder="Password" required />
+                    <button class="cmn--btn active" onclick="login()">Login</button>
+                    <div class="form-link">
+                        <a href="javascript:void(0)" onclick="openTab('register')">Don't have an account? Register here</a>
+                    </div>
+                </div>
+                <div id="register" class="tab-content">
+                    <input type="text" id="registerUsername" placeholder="Username" required />
+                    <input type="email" id="registerEmail" placeholder="Email" required />
+                    <input type="password" id="registerPassword" placeholder="Password" required />
+                    <button class="cmn--btn active" onclick="register()">Register</button>
+                    <div class="form-link">
+                        <a href="javascript:void(0)" onclick="openTab('login')">Already have an account? Login here</a>
+                    </div>
+                </div>
             </div>
-          </div>
         </div>
-      </div>
     </div>
-
+    <div class="alert-modal" id="alertModal" style="display: none">
+        <div class="alert-modal-content">
+            <div class="alert-modal-header">
+                <h5>Notice</h5>
+                <button type="button" class="btn-close" onclick="closeAlertModal()"></button>
+            </div>
+            <p id="alertMessage"></p>
+            <div class="alert-modal-buttons">
+                <button class="cmn--btn active" onclick="closeAlertModal()">OK</button>
+            </div>
+        </div>
+    </div>
     <div class="header">
-      <div class="container">
-        <div class="header-bottom">
-          <div class="header-bottom-area align-items-center">
-            <div class="logo">
-              <a href="/"><img src="/assets/images/logo.png" alt="logo" /></a>
-            </div>
-            <ul class="menu">
-              <li><a href="/">Home</a></li>
-              <li><a href="/about/">About</a></li>
-              <li>
-                <a href="/games/"
-                  >Games
-                  <span class="badge badge--sm badge--base text-dark"
-                    >NEW</span
-                  ></a
-                >
-              </li>
-              <li><a href="/contact/">Contact</a></li>
-              <button class="btn-close btn-close-white d-lg-none"></button>
-            </ul>
-            <div class="header-trigger-wrapper d-flex align-items-center">
-              <div id="user-account" class="ms-3 d-flex align-items-center">
-                <div id="auth-container">
-                  <a
-                    href="javascript:void(0)"
-                    id="auth-btn"
-                    class="cmn--btn active btn--md ms-2 d-sm-block"
-                    onclick="showAuthModal()"
-                    >Login/Register</a
-                  >
+        <div class="container">
+            <div class="header-bottom">
+                <div class="header-bottom-area align-items-center">
+                    <div class="logo"><a href="/"><img src="/assets/images/logo.png" alt="logo" /></a></div>
+                    <ul class="menu">
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/about/">About</a></li>
+                        <li><a href="/games/">Games <span class="badge badge--sm badge--base text-dark">NEW</span></a></li>
+                        <li><a href="/contact/">Contact</a></li>
+                        <button class="btn-close btn-close-white d-lg-none"></button>
+                    </ul>
+                    <div class="header-trigger-wrapper d-flex align-items-center">
+                        <div id="user-account" class="ms-3 d-flex align-items-center">
+                            <div id="auth-container">
+                                <a href="javascript:void(0)" id="auth-btn" class="cmn--btn active btn--md ms-2 d-sm-block" onclick="showAuthModal()">Login/Register</a>
+                            </div>
+                            <div id="user-circle" class="user-circle d-none">
+                                <span id="user-name"></span>
+                                <div class="user-dropdown">
+                                    <div id="user-details"></div>
+                                    <a href="javascript:void(0)" id="logout-btn" onclick="logout()">Logout</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="header-trigger me-4 d-lg-none"><span></span></div>
+                    </div>
                 </div>
-                <div id="user-circle" class="user-circle d-none">
-                  <span id="user-name"></span>
-                  <div class="user-dropdown">
-                    <div id="user-details"></div>
-                    <a
-                      href="javascript:void(0)"
-                      id="logout-btn"
-                      onclick="logout()"
-                      >Logout</a
-                    >
-                  </div>
-                </div>
-              </div>
-              <div class="header-trigger me-4 d-lg-none"><span></span></div>
             </div>
-          </div>
         </div>
-      </div>
     </div>
-
-    <!-- Inner Hero Section -->
-    <section
-      class="inner-banner bg_img"
-      style="background: url('/assets/images/inner-banner/bg2.jpg') top"
-    >
-      <div class="container">
-        <div class="row justify-content-center">
-          <div class="col-lg-7 col-xl-6 text-center">
-            <h2 class="title text-white">Terms of Service</h2>
-            <ul
-              class="breadcrumbs d-flex flex-wrap align-items-center justify-content-center"
-            >
-              <li><a href="/">Home</a></li>
-              <li>Terms of Service</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Terms and Conditions Section -->
-    <section class="padding-top padding-bottom">
-      <div class="container">
-        <div class="row justify-content-center">
-          <div class="col-lg-8">
-            <h2>Terms of Service</h2>
-            <p>
-              Welcome to Spinnshare, a social casino platform designed for
-              entertainment. By using our site, you agree to these Terms of
-              Service, which govern your access and use of our services.
-            </p>
-            <h3>Eligibility</h3>
-            <p>
-              You must be at least 18 years old to use Spinnshare. By
-              registering, you confirm you meet this age requirement and are not
-              in a jurisdiction where social gaming is prohibited. We reserve
-              the right to verify your identity and restrict access if you do
-              not comply.
-            </p>
-            <h3>Account Usage</h3>
-            <p>
-              To access games, you must create an account with accurate
-              information. You are responsible for maintaining the
-              confidentiality of your login details. Do not share your account
-              or use another user’s account. Notify us immediately at
-              info@spinnshare.org if you suspect unauthorized access. We may
-              suspend accounts for violations of these terms.
-            </p>
-            <h3>Virtual Currency</h3>
-            <p>
-              Spinnshare uses virtual coins for gameplay, which have no cash
-              value and cannot be redeemed for real money. Coins are provided
-              for free upon registration (5,000 coins) and through daily rewards
-              or leaderboards. We may offer coin purchases, but these are
-              optional and non-refundable.
-            </p>
-            <h3>User Conduct</h3>
-            <p>
-              You agree not to use Spinnshare for illegal activities,
-              harassment, or attempts to manipulate gameplay. Cheating, hacking,
-              or exploiting platform features may result in account suspension
-              or termination. Respect other players and follow community
-              guidelines.
-            </p>
-            <h3>Intellectual Property</h3>
-            <p>
-              All content, including games, graphics, and logos, is owned by
-              Spinnshare or its licensors. You may not reproduce or distribute
-              our content without permission. User-generated content must not
-              infringe on third-party rights.
-            </p>
-            <h3>Limitation of Liability</h3>
-            <p>
-              Spinnshare is provided “as is” for entertainment only. We are not
-              liable for losses or damages from site use, including technical
-              issues or data loss. For more on data protection, see our
-              <a
-                href="/policy/"
-                style="color: #ffc827; text-decoration: underline"
-                >Privacy Policy</a
-              >
-              and
-              <a
-                href="/cookies-policy/"
-                style="color: #ffc827; text-decoration: underline"
-                >Cookies Policy</a
-              >.
-            </p>
-            <h3>Updates and Termination</h3>
-            <p>
-              We may update these terms at any time, with changes posted here.
-              Continued use constitutes acceptance. We may terminate accounts
-              for violations or at our discretion. Contact us at
-              info@spinnshare.org or 123 Maple Street, Toronto, ON M5V 2T6,
-              Canada, with questions. Last updated: August 5, 2025.
-            </p>
-            <p>(Word count: ~310 words)</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Footer Section -->
-    <footer
-      class="footer-section bg_img"
-      style="background: url(/assets/images/footer/bg.jpg) center"
-    >
-      <div class="footer-top">
+    <section class="inner-banner bg_img" style="background: url('/assets/images/inner-banner/bg2.jpg') top;">
         <div class="container">
-          <div
-            class="footer-wrapper d-flex flex-wrap align-items-center justify-content-md-between justify-content-center"
-          >
-            <div class="logo mb-3 mb-md-0">
-              <a href="/"><img src="/assets/images/logo.png" alt="logo" /></a>
+            <div class="row justify-content-center">
+                <div class="col-lg-7 col-xl-6 text-center">
+                    <h2 class="title text-white">Terms of Service</h2>
+                    <ul class="breadcrumbs d-flex flex-wrap align-items-center justify-content-center">
+                        <li><a href="/">Home</a></li>
+                        <li>Terms of Service</li>
+                    </ul>
+                </div>
             </div>
-            <ul class="footer-links d-flex flex-wrap justify-content-center">
-              <li><a href="/games/">Games</a></li>
-              <li>
-                <a href="/terms-conditions/" class="active">Terms of Service</a>
-              </li>
-              <li><a href="/policy/">Privacy Policy</a></li>
-              <li><a href="/cookies-policy/">Cookies Policy</a></li>
-              <li><a href="/responsible-gaming/">Responsible Gaming</a></li>
-            </ul>
-          </div>
         </div>
-      </div>
-      <div class="footer-bottom">
+    </section>
+    <section class="privacy-policy-section padding-top padding-bottom">
         <div class="container">
-          <div
-            class="footer-wrapper d-flex flex-wrap justify-content-center align-items-center text-center"
-          >
-            <p class="copyright text-white">
-              Copyrights &copy; 2025 All Rights Reserved. | Virtual coins have
-              no cash value | For entertainment purposes only |
-              info@spinnshare.org
-            </p>
-          </div>
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="privacy-policy-sidebar">
+                        <ul class="privacy-policy-sidebar-menu">
+                            <li><a href="#introduction">Introduction</a></li>
+                            <li><a href="#eligibility">Eligibility</a></li>
+                            <li><a href="#use">Use of Service</a></li>
+                            <li><a href="#conduct">User Conduct</a></li>
+                            <li><a href="#termination">Termination</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-8">
+                    <div class="privacy-policy-content">
+                        <div class="item" id="introduction">
+                            <h3 class="title">Introduction</h3>
+                            <p>Welcome to Spinnshare, a social casino gaming platform. These Terms of Service govern your use of our website and services. By accessing or using Spinnshare, you agree to be bound by these terms.</p>
+                        </div>
+                        <div class="item" id="eligibility">
+                            <h3 class="title">Eligibility</h3>
+                            <p>You must be at least 18 years old to use Spinnshare. By registering, you confirm that you meet this age requirement and that your use complies with applicable laws.</p>
+                        </div>
+                        <div class="item" id="use">
+                            <h3 class="title">Use of Service</h3>
+                            <p>Spinnshare provides free casino games using virtual coins with no cash value. No real-money transactions or cash-outs are available. You agree to use the platform solely for entertainment purposes.</p>
+                        </div>
+                        <div class="item" id="conduct">
+                            <h3 class="title">User Conduct</h3>
+                            <p>You agree not to engage in any unlawful or abusive behavior, including hacking, cheating, or harassing other users. Violation of these terms may result in account suspension.</p>
+                        </div>
+                        <div class="item" id="termination">
+                            <h3 class="title">Termination</h3>
+                            <p>We reserve the right to terminate or suspend your account at our discretion, particularly for violations of these terms or applicable laws.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
-      <div class="shapes">
-        <img src="/assets/images/footer/bg.jpg" alt="footer" class="shape1" />
-      </div>
+    </section>
+    <footer class="footer-section bg_img" style="background: url(/assets/images/footer/bg.jpg) center;">
+        <div class="footer-top">
+            <div class="container">
+                <div class="footer-wrapper d-flex flex-wrap align-items-center justify-content-md-between justify-content-center">
+                    <div class="logo mb-3 mb-md-0"><a href="/"><img src="/assets/images/logo.png" alt="logo"></a></div>
+                    <ul class="footer-links d-flex flex-wrap justify-content-center">
+                        <li><a href="/games/">Games</a></li>
+                        <li><a href="/terms-conditions/" class="active">Terms of Service</a></li>
+                        <li><a href="/policy/">Privacy Policy</a></li>
+                        <li><a href="/cookies-policy/">Cookies Policy</a></li>
+                        <li><a href="/responsible-gaming/">Responsible Gaming</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="footer-wrapper d-flex flex-wrap justify-content-center align-items-center text-center">
+                    <p class="copyright text-white">Copyrights &copy; 2025 All Rights Reserved. | Virtual coins have no cash value | For entertainment purposes only | info@spinnshare.org</p>
+                </div>
+            </div>
+        </div>
+        <div class="shapes">
+            <img src="/assets/images/footer/bg.jpg" alt="footer" class="shape1">
+        </div>
     </footer>
-
-    <!-- Scripts -->
     <script src="/assets/js/lib/jquery-3.6.0.min.js"></script>
     <script src="/assets/js/lib/bootstrap.min.js"></script>
     <script src="/assets/js/lib/slick.min.js"></script>
     <script src="/assets/js/main.js"></script>
     <script src="/script.js"></script>
-    <script>
-      "use strict";
-      function showAuthModal() {
-        $("#authModal").fadeIn(300);
-        $(".overlay").addClass("active");
-      }
-      function closeModal() {
-        $("#authModal").fadeOut(300);
-        $(".overlay").removeClass("active");
-      }
-      function openTab(tabName) {
-        $(".tab-link").removeClass("active");
-        $(".tab-content").removeClass("active");
-        $(`.tab-link[onclick="openTab('${tabName}')"]`).addClass("active");
-        $(`#${tabName}`).addClass("active");
-      }
-      function login() {
-        const email = $("#loginEmail").val();
-        const password = $("#loginPassword").val();
-        if (email && password) {
-          localStorage.setItem(
-            "userState",
-            JSON.stringify({
-              isLoggedIn: true,
-              username: email.split("@")[0],
-              email: email,
-              coins: 5000,
-            })
-          );
-          $("#user-name").text(email.split("@")[0]);
-          $("#user-details").text(
-            `Name: ${email.split("@")[0]}\nEmail: ${email}\nCoins: 5000`
-          );
-          $("#auth-container").addClass("d-none");
-          $("#user-circle").removeClass("d-none");
-          closeModal();
-        } else {
-          alert("Please enter both email and password.");
-        }
-      }
-      function register() {
-        const username = $("#registerUsername").val();
-        const email = $("#registerEmail").val();
-        const password = $("#registerPassword").val();
-        if (username && email && password) {
-          localStorage.setItem(
-            "userState",
-            JSON.stringify({
-              isLoggedIn: true,
-              username: username,
-              email: email,
-              coins: 5000,
-            })
-          );
-          $("#user-name").text(username);
-          $("#user-details").text(
-            `Name: ${username}\nEmail: ${email}\nCoins: 5000`
-          );
-          $("#auth-container").addClass("d-none");
-          $("#user-circle").removeClass("d-none");
-          closeModal();
-        } else {
-          alert("Please fill in all fields.");
-        }
-      }
-      function logout() {
-        localStorage.removeItem("userState");
-        $("#user-name").text("");
-        $("#user-details").text("");
-        $("#auth-container").removeClass("d-none");
-        $("#user-circle").addClass("d-none").removeClass("show");
-      }
-      function restoreUserState() {
-        const userState = JSON.parse(localStorage.getItem("userState"));
-        if (userState && userState.isLoggedIn) {
-          $("#user-name").text(userState.username);
-          $("#user-details").text(
-            `Name: ${userState.username}\nEmail: ${userState.email}\nCoins: ${userState.coins}`
-          );
-          $("#auth-container").addClass("d-none");
-          $("#user-circle").removeClass("d-none");
-        } else {
-          $("#user-name").text("");
-          $("#user-details").text("");
-          $("#auth-container").removeClass("d-none");
-          $("#user-circle").addClass("d-none").removeClass("show");
-        }
-      }
-      function toggleDropdown(event) {
-        event.stopPropagation();
-        $("#user-circle").toggleClass("show");
-      }
-      $(document).ready(function () {
-        restoreUserState();
-        $("#user-circle").on("click", toggleDropdown);
-        $(document).on("click", function (event) {
-          if (!$(event.target).closest("#user-circle").length) {
-            $("#user-circle").removeClass("show");
-          }
-        });
-      });
-    </script>
-  </body>
+</body>
 </html>
