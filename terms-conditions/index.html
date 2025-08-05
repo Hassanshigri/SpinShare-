@@ -1,0 +1,359 @@
+<!-- meta tags and other links -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Casino - Online Casino Platform</title>
+    <link
+      rel="icon"
+      type="image/png"
+      href="assets/images/favicon.png"
+      sizes="16x16"
+    />
+    <!-- bootstrap 5  -->
+    <link rel="stylesheet" href="assets/css/lib/bootstrap.min.css" />
+    <!-- Icon Link  -->
+    <link rel="stylesheet" href="assets/css/all.min.css" />
+    <link rel="stylesheet" href="assets/css/line-awesome.min.css" />
+    <link rel="stylesheet" href="assets/css/lib/animate.css" />
+
+    <!-- Plugin Link -->
+    <link rel="stylesheet" href="assets/css/lib/slick.css" />
+
+    <!-- Main css -->
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+
+  <body
+    data-bs-spy="scroll"
+    data-bs-offset="170"
+    data-bs-target=".privacy-policy-sidebar-menu"
+  >
+    <div class="overlay"></div>
+    <div class="preloader">
+      <div class="scene" id="scene">
+        <input type="checkbox" id="andicator" />
+        <div class="cube">
+          <div class="cube__face cube__face--front"><i></i></div>
+          <div class="cube__face cube__face--back"><i></i><i></i></div>
+          <div class="cube__face cube__face--right">
+            <i></i> <i></i> <i></i> <i></i> <i></i>
+          </div>
+          <div class="cube__face cube__face--left">
+            <i></i> <i></i> <i></i> <i></i> <i></i> <i></i>
+          </div>
+          <div class="cube__face cube__face--top"><i></i> <i></i> <i></i></div>
+          <div class="cube__face cube__face--bottom">
+            <i></i> <i></i> <i></i> <i></i>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Authentication Modal -->
+    <div class="custom--modal" id="authModal" style="display: none">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5>Sign In</h5>
+          <button
+            type="button"
+            class="btn-close"
+            onclick="closeModal()"
+          ></button>
+        </div>
+        <div class="modal-body">
+          <div id="login" class="tab-content active">
+            <input type="email" id="loginEmail" placeholder="Email" required />
+            <input
+              type="password"
+              id="loginPassword"
+              placeholder="Password"
+              required
+            />
+            <button class="cmn--btn active" onclick="login()">Login</button>
+            <div class="form-link">
+              <a href="javascript:void(0)" onclick="openTab('register')"
+                >Don't have an account? Register here</a
+              >
+            </div>
+          </div>
+          <div id="register" class="tab-content">
+            <input
+              type="text"
+              id="registerUsername"
+              placeholder="Username"
+              required
+            />
+            <input
+              type="email"
+              id="registerEmail"
+              placeholder="Email"
+              required
+            />
+            <input
+              type="password"
+              id="registerPassword"
+              placeholder="Password"
+              required
+            />
+            <button class="cmn--btn active" onclick="register()">
+              Register
+            </button>
+            <div class="form-link">
+              <a href="javascript:void(0)" onclick="openTab('login')"
+                >Already have an account? Login here</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="header">
+      <div class="container">
+        <div class="header-bottom">
+          <div class="header-bottom-area align-items-center">
+            <div class="logo">
+              <a href="/"><img src="/assets/images/logo.png" alt="logo" /></a>
+            </div>
+            <ul class="menu">
+              <li>
+                <a href="/" class="active">Home</a>
+              </li>
+              <li>
+                <a href="/about/">About</a>
+              </li>
+              <li>
+                <a href="/games/"
+                  >Games
+                  <span class="badge badge--sm badge--base text-dark"
+                    >NEW</span
+                  ></a
+                >
+              </li>
+              <li>
+                <a href="/contact/">Contact</a>
+              </li>
+              <button class="btn-close btn-close-white d-lg-none"></button>
+            </ul>
+            <div class="header-trigger-wrapper d-flex align-items-center">
+              <div id="user-account" class="ms-3 d-flex align-items-center">
+                <div id="auth-container">
+                  <a
+                    href="javascript:void(0)"
+                    id="auth-btn"
+                    class="cmn--btn active btn--md ms-2 d-sm-block"
+                    onclick="showAuthModal()"
+                    >Login/Register</a
+                  >
+                </div>
+                <div id="user-circle" class="user-circle d-none">
+                  <span id="user-name"></span>
+                  <div class="user-dropdown">
+                    <div id="user-details"></div>
+                    <a
+                      href="javascript:void(0)"
+                      id="logout-btn"
+                      onclick="logout()"
+                      >Logout</a
+                    >
+                  </div>
+                </div>
+              </div>
+              <div class="header-trigger me-4 d-lg-none">
+                <span></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- inner hero section start -->
+    <section
+      class="inner-banner bg_img"
+      style="background: url('assets/images/inner-banner/bg2.jpg') top"
+    >
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-7 col-xl-6 text-center">
+            <h2 class="title text-white">Terms & Conditons</h2>
+            <ul
+              class="breadcrumbs d-flex flex-wrap align-items-center justify-content-center"
+            >
+              <li><a href="index.html">Home</a></li>
+              <li>Terms & Conditions</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- inner hero section end -->
+
+    <!-- Privacy Policy Section Starts Here -->
+    <section class="privacy-policy padding-top padding-bottom">
+      <div class="container">
+        <div class="row gy-5">
+          <div class="col-lg-3">
+            <ul class="privacy-policy-sidebar-menu">
+              <li>
+                <a href="#overview" class="active nav-link">Overview</a>
+              </li>
+              <li>
+                <a href="#data-collection" class="nav-link"
+                  >Data Collection & Use</a
+                >
+              </li>
+              <li>
+                <a href="#cookies" class="nav-link">Cookies Data</a>
+              </li>
+              <li>
+                <a href="#data-security" class="nav-link">Data Security</a>
+              </li>
+              <li>
+                <a href="#overview2" class="nav-link">Customer Information</a>
+              </li>
+              <li>
+                <a href="#overview3" class="nav-link">Data Collection & Use</a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-lg-9">
+            <div class="privacy-policy-content">
+              <div class="content-item">
+                <h4 class="title" id="overview">Overview</h4>
+                <p>
+                  At Spinnshare, your privacy is important to us. We are
+                  committed to maintaining the confidentiality and security of
+                  your personal data. This policy explains how we collect, use,
+                  store, and protect your information when you use our social
+                  casino platform. All activity on our website is for
+                  entertainment purposes only—no real money is involved.
+                </p>
+              </div>
+              <div class="content-item">
+                <h4 class="title" id="data-collection">
+                  Data Collection & Use
+                </h4>
+                <p>
+                  We collect limited personal information during account
+                  registration, such as your email address, username, and
+                  country (if applicable). This data is used to:
+                </p>
+                <ul class="info-list">
+                  <li>Create and manage your user profile</li>
+                  <li>
+                    Track your virtual coin balance and leaderboard position
+                  </li>
+                  <li>Improve the user experience through analytics</li>
+                </ul>
+              </div>
+              <div class="content-item">
+                <h4 class="title" id="cookies">Cookies Data</h4>
+                <p>
+                  We use cookies and similar technologies to: Remember your
+                  login session Track in-game progress and user preferences
+                  Monitor website performance and improve functionality You can
+                  manage cookie preferences through your browser settings.
+                  Disabling cookies may affect how the platform functions for
+                  you.
+                </p>
+              </div>
+              <div class="content-item">
+                <h4 class="title" id="data-security">Data Collection & Use</h4>
+                <p>
+                  Your data is stored securely using industry-standard
+                  practices. All user information is kept confidential and is
+                  only accessible to authorized personnel. We retain user data
+                  only as long as necessary to support your account and provide
+                  a quality experience on our platform.
+                </p>
+              </div>
+              <div class="content-item">
+                <h4 class="title" id="overview2">Data Cookies</h4>
+                <p>
+                  Our platform does not link to or interact with any third-party
+                  gambling or external real-money services. All gameplay is
+                  virtual and confined within the Spinnshare website.
+                </p>
+                <br />
+                <p>
+                  Changes to This Policy We may update this policy periodically
+                  to reflect new legal requirements or platform features. Users
+                  will be notified of major changes via email or on-site notice.
+                </p>
+              </div>
+              <div class="content-item">
+                <h4 class="title" id="overview3">Data Storage</h4>
+                <p>
+                  Pconsectetur adipisicing elit. Assumenda officia vel omnis,
+                  odit quidem, expedita nam deserunt molestiae accusamus
+                  voluptas aut. Sapiente voluptatem nulla unde quia harum illum
+                  ipsum dolore! Lorem ipsum dolor sit amet consectetur
+                  adipisicing elit. In dolorem illum molestiae corrupti, maxime
+                  sint velit quibusdam officiis ipsam a minima quos voluptates
+                  possimus eaque, vitae, veniam consequuntur! Dolorem,
+                  architecto.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Privacy Policy Section Ends Here -->
+
+    <!-- Footer Section Starts Here -->
+    <footer
+      class="footer-section bg_img"
+      style="background: url(assets/images/footer/bg.jpg) center"
+    >
+      <div class="footer-top">
+        <div class="container">
+          <div
+            class="footer-wrapper d-flex flex-wrap align-items-center justify-content-md-between justify-content-center"
+          >
+            <div class="logo mb-3 mb-md-0">
+              <a href="index.html"
+                ><img src="assets/images/logo.png" alt="logo"
+              /></a>
+            </div>
+            <ul class="footer-links d-flex flex-wrap justify-content-center">
+              <li><a href="games.html">Games</a></li>
+              <li><a href="/terms-conditions/">Terms & Conditions</a></li>
+              <li><a href="/policy/">Privacy Policy</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div class="container">
+          <div
+            class="footer-wrapper d-flex flex-wrap justify-content-center align-items-center text-center"
+          >
+            <p class="copyright text-white">
+              Copyrights &copy; 2021 All Rights Reserved by
+              <a href="#0" class="text--base ms-2">Viserlab</a>
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="shapes">
+        <img src="assets/images/footer/shape.png" alt="footer" class="shape1" />
+      </div>
+    </footer>
+    <!-- Footer Section Ends Here -->
+
+    <!-- jQuery library -->
+    <script src="assets/js/lib/jquery-3.6.0.min.js"></script>
+    <!-- bootstrap 5 js -->
+    <script src="assets/js/lib/bootstrap.min.js"></script>
+
+    <!-- Pluglin Link -->
+    <script src="assets/js/lib/slick.min.js"></script>
+
+    <!-- main js -->
+    <script src="assets/js/main.js"></script>
+    <script src="/script.js"></script>
+  </body>
+</html>
