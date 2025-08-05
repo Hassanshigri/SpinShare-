@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Games - Spinnshare | Social Casino Platform</title>
     <meta name="description" content="Play exciting casino games from top providers like Hacksaw Gaming, Pragmatic Play, and more on Spinnshare’s social casino platform." />
-    <meta name="keywords" content="Spinnshare Games, Social Casino, Online Slots, Hacksaw Gaming, Pragmatic Play, Nolimit City, Evolution Gaming, Peter and Sons" />
+    <meta name="keywords" content="Spinnshare Games, Social Casino, Online Slots, Hacksaw Gaming, Pragmatic Play, Nolimit City, Peter and Sons" />
     <meta name="author" content="Spinnshare Team" />
     <link rel="canonical" href="https://spinnshare.org/games/" />
     <meta property="og:title" content="Games - Spinnshare" />
@@ -38,6 +38,10 @@
             width: 90%; max-width: 500px; padding: 25px; 
             animation: animate__zoomIn 0.4s ease-in-out; 
             font-family: 'Josefin Sans', sans-serif; 
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
         }
         .game-modal-content { 
             background: linear-gradient(180deg, #370A2C 0%, #2A0722 100%); 
@@ -218,10 +222,7 @@
                 <button type="button" class="btn-close" onclick="closeModal()"></button>
             </div>
             <div class="modal-body">
-                <div class="auth-tabs">
-                    <button class="tab-link active" onclick="openTab('login')">Login</button>
-                    <button class="tab-link" onclick="openTab('register')">Register</button>
-                </div>
+                
                 <div id="login" class="tab-content active">
                     <input type="email" id="loginEmail" placeholder="Email" required />
                     <input type="password" id="loginPassword" placeholder="Password" required />
@@ -314,141 +315,13 @@
                     <div class="game-item">
                         <div class="game-inner">
                             <div class="game-item__thumb">
-                                <img src="/assets/images/game/wanted-dead-or-a-wild.jpg" alt="Wanted Dead or a Wild" />
+                                <img src="/assets/images/game/barbarossa-revenge.jpg" alt="Barbarossa Revenge Power Up RTP" />
                             </div>
                             <div class="game-item__content">
-                                <h4 class="title">Wanted Dead or a Wild</h4>
-                                <p class="invest-info">Hacksaw Gaming</p>
-                                <p class="invest-amount"></p>
-                                <a href="javascript:void(0)" class="cmn--btn active btn--md radius-0" onclick="playGame('https://demo.hacksawgaming.com/casino/ContainerLauncher?game=wanted-dead-or-a-wild&demo=2&brand=spinnshare&lobby=https%3A%2F%2Fspinnshare.org%2Fgames&practice=1', 'Wanted Dead or a Wild')">Play Now</a>
-                            </div>
-                        </div>
-                        <div class="ball"></div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-xl-3 col-md-6 col-sm-6">
-                    <div class="game-item">
-                        <div class="game-inner">
-                            <div class="game-item__thumb">
-                                <img src="/assets/images/game/chaos-crew.jpg" alt="Chaos Crew" />
-                            </div>
-                            <div class="game-item__content">
-                                <h4 class="title">Chaos Crew</h4>
-                                <p class="invest-info">Hacksaw Gaming</p>
-                                <p class="invest-amount"></p>
-                                <a href="javascript:void(0)" class="cmn--btn active btn--md radius-0" onclick="playGame('https://demo.hacksawgaming.com/casino/ContainerLauncher?game=chaos-crew&demo=2&brand=spinnshare&lobby=https%3A%2F%2Fspinnshare.org%2Fgames&practice=1', 'Chaos Crew')">Play Now</a>
-                            </div>
-                        </div>
-                        <div class="ball"></div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-xl-3 col-md-6 col-sm-6">
-                    <div class="game-item">
-                        <div class="game-inner">
-                            <div class="game-item__thumb">
-                                <img src="/assets/images/game/sweet-bonanza.jpg" alt="Sweet Bonanza" />
-                            </div>
-                            <div class="game-item__content">
-                                <h4 class="title">Sweet Bonanza</h4>
-                                <p class="invest-info">Pragmatic Play</p>
-                                <p class="invest-amount"></p>
-                                <a href="javascript:void(0)" class="cmn--btn active btn--md radius-0" onclick="playGame('https://demogames.pragmaticplay.net/casino/ContainerLauncher?game=sweet-bonanza&demo=2&brand=spinnshare&lobby=https%3A%2F%2Fspinnshare.org%2Fgames&practice=1', 'Sweet Bonanza')">Play Now</a>
-                            </div>
-                        </div>
-                        <div class="ball"></div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-xl-3 col-md-6 col-sm-6">
-                    <div class="game-item">
-                        <div class="game-inner">
-                            <div class="game-item__thumb">
-                                <img src="/assets/images/game/the-dog-house.jpg" alt="The Dog House" />
-                            </div>
-                            <div class="game-item__content">
-                                <h4 class="title">The Dog House</h4>
-                                <p class="invest-info">Pragmatic Play</p>
-                                <p class="invest-amount"></p>
-                                <a href="javascript:void(0)" class="cmn--btn active btn--md radius-0" onclick="playGame('https://demogames.pragmaticplay.net/casino/ContainerLauncher?game=the-dog-house&demo=2&brand=spinnshare&lobby=https%3A%2F%2Fspinnshare.org%2Fgames&practice=1', 'The Dog House')">Play Now</a>
-                            </div>
-                        </div>
-                        <div class="ball"></div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-xl-3 col-md-6 col-sm-6">
-                    <div class="game-item">
-                        <div class="game-inner">
-                            <div class="game-item__thumb">
-                                <img src="/assets/images/game/deadwood-xnudge.jpg" alt="Deadwood xNudge" />
-                            </div>
-                            <div class="game-item__content">
-                                <h4 class="title">Deadwood xNudge</h4>
-                                <p class="invest-info">Nolimit City</p>
-                                <p class="invest-amount"></p>
-                                <a href="javascript:void(0)" class="cmn--btn active btn--md radius-0" onclick="playGame('https://demo.nolimitcity.com/casino/ContainerLauncher?game=deadwood-xnudge&demo=2&brand=spinnshare&lobby=https%3A%2F%2Fspinnshare.org%2Fgames&practice=1', 'Deadwood xNudge')">Play Now</a>
-                            </div>
-                        </div>
-                        <div class="ball"></div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-xl-3 col-md-6 col-sm-6">
-                    <div class="game-item">
-                        <div class="game-inner">
-                            <div class="game-item__thumb">
-                                <img src="/assets/images/game/punk-toilet.jpg" alt="Punk Toilet" />
-                            </div>
-                            <div class="game-item__content">
-                                <h4 class="title">Punk Toilet</h4>
-                                <p class="invest-info">Nolimit City</p>
-                                <p class="invest-amount"></p>
-                                <a href="javascript:void(0)" class="cmn--btn active btn--md radius-0" onclick="playGame('https://demo.nolimitcity.com/casino/ContainerLauncher?game=punk-toilet&demo=2&brand=spinnshare&lobby=https%3A%2F%2Fspinnshare.org%2Fgames&practice=1', 'Punk Toilet')">Play Now</a>
-                            </div>
-                        </div>
-                        <div class="ball"></div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-xl-3 col-md-6 col-sm-6">
-                    <div class="game-item">
-                        <div class="game-inner">
-                            <div class="game-item__thumb">
-                                <img src="/assets/images/game/crazy-time.jpg" alt="Crazy Time" />
-                            </div>
-                            <div class="game-item__content">
-                                <h4 class="title">Crazy Time</h4>
-                                <p class="invest-info">Evolution Gaming</p>
-                                <p class="invest-amount"></p>
-                                <a href="javascript:void(0)" class="cmn--btn active btn--md radius-0" onclick="playGame('https://demo.evolutiongaming.com/casino/ContainerLauncher?game=crazy-time&demo=2&brand=spinnshare&lobby=https%3A%2F%2Fspinnshare.org%2Fgames&practice=1', 'Crazy Time')">Play Now</a>
-                            </div>
-                        </div>
-                        <div class="ball"></div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-xl-3 col-md-6 col-sm-6">
-                    <div class="game-item">
-                        <div class="game-inner">
-                            <div class="game-item__thumb">
-                                <img src="/assets/images/game/monopoly-live.jpg" alt="Monopoly Live" />
-                            </div>
-                            <div class="game-item__content">
-                                <h4 class="title">Monopoly Live</h4>
-                                <p class="invest-info">Evolution Gaming</p>
-                                <p class="invest-amount"></p>
-                                <a href="javascript:void(0)" class="cmn--btn active btn--md radius-0" onclick="playGame('https://demo.evolutiongaming.com/casino/ContainerLauncher?game=monopoly-live&demo=2&brand=spinnshare&lobby=https%3A%2F%2Fspinnshare.org%2Fgames&practice=1', 'Monopoly Live')">Play Now</a>
-                            </div>
-                        </div>
-                        <div class="ball"></div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-xl-3 col-md-6 col-sm-6">
-                    <div class="game-item">
-                        <div class="game-inner">
-                            <div class="game-item__thumb">
-                                <img src="/assets/images/game/rat-king.jpg" alt="Rat King" />
-                            </div>
-                            <div class="game-item__content">
-                                <h4 class="title">Rat King</h4>
+                                <h4 class="title">Barbarossa Revenge Power Up RTP</h4>
                                 <p class="invest-info">Peter and Sons</p>
                                 <p class="invest-amount"></p>
-                                <a href="javascript:void(0)" class="cmn--btn active btn--md radius-0" onclick="playGame('https://demo.peterandsons.com/casino/ContainerLauncher?game=rat-king&demo=2&brand=spinnshare&lobby=https%3A%2F%2Fspinnshare.org%2Fgames&practice=1', 'Rat King')">Play Now</a>
+                                <a href="javascript:void(0)" class="cmn--btn active btn--md radius-0" onclick="playGame('https://demo.peterandsons.com/casino/ContainerLauncher?game=barbarossa-revenge-power-up-rtp&demo=2&brand=spinnshare&lobby=https%3A%2F%2Fspinnshare.org%2Fgames&practice=1', 'Barbarossa Revenge Power Up RTP')">Play Now</a>
                             </div>
                         </div>
                         <div class="ball"></div>
@@ -458,13 +331,173 @@
                     <div class="game-item">
                         <div class="game-inner">
                             <div class="game-item__thumb">
-                                <img src="/assets/images/game/barbarossa-doublemax.jpg" alt="Barbarossa DoubleMax" />
+                                <img src="/assets/images/game/bullets-and-bounty.jpg" alt="Bullets and Bounty" />
                             </div>
                             <div class="game-item__content">
-                                <h4 class="title">Barbarossa DoubleMax</h4>
-                                <p class="invest-info">Peter and Sons</p>
+                                <h4 class="title">Bullets and Bounty</h4>
+                                <p class="invest-info">Hacksaw Gaming</p>
                                 <p class="invest-amount"></p>
-                                <a href="javascript:void(0)" class="cmn--btn active btn--md radius-0" onclick="playGame('https://demo.peterandsons.com/casino/ContainerLauncher?game=barbarossa-doublemax&demo=2&brand=spinnshare&lobby=https%3A%2F%2Fspinnshare.org%2Fgames&practice=1', 'Barbarossa DoubleMax')">Play Now</a>
+                                <a href="javascript:void(0)" class="cmn--btn active btn--md radius-0" onclick="playGame('https://demo.hacksawgaming.com/casino/ContainerLauncher?game=bullets-and-bounty&demo=2&brand=spinnshare&lobby=https%3A%2F%2Fspinnshare.org%2Fgames&practice=1', 'Bullets and Bounty')">Play Now</a>
+                            </div>
+                        </div>
+                        <div class="ball"></div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-xl-3 col-md-6 col-sm-6">
+                    <div class="game-item">
+                        <div class="game-inner">
+                            <div class="game-item__thumb">
+                                <img src="/assets/images/game/zombie-school-megaways.jpg" alt="Zombie School Megaways" />
+                            </div>
+                            <div class="game-item__content">
+                                <h4 class="title">Zombie School Megaways</h4>
+                                <p class="invest-info">Pragmatic Play</p>
+                                <p class="invest-amount"></p>
+                                <a href="javascript:void(0)" class="cmn--btn active btn--md radius-0" onclick="playGame('https://demogames.pragmaticplay.net/casino/ContainerLauncher?game=zombie-school-megaways&demo=2&brand=spinnshare&lobby=https%3A%2F%2Fspinnshare.org%2Fgames&practice=1', 'Zombie School Megaways')">Play Now</a>
+                            </div>
+                        </div>
+                        <div class="ball"></div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-xl-3 col-md-6 col-sm-6">
+                    <div class="game-item">
+                        <div class="game-inner">
+                            <div class="game-item__thumb">
+                                <img src="/assets/images/game/zeus-vs-hades.jpg" alt="Zeus vs Hades - Gods of War" />
+                            </div>
+                            <div class="game-item__content">
+                                <h4 class="title">Zeus vs Hades - Gods of War</h4>
+                                <p class="invest-info">Pragmatic Play</p>
+                                <p class="invest-amount"></p>
+                                <a href="javascript:void(0)" class="cmn--btn active btn--md radius-0" onclick="playGame('https://demogames.pragmaticplay.net/casino/ContainerLauncher?game=zeus-vs-hades-gods-of-war&demo=2&brand=spinnshare&lobby=https%3A%2F%2Fspinnshare.org%2Fgames&practice=1', 'Zeus vs Hades - Gods of War')">Play Now</a>
+                            </div>
+                        </div>
+                        <div class="ball"></div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-xl-3 col-md-6 col-sm-6">
+                    <div class="game-item">
+                        <div class="game-inner">
+                            <div class="game-item__thumb">
+                                <img src="/assets/images/game/gates-of-olympus-1000.jpg" alt="Gates of Olympus 1000" />
+                            </div>
+                            <div class="game-item__content">
+                                <h4 class="title">Gates of Olympus 1000</h4>
+                                <p class="invest-info">Pragmatic Play</p>
+                                <p class="invest-amount"></p>
+                                <a href="javascript:void(0)" class="cmn--btn active btn--md radius-0" onclick="playGame('https://demogames.pragmaticplay.net/casino/ContainerLauncher?game=gates-of-olympus-1000&demo=2&brand=spinnshare&lobby=https%3A%2F%2Fspinnshare.org%2Fgames&practice=1', 'Gates of Olympus 1000')">Play Now</a>
+                            </div>
+                        </div>
+                        <div class="ball"></div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-xl-3 col-md-6 col-sm-6">
+                    <div class="game-item">
+                        <div class="game-inner">
+                            <div class="game-item__thumb">
+                                <img src="/assets/images/game/le-pharaoh.jpg" alt="Le Pharaoh" />
+                            </div>
+                            <div class="game-item__content">
+                                <h4 class="title">Le Pharaoh</h4>
+                                <p class="invest-info">Hacksaw Gaming</p>
+                                <p class="invest-amount"></p>
+                                <a href="javascript:void(0)" class="cmn--btn active btn--md radius-0" onclick="playGame('https://demo.hacksawgaming.com/casino/ContainerLauncher?game=le-pharaoh&demo=2&brand=spinnshare&lobby=https%3A%2F%2Fspinnshare.org%2Fgames&practice=1', 'Le Pharaoh')">Play Now</a>
+                            </div>
+                        </div>
+                        <div class="ball"></div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-xl-3 col-md-6 col-sm-6">
+                    <div class="game-item">
+                        <div class="game-inner">
+                            <div class="game-item__thumb">
+                                <img src="/assets/images/game/le-bandit.jpg" alt="Le Bandit" />
+                            </div>
+                            <div class="game-item__content">
+                                <h4 class="title">Le Bandit</h4>
+                                <p class="invest-info">Hacksaw Gaming</p>
+                                <p class="invest-amount"></p>
+                                <a href="javascript:void(0)" class="cmn--btn active btn--md radius-0" onclick="playGame('https://demo.hacksawgaming.com/casino/ContainerLauncher?game=le-bandit&demo=2&brand=spinnshare&lobby=https%3A%2F%2Fspinnshare.org%2Fgames&practice=1', 'Le Bandit')">Play Now</a>
+                            </div>
+                        </div>
+                        <div class="ball"></div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-xl-3 col-md-6 col-sm-6">
+                    <div class="game-item">
+                        <div class="game-inner">
+                            <div class="game-item__thumb">
+                                <img src="/assets/images/game/duck-hunters.jpg" alt="Duck Hunters" />
+                            </div>
+                            <div class="game-item__content">
+                                <h4 class="title">Duck Hunters</h4>
+                                <p class="invest-info">Nolimit City</p>
+                                <p class="invest-amount"></p>
+                                <a href="javascript:void(0)" class="cmn--btn active btn--md radius-0" onclick="playGame('https://demo.nolimitcity.com/casino/ContainerLauncher?game=duck-hunters&demo=2&brand=spinnshare&lobby=https%3A%2F%2Fspinnshare.org%2Fgames&practice=1', 'Duck Hunters')">Play Now</a>
+                            </div>
+                        </div>
+                        <div class="ball"></div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-xl-3 col-md-6 col-sm-6">
+                    <div class="game-item">
+                        <div class="game-inner">
+                            <div class="game-item__thumb">
+                                <img src="/assets/images/game/slayers-inc-boosted.jpg" alt="Slayers Inc Boosted" />
+                            </div>
+                            <div class="game-item__content">
+                                <h4 class="title">Slayers Inc Boosted</h4>
+                                <p class="invest-info">Hacksaw Gaming</p>
+                                <p class="invest-amount"></p>
+                                <a href="javascript:void(0)" class="cmn--btn active btn--md radius-0" onclick="playGame('https://demo.hacksawgaming.com/casino/ContainerLauncher?game=slayers-inc-boosted&demo=2&brand=spinnshare&lobby=https%3A%2F%2Fspinnshare.org%2Fgames&practice=1', 'Slayers Inc Boosted')">Play Now</a>
+                            </div>
+                        </div>
+                        <div class="ball"></div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-xl-3 col-md-6 col-sm-6">
+                    <div class="game-item">
+                        <div class="game-inner">
+                            <div class="game-item__thumb">
+                                <img src="/assets/images/game/hounds-of-hell-boosted.jpg" alt="Hounds of Hell Boosted" />
+                            </div>
+                            <div class="game-item__content">
+                                <h4 class="title">Hounds of Hell Boosted</h4>
+                                <p class="invest-info">Hacksaw Gaming</p>
+                                <p class="invest-amount"></p>
+                                <a href="javascript:void(0)" class="cmn--btn active btn--md radius-0" onclick="playGame('https://demo.hacksawgaming.com/casino/ContainerLauncher?game=hounds-of-hell-boosted&demo=2&brand=spinnshare&lobby=https%3A%2F%2Fspinnshare.org%2Fgames&practice=1', 'Hounds of Hell Boosted')">Play Now</a>
+                            </div>
+                        </div>
+                        <div class="ball"></div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-xl-3 col-md-6 col-sm-6">
+                    <div class="game-item">
+                        <div class="game-inner">
+                            <div class="game-item__thumb">
+                                <img src="/assets/images/game/rotten.jpg" alt="Rotten" />
+                            </div>
+                            <div class="game-item__content">
+                                <h4 class="title">Rotten</h4>
+                                <p class="invest-info">Hacksaw Gaming</p>
+                                <p class="invest-amount"></p>
+                                <a href="javascript:void(0)" class="cmn--btn active btn--md radius-0" onclick="playGame('https://demo.hacksawgaming.com/casino/ContainerLauncher?game=rotten&demo=2&brand=spinnshare&lobby=https%3A%2F%2Fspinnshare.org%2Fgames&practice=1', 'Rotten')">Play Now</a>
+                            </div>
+                        </div>
+                        <div class="ball"></div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-xl-3 col-md-6 col-sm-6">
+                    <div class="game-item">
+                        <div class="game-inner">
+                            <div class="game-item__thumb">
+                                <img src="/assets/images/game/wanted.jpg" alt="Wanted" />
+                            </div>
+                            <div class="game-item__content">
+                                <h4 class="title">Wanted</h4>
+                                <p class="invest-info">Hacksaw Gaming</p>
+                                <p class="invest-amount"></p>
+                                <a href="javascript:void(0)" class="cmn--btn active btn--md radius-0" onclick="playGame('https://demo.hacksawgaming.com/casino/ContainerLauncher?game=wanted&demo=2&brand=spinnshare&lobby=https%3A%2F%2Fspinnshare.org%2Fgames&practice=1', 'Wanted')">Play Now</a>
                             </div>
                         </div>
                         <div class="ball"></div>
@@ -561,7 +594,7 @@
             if (username && email && password) {
                 localStorage.setItem('userState', JSON.stringify({ isLoggedIn: true, username: username, email: email, coins: 5000 }));
                 $('#user-name').text(username); 
-                $('#user-details').text(`Name: ${username}\nEmail: ${email}\nCoins: 5000`);
+                $('#user-details').text(`Name: ${username}\nEmail: ${email}\nCoins: ${5000}`);
                 $('#auth-container').addClass('d-none'); 
                 $('#user-circle').removeClass('d-none'); 
                 closeModal();
