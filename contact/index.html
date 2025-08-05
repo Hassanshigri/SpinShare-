@@ -18,6 +18,7 @@
 
     <!-- Main css -->
     <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="../style.css">
 </head>
     <body data-bs-spy="scroll" data-bs-offset="170" data-bs-target=".privacy-policy-sidebar-menu">
 
@@ -44,37 +45,77 @@
             </div>
         </div>
 
-<div class="header">
-    <div class="container">
-        <div class="header-bottom">
-            <div class="header-bottom-area align-items-center">
-                <div class="logo"><a href="/"><img src="./assets/images/logo.png" alt="logo"></a></div>
-                <ul class="menu">
-                    <li>
-                        <a href="/">Home</a>
-                    </li>
-                    <li>
-                        <a href="/about/">About</a>
-                    </li>
-                    <li>
-                        <a href="/games/">Games <span class="badge badge--sm badge--base text-dark">NEW</span></a>
-                    </li>
-   
-                    <li>
-                        <a href="/contact/">Contact</a>
-                    </li>
-                    <button class="btn-close btn-close-white d-lg-none"></button>
-                </ul>
-                <div class="header-trigger-wrapper d-flex d-lg-none align-items-center">
-                    <div class="header-trigger me-4">
-                        <span></span>
+   <!-- Authentication Modal -->
+    <div class="custom--modal" id="authModal" style="display: none;">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5>Sign In</h5>
+                <button type="button" class="btn-close" onclick="closeModal()"></button>
+            </div>
+            <div class="modal-body">
+               
+                <div id="login" class="tab-content active">
+                    <input type="email" id="loginEmail" placeholder="Email" required>
+                    <input type="password" id="loginPassword" placeholder="Password" required>
+                    <button class="cmn--btn active" onclick="login()">Login</button>
+                    <div class="form-link">
+                        <a href="javascript:void(0)" onclick="openTab('register')">Don't have an account? Register here</a>
                     </div>
-                    <a href="sign-in.html" class="cmn--btn active btn--md d-none d-sm-block">Sign In</a>
+                </div>
+                <div id="register" class="tab-content">
+                    <input type="text" id="registerUsername" placeholder="Username" required>
+                    <input type="email" id="registerEmail" placeholder="Email" required>
+                    <input type="password" id="registerPassword" placeholder="Password" required>
+                    <button class="cmn--btn active" onclick="register()">Register</button>
+                    <div class="form-link">
+                        <a href="javascript:void(0)" onclick="openTab('login')">Already have an account? Login here</a>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
+
+    <div class="header">
+        <div class="container">
+            <div class="header-bottom">
+                <div class="header-bottom-area align-items-center">
+                    <div class="logo"><a href="/"><img src="assets/images/logo.png" alt="logo"></a></div>
+                    <ul class="menu">
+                        <li>
+                            <a href="/" class="active">Home</a>
+                        </li>
+                        <li>
+                            <a href="/about/">About</a>
+                        </li>
+                        <li>
+                            <a href="/games/">Games <span class="badge badge--sm badge--base text-dark">NEW</span></a>
+                        </li>
+                        <li>
+                            <a href="/contact/">Contact</a>
+                        </li>
+                        <button class="btn-close btn-close-white d-lg-none"></button>
+                    </ul>
+                    <div class="header-trigger-wrapper d-flex align-items-center">
+                        <div id="user-account" class="ms-3 d-flex align-items-center">
+                            <div id="auth-container">
+                                <a href="javascript:void(0)" id="auth-btn" class="cmn--btn active btn--md ms-2 d-sm-block" onclick="showAuthModal()">Login/Register</a>
+                            </div>
+                            <div id="user-circle" class="user-circle d-none">
+                                <span id="user-name"></span>
+                                <div class="user-dropdown">
+                                    <div id="user-details"></div>
+                                    <a href="javascript:void(0)" id="logout-btn" onclick="logout()">Logout</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="header-trigger me-4 d-lg-none">
+                            <span></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 <!-- inner hero section start -->
 <section class="inner-banner bg_img" style="background: url('assets/images/inner-banner/bg2.jpg') top;">
   <div class="container">
@@ -198,6 +239,7 @@
 
 <!-- main js -->
 <script src="assets/js/main.js"></script>  
+<script src="../script.js"></script>  
 
 </body>
 </html>

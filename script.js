@@ -80,15 +80,15 @@ function logout() {
   $("#user-name").text("");
   $("#user-details").text("");
   $("#auth-container").removeClass("d-none");
-  $("#user-circle").addClass("d-none");
+  $("#user-circle").addClass("d-none").removeClass("show"); // Changed from removeClass("d-none") to addClass("d-none")
 }
 
 function restoreUserState() {
   const userState = JSON.parse(localStorage.getItem("userState"));
   if (userState && userState.isLoggedIn) {
     $("#user-name").text(userState.username);
-    $("#user-details").html(
-      `Name: ${userState.username}<br>Email: ${userState.email}<br>Coins: ${userState.coins}`
+    $("#user-details").text(
+      `Name: ${userState.username}\nEmail: ${userState.email}\nCoins: ${userState.coins}`
     );
     $("#auth-container").addClass("d-none");
     $("#user-circle").removeClass("d-none");
@@ -96,11 +96,24 @@ function restoreUserState() {
     $("#user-name").text("");
     $("#user-details").text("");
     $("#auth-container").removeClass("d-none");
-    $("#user-circle").addClass("d-none");
+    $("#user-circle").addClass("d-none").removeClass("show");
   }
+}
+
+function toggleDropdown(event) {
+  event.stopPropagation(); // Prevent click from bubbling to document
+  $("#user-circle").toggleClass("show");
 }
 
 // Initialize on page load
 $(document).ready(function () {
   restoreUserState();
+  // Toggle dropdown on user circle click
+  $("#user-circle").on("click", toggleDropdown);
+  // Close dropdown when clicking outside
+  $(document).on("click", function (event) {
+    if (!$(event.target).closest("#user-circle").length) {
+      $("#user-circle").removeClass("show");
+    }
+  });
 });
