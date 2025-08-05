@@ -3,27 +3,196 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us | Spinnshare - Social Casino Gaming Platform</title>
-    <meta name="description" content="Get in touch with Spinnshare! Contact our support team for any inquiries about our social casino gaming platform.">
-    <meta name="keywords" content="Spinnshare, Contact Spinnshare, Casino Support, Social Casino, Online Casino, Game Platform">
+    <title>Contact Us | Spinnshare - Get in Touch</title>
+    <meta name="description" content="Reach out to Spinnshare for support, questions, or feedback. We’re here to help with your online casino gaming experience.">
+    <meta name="keywords" content="Spinnshare contact, online casino support, get in touch, casino help, customer service, casino queries, support team">
     <meta name="author" content="Spinnshare Team">
-    <meta property="og:title" content="Contact Us | Spinnshare - Social Casino Gaming Platform">
-    <meta property="og:description" content="Reach out to Spinnshare for support or inquiries about our exciting social casino games.">
+    <link rel="canonical" href="https://spinnshare.org/contact">
+    <meta property="og:title" content="Contact Us | Spinnshare - Get in Touch">
+    <meta property="og:description" content="Reach out to Spinnshare for support, questions, or feedback. We’re here to help with your online casino gaming experience.">
     <meta property="og:image" content="/assets/images/logo.png">
     <meta property="og:url" content="https://spinnshare.org/contact">
     <meta property="og:type" content="website">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Contact Us | Spinnshare - Social Casino Gaming Platform">
-    <meta name="twitter:description" content="Reach out to Spinnshare for support or inquiries about our exciting social casino games.">
+    <meta name="twitter:title" content="Contact Us | Spinnshare - Get in Touch">
+    <meta name="twitter:description" content="Reach out to Spinnshare for support, questions, or feedback. We’re here to help with your online casino gaming experience.">
     <meta name="twitter:image" content="/assets/images/logo.png">
-    <link rel="icon" href="/assets/images/favicon.png" type="image/png">
-    <link rel="stylesheet" href="/assets/css/lib/bootstrap.min.css" />
-    <link rel="stylesheet" href="/assets/css/all.min.css" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/line-awesome@1.3.0/dist/line-awesome/css/line-awesome.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="/assets/css/lib/animate.css" />
-    <link rel="stylesheet" href="/assets/css/lib/slick.css" />
-    <link rel="stylesheet" href="/assets/css/main.css" />
-    <link rel="stylesheet" href="/style.css" />
+    <link rel="icon" type="image/png" href="/assets/images/favicon.png" sizes="16x16">
+    <link rel="stylesheet" href="/assets/css/lib/bootstrap.min.css">
+    <link rel="stylesheet" href="/assets/css/all.min.css">
+    <link rel="stylesheet" href="/assets/css/line-awesome.min.css">
+    <link rel="stylesheet" href="/assets/css/lib/animate.css">
+    <link rel="stylesheet" href="/assets/css/lib/slick.css">
+    <link rel="stylesheet" href="/assets/css/main.css">
+    <style>
+        .custom--modal, .alert-modal, .success-popup {
+            position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(0, 0, 0, 0.85); display: none;
+            justify-content: center; align-items: center; z-index: 10000;
+            backdrop-filter: blur(5px);
+        }
+        .modal-content, .alert-modal-content, .success-popup {
+            background: linear-gradient(180deg, #370A2C 0%, #2A0722 100%);
+            border-radius: 15px; box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+            width: 90%; max-width: 500px; padding: 25px;
+            animation: animate__zoomIn 0.4s ease-in-out;
+            font-family: 'Josefin Sans', sans-serif;
+            position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
+        }
+        .modal-header, .alert-modal-header {
+            display: flex; justify-content: space-between; align-items: center;
+            padding: 0 0 15px; border-bottom: 2px solid #FFC827;
+            margin-bottom: 20px;
+        }
+        .modal-header h5, .alert-modal-header h5 {
+            font-size: 1.6rem; color: #FFC827; margin: 0;
+            font-weight: 700; letter-spacing: 0.5px;
+        }
+        .modal-header .btn-close, .alert-modal-header .btn-close {
+            background: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23FFC827'%3e%3cpath d='M.293.293a1 1 0 011.414 0L8 6.586 14.293.293a1 1 0 111.414 1.414L9.414 8l6.293 6.293a1 1 0 01-1.414 1.414L8 9.414l-6.293 6.293a1 1 0 01-1.414-1.414L6.586 8 .293 1.707A1 1 0 01.293.293z'/%3e%3c/svg%3e") no-repeat center;
+            background-size: 18px; background-color: #4A1039;
+            border-radius: 50%; width: 32px; height: 32px;
+            opacity: 0.9; transition: transform 0.2s ease, opacity 0.2s ease;
+        }
+        .modal-header .btn-close:hover, .alert-modal-header .btn-close:hover {
+            opacity: 1; transform: scale(1.1);
+        }
+        .modal-body { padding: 20px 0; }
+        .auth-tabs {
+            display: flex; justify-content: center; margin-bottom: 25px;
+            gap: 10px;
+        }
+        .tab-link {
+            background: #4A1039; border: none; padding: 12px 25px;
+            font-size: 1rem; color: #fff; cursor: pointer;
+            transition: all 0.3s ease; border-radius: 8px;
+            font-weight: 600; letter-spacing: 0.5px;
+        }
+        .tab-link.active {
+            background: linear-gradient(45deg, #FFC827, #FFD966);
+            color: #370A2C;
+        }
+        .tab-link:hover {
+            transform: translateY(-2px); box-shadow: 0 4px 10px rgba(255, 200, 39, 0.3);
+        }
+        .tab-content {
+            display: none; padding: 20px; background: #2A0722;
+            border-radius: 8px; box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+        .tab-content.active { display: block; }
+        .tab-content input {
+            width: 100%; padding: 14px; margin-bottom: 15px;
+            border: 1px solid #FFC827; border-radius: 8px; font-size: 1rem;
+            color: #fff; background: #370A2C; transition: all 0.3s ease;
+        }
+        .tab-content input:focus {
+            outline: none; border-color: #FFD966;
+            box-shadow: 0 0 8px rgba(255, 200, 39, 0.4);
+        }
+        .tab-content input::placeholder { color: #aaa; }
+        .cmn--btn.active {
+            background: linear-gradient(45deg, #FFC827, #FFD966);
+            color: #370A2C; border: none; padding: 12px 25px;
+            font-size: 1rem; border-radius: 8px; cursor: pointer;
+            transition: all 0.3s ease; font-weight: 600;
+            box-shadow: 0 4px 10px rgba(255, 200, 39, 0.2);
+        }
+        .cmn--btn.active:hover {
+            transform: translateY(-2px); box-shadow: 0 6px 15px rgba(255, 200, 39, 0.4);
+        }
+        .cmn--btn:not(.active) {
+            background: #555; color: #fff; border-radius: 8px;
+            padding: 12px 25px; transition: all 0.3s ease;
+        }
+        .cmn--btn:not(.active):hover {
+            transform: translateY(-2px); box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        }
+        .form-link { text-align: center; margin-top: 15px; }
+        .form-link a {
+            color: #FFC827; text-decoration: none; font-size: 0.9rem;
+            transition: color 0.2s ease;
+        }
+        .form-link a:hover { color: #FFD966; text-decoration: underline; }
+        .user-circle { position: relative; cursor: pointer; }
+        .user-circle span {
+            display: inline-block; width: 42px; height: 42px; line-height: 42px;
+            text-align: center; background: linear-gradient(45deg, #FFC827, #FFD966);
+            color: #370A2C; border-radius: 50%; font-size: 1.1rem;
+            font-weight: 600; box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+        .user-dropdown {
+            display: none; position: absolute; top: 50px; right: 0;
+            background: #370A2C; padding: 15px; border-radius: 8px;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3); z-index: 1001;
+            min-width: 220px;
+        }
+        .user-circle.show .user-dropdown { display: block !important; }
+        .user-dropdown div, .user-dropdown a {
+            color: #FFC827; font-size: 0.9rem; margin-bottom: 10px;
+            transition: color 0.2s ease;
+        }
+        .user-dropdown a:hover { color: #FFD966; text-decoration: underline; }
+        .cookie-popup {
+            position: fixed; bottom: 30px; left: 50%; transform: translateX(-50%);
+            width: 90%; max-width: 450px; background: linear-gradient(180deg, #370A2C 0%, #2A0722 100%);
+            border-radius: 15px; box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+            z-index: 10000; padding: 25px; animation: animate__fadeInUp 0.4s ease-in-out;
+        }
+        .cookie-content h5 {
+            font-size: 1.3rem; color: #FFC827; margin: 0 0 15px;
+            font-weight: 700; letter-spacing: 0.5px;
+        }
+        .cookie-content p {
+            font-size: 0.95rem; color: #fff; margin: 0 0 20px; line-height: 1.5;
+        }
+        .cookie-buttons { display: flex; gap: 15px; justify-content: center; }
+        .cookie-buttons .cmn--btn { padding: 10px 25px; font-size: 0.95rem; }
+        .success-popup p {
+            font-size: 1rem; color: #fff; margin: 0 0 20px; text-align: center;
+            line-height: 1.5;
+        }
+        .success-popup .cmn--btn { padding: 10px 25px; font-size: 0.95rem; }
+        .alert-modal-content p {
+            font-size: 1rem; color: #fff; margin: 0 0 20px; text-align: center;
+            line-height: 1.5;
+        }
+        .alert-modal-buttons { display: flex; justify-content: center; }
+        .alert-modal-buttons .cmn--btn { padding: 10px 25px; font-size: 0.95rem; }
+        .contact-info-wrapper { background: linear-gradient(180deg, #370A2C 0%, #2A0722 100%); border-radius: 15px; padding: 25px; box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4); }
+        .contact-info-wrapper .title { color: #FFC827; font-size: 1.6rem; font-weight: 700; letter-spacing: 0.5px; }
+        .contact-info-list li { display: flex; align-items: center; margin-bottom: 15px; }
+        .contact-info-list li i { color: #FFC827; font-size: 1.2rem; margin-right: 10px; }
+        .contact-info-list li span, .contact-info-list li a { color: #fff; font-size: 1rem; }
+        .contact-info-list li a:hover { color: #FFD966; }
+        .social-links { display: flex; gap: 15px; }
+        .social-links li a { color: #FFC827; font-size: 1.2rem; transition: color 0.2s ease; }
+        .social-links li a:hover { color: #FFD966; }
+        .contact-form { background: linear-gradient(180deg, #370A2C 0%, #2A0722 100%); border-radius: 15px; padding: 25px; box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4); }
+        .contact-form .title { color: #FFC827; font-size: 1.6rem; font-weight: 700; letter-spacing: 0.5px; }
+        .contact-form .form-label { color: #fff; font-size: 1rem; margin-bottom: 5px; }
+        .contact-form .form-control { background: #370A2C; border: 1px solid #FFC827; color: #fff; border-radius: 8px; padding: 12px; font-size: 1rem; transition: all 0.3s ease; }
+        .contact-form .form-control:focus { outline: none; border-color: #FFD966; box-shadow: 0 0 8px rgba(255, 200, 39, 0.4); }
+        .contact-form .form-control::placeholder { color: #aaa; }
+        .text--danger { color: #FF5555; }
+        @media (max-width: 768px) {
+            .contact-info-wrapper, .contact-form { padding: 20px; }
+            .contact-info-wrapper .title, .contact-form .title { font-size: 1.4rem; }
+            .contact-info-list li i { font-size: 1.1rem; }
+            .contact-info-list li span, .contact-info-list li a { font-size: 0.9rem; }
+            .social-links li a { font-size: 1.1rem; }
+            .contact-form .form-label { font-size: 0.9rem; }
+            .contact-form .form-control { padding: 10px; font-size: 0.9rem; }
+        }
+        @media (max-width: 576px) {
+            .contact-info-wrapper, .contact-form { padding: 15px; }
+            .contact-info-wrapper .title, .contact-form .title { font-size: 1.2rem; }
+            .contact-info-list li i { font-size: 1rem; }
+            .contact-info-list li span, .contact-info-list li a { font-size: 0.85rem; }
+            .social-links li a { font-size: 1rem; }
+            .contact-form .form-label { font-size: 0.85rem; }
+            .contact-form .form-control { padding: 8px; font-size: 0.85rem; }
+        }
+    </style>
 </head>
 <body data-bs-spy="scroll" data-bs-offset="170" data-bs-target=".privacy-policy-sidebar-menu">
     <div class="overlay"></div>
@@ -94,22 +263,14 @@
         </div>
     </div>
     <div class="success-popup" id="successPopup" style="display: none">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5>Success</h5>
-                <button type="button" class="btn-close" onclick="closeSuccessPopup()"></button>
-            </div>
-            <p>Your message has been sent successfully!</p>
-            <div class="alert-modal-buttons">
-                <button class="cmn--btn active" onclick="closeSuccessPopup()">OK</button>
-            </div>
-        </div>
+        <p>We will contact you via mail</p>
+        <button class="cmn--btn active" onclick="closeSuccessPopup()">OK</button>
     </div>
     <div class="header">
         <div class="container">
             <div class="header-bottom">
                 <div class="header-bottom-area align-items-center">
-                    <div class="logo"><a href="/"><img src="/assets/images/logo.png" alt="logo" /></a></div>
+                    <div class="logo"><a href="/"><img src="/assets/images/logo.png" alt="logo"></a></div>
                     <ul class="menu">
                         <li><a href="/">Home</a></li>
                         <li><a href="/about/">About</a></li>
@@ -140,7 +301,7 @@
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-lg-7 col-xl-6 text-center">
-                    <h2 class="title text-white">Contact Us</h2>
+                    <h2 class="title text-white">Contact Page</h2>
                     <ul class="breadcrumbs d-flex flex-wrap align-items-center justify-content-center">
                         <li><a href="/">Home</a></li>
                         <li>Contact</li>
@@ -149,57 +310,67 @@
             </div>
         </div>
     </section>
-    <section class="contact-section padding-top padding-bottom">
+    <div class="contact-section padding-top padding-bottom">
         <div class="container">
-            <div class="row">
-                <div class="col-lg-6">
-                    <div class="contact-content">
-                        <h2 class="title mb-3">Contact With Us</h2>
-                        <p>Have questions or need assistance? Reach out to our team, and we’ll get back to you as soon as possible.</p>
-                        <ul class="info-list mt-5">
-                            <li><i class="las la-map-marker"></i> 123 Casino Street, Las Vegas, NV 89101</li>
-                            <li><i class="las la-phone"></i> +1 (702) 555-1234</li>
-                            <li><i class="las la-envelope"></i> support@spinnshare.org</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-lg-6">
-                    <form id="contactForm" onsubmit="handleFormSubmission(event)">
-                        <div class="row">
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                    <input type="text" id="fname" placeholder="First Name" required />
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                    <input type="text" id="lname" placeholder="Last Name" required />
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                    <input type="email" id="email" placeholder="Email" required />
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                    <input type="text" id="phone" placeholder="Phone" required />
-                                </div>
-                            </div>
-                            <div class="col-12">
-                                <div class="form-group">
-                                    <textarea id="msg" placeholder="Your Message" rows="5" required></textarea>
-                                </div>
-                            </div>
-                            <div class="col-12">
-                                <button type="submit" class="cmn--btn active">Send Message</button>
-                            </div>
+            <div class="contact-wrapper">
+                <div class="row g-5 align-items-center">
+                    <div class="col-lg-5">
+                        <div class="contact-info-wrapper">
+                            <h3 class="title mb-3 mb-lg-4">Contact Information</h3>
+                            <ul class="contact-info-list m-0">
+                                <li><i class="las la-map-marker-alt"></i> <span>123 Maple Street<br>Toronto, ON M5V 2T6, Canada</span></li>
+                                <li><a href="tel:+14165551234"><i class="las la-phone-volume"></i> <span>+1 416-555-1234</span></a></li>
+                                <li><a href="tel:+14165551234"><i class="las la-phone-volume"></i> <span>+1 416-555-1234</span></a></li>
+                                <li><a href="mailto:support@casinoplatform.ca"><i class="las la-envelope"></i> <span>support@casinoplatform.ca</span></a></li>
+                                <li><a href="mailto:info@casinoplatform.ca"><i class="las la-envelope"></i> <span>info@casinoplatform.ca</span></a></li>
+                            </ul>
+                           
                         </div>
-                    </form>
+                    </div>
+                    <div class="col-lg-7">
+                        <form class="contact-form" id="contactForm" onsubmit="event.preventDefault(); submitContactForm();">
+                            <h3 class="title mb-3">Get In Touch</h3>
+                            <div class="row gy-3">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="fname" class="form-label">First Name <span class="text--danger">*</span></label>
+                                        <input id="fname" type="text" class="form-control form--control" required />
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="lname" class="form-label">Last Name <span class="text--danger">*</span></label>
+                                        <input id="lname" type="text" class="form-control form--control" required />
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="email" class="form-label">Email Address <span class="text--danger">*</span></label>
+                                        <input id="email" type="email" class="form-control form--control" required />
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="phone" class="form-label">Phone Number <span class="text--danger">*</span></label>
+                                        <input id="phone" type="tel" class="form-control form--control" required />
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <label for="msg" class="form-label">Your Message <span class="text--danger">*</span></label>
+                                        <textarea id="msg" class="form-control form--control" required></textarea>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <button type="submit" class="cmn--btn active">Send Message</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
     <footer class="footer-section bg_img" style="background: url(/assets/images/footer/bg.jpg) center;">
         <div class="footer-top">
             <div class="container">
