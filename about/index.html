@@ -1,442 +1,701 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>About Us | Spinnshare - Social Casino Gaming Platform</title>
-    <meta name="description" content="Discover who we are at Spinnshare – your ultimate social casino gaming platform. Learn about our mission, values, and what sets us apart in online entertainment.">
-    <meta name="keywords" content="Spinnshare, About Spinnshare, Casino Gaming, Social Casino, Online Casino, Game Platform">
-    <meta name="author" content="Spinnshare Team">
-    <meta property="og:title" content="About Us | Spinnshare - Social Casino Gaming Platform">
-    <meta property="og:description" content="Explore Spinnshare and find out what makes us a trusted name in online social casino games.">
-    <meta property="og:image" content="/assets/images/logo.png">
-    <meta property="og:url" content="https://spinnshare.org/about">
-    <meta property="og:type" content="website">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="About Us | Spinnshare - Social Casino Gaming Platform">
-    <meta name="twitter:description" content="Explore Spinnshare and find out what makes us a trusted name in online social casino games.">
-    <meta name="twitter:image" content="/assets/images/logo.png">
-    <link rel="icon" href="/assets/images/favicon.png" type="image/png">
+    <meta
+      name="description"
+      content="Discover who we are at Spinnshare – your ultimate social casino gaming platform. Learn about our mission, values, and what sets us apart in online entertainment."
+    />
+    <meta
+      name="keywords"
+      content="Spinnshare, About Spinnshare, Casino Gaming, Social Casino, Online Casino, Game Platform"
+    />
+    <meta name="author" content="Spinnshare Team" />
+    <meta
+      property="og:title"
+      content="About Us | Spinnshare - Social Casino Gaming Platform"
+    />
+    <meta
+      property="og:description"
+      content="Explore Spinnshare and find out what makes us a trusted name in online social casino games."
+    />
+    <meta property="og:image" content="/assets/images/logo.png" />
+    <meta property="og:url" content="https://spinnshare.org/about" />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="About Us | Spinnshare - Social Casino Gaming Platform"
+    />
+    <meta
+      name="twitter:description"
+      content="Explore Spinnshare and find out what makes us a trusted name in online social casino games."
+    />
+    <meta name="twitter:image" content="/assets/images/logo.png" />
+    <link rel="icon" href="/assets/images/favicon.png" type="image/png" />
     <link rel="stylesheet" href="/assets/css/lib/bootstrap.min.css" />
     <link rel="stylesheet" href="/assets/css/all.min.css" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/line-awesome@1.3.0/dist/line-awesome/css/line-awesome.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/line-awesome@1.3.0/dist/line-awesome/css/line-awesome.min.css"
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <link rel="stylesheet" href="/assets/css/lib/animate.css" />
     <link rel="stylesheet" href="/assets/css/lib/slick.css" />
     <link rel="stylesheet" href="/assets/css/main.css" />
     <link rel="stylesheet" href="/style.css" />
-</head>
-<body data-bs-spy="scroll" data-bs-offset="170" data-bs-target=".privacy-policy-sidebar-menu">
+  </head>
+  <body
+    data-bs-spy="scroll"
+    data-bs-offset="170"
+    data-bs-target=".privacy-policy-sidebar-menu"
+  >
     <div class="overlay"></div>
     <div class="cookie-popup" id="cookiePopup" style="display: none">
-        <div class="cookie-content">
-            <h5>We Use Cookies</h5>
-            <p>We use cookies to enhance your experience. By continuing, you agree to our <a href="/cookies-policy/" style="color: #FFC827; text-decoration: underline;">Cookies Policy</a>.</p>
-            <div class="cookie-buttons">
-                <button class="cmn--btn active" onclick="acceptCookies()">Accept</button>
-                <button class="cmn--btn" onclick="declineCookies()">Decline</button>
-            </div>
+      <div class="cookie-content">
+        <h5>We Use Cookies</h5>
+        <p>
+          We use cookies to enhance your experience. By continuing, you agree to
+          our
+          <a
+            href="/cookies-policy/"
+            style="color: #ffc827; text-decoration: underline"
+            >Cookies Policy</a
+          >.
+        </p>
+        <div class="cookie-buttons">
+          <button class="cmn--btn active" onclick="acceptCookies()">
+            Accept
+          </button>
+          <button class="cmn--btn" onclick="declineCookies()">Decline</button>
         </div>
+      </div>
     </div>
     <div class="preloader">
-        <div class="scene" id="scene">
-            <input type="checkbox" id="andicator" />
-            <div class="cube">
-                <div class="cube__face cube__face--front"><i></i></div>
-                <div class="cube__face cube__face--back"><i></i><i></i></div>
-                <div class="cube__face cube__face--right"><i></i><i></i><i></i><i></i><i></i></div>
-                <div class="cube__face cube__face--left"><i></i><i></i><i></i><i></i><i></i><i></i></div>
-                <div class="cube__face cube__face--top"><i></i><i></i><i></i></div>
-                <div class="cube__face cube__face--bottom"><i></i><i></i><i></i><i></i></div>
-            </div>
+      <div class="scene" id="scene">
+        <input type="checkbox" id="andicator" />
+        <div class="cube">
+          <div class="cube__face cube__face--front"><i></i></div>
+          <div class="cube__face cube__face--back"><i></i><i></i></div>
+          <div class="cube__face cube__face--right">
+            <i></i><i></i><i></i><i></i><i></i>
+          </div>
+          <div class="cube__face cube__face--left">
+            <i></i><i></i><i></i><i></i><i></i><i></i>
+          </div>
+          <div class="cube__face cube__face--top"><i></i><i></i><i></i></div>
+          <div class="cube__face cube__face--bottom">
+            <i></i><i></i><i></i><i></i>
+          </div>
         </div>
+      </div>
     </div>
     <div class="custom--modal" id="authModal" style="display: none">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 id="modalTitle">Sign In</h5>
-                <button type="button" class="btn-close" onclick="closeModal()"></button>
-            </div>
-            <div class="modal-body">
-                <div class="auth-tabs">
-                    <button class="tab-link active" onclick="openTab('login')">Login</button>
-                    <button class="tab-link" onclick="openTab('register')">Register</button>
-                </div>
-                <div id="login" class="tab-content active">
-                    <input type="email" id="loginEmail" placeholder="Email" required />
-                    <input type="password" id="loginPassword" placeholder="Password" required />
-                    <button class="cmn--btn active" onclick="login()">Login</button>
-                    <div class="form-link">
-                        <a href="javascript:void(0)" onclick="openTab('register')">Don't have an account? Register here</a>
-                    </div>
-                </div>
-                <div id="register" class="tab-content">
-                    <input type="text" id="registerUsername" placeholder="Username" required />
-                    <input type="email" id="registerEmail" placeholder="Email" required />
-                    <input type="password" id="registerPassword" placeholder="Password" required />
-                    <button class="cmn--btn active" onclick="register()">Register</button>
-                    <div class="form-link">
-                        <a href="javascript:void(0)" onclick="openTab('login')">Already have an account? Login here</a>
-                    </div>
-                </div>
-            </div>
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 id="modalTitle">Sign In</h5>
+          <button
+            type="button"
+            class="btn-close"
+            onclick="closeModal()"
+          ></button>
         </div>
+        <div class="modal-body">
+          <div class="auth-tabs">
+            <button class="tab-link active" onclick="openTab('login')">
+              Login
+            </button>
+            <button class="tab-link" onclick="openTab('register')">
+              Register
+            </button>
+          </div>
+          <div id="login" class="tab-content active">
+            <input type="email" id="loginEmail" placeholder="Email" required />
+            <input
+              type="password"
+              id="loginPassword"
+              placeholder="Password"
+              required
+            />
+            <button class="cmn--btn active" onclick="login()">Login</button>
+            <div class="form-link">
+              <a href="javascript:void(0)" onclick="openTab('register')"
+                >Don't have an account? Register here</a
+              >
+            </div>
+          </div>
+          <div id="register" class="tab-content">
+            <input
+              type="text"
+              id="registerUsername"
+              placeholder="Username"
+              required
+            />
+            <input
+              type="email"
+              id="registerEmail"
+              placeholder="Email"
+              required
+            />
+            <input
+              type="password"
+              id="registerPassword"
+              placeholder="Password"
+              required
+            />
+            <button class="cmn--btn active" onclick="register()">
+              Register
+            </button>
+            <div class="form-link">
+              <a href="javascript:void(0)" onclick="openTab('login')"
+                >Already have an account? Login here</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
     <div class="alert-modal" id="alertModal" style="display: none">
-        <div class="alert-modal-content">
-            <div class="alert-modal-header">
-                <h5>Notice</h5>
-                <button type="button" class="btn-close" onclick="closeAlertModal()"></button>
-            </div>
-            <p id="alertMessage"></p>
-            <div class="alert-modal-buttons">
-                <button class="cmn--btn active" onclick="closeAlertModal()">OK</button>
-            </div>
+      <div class="alert-modal-content">
+        <div class="alert-modal-header">
+          <h5>Notice</h5>
+          <button
+            type="button"
+            class="btn-close"
+            onclick="closeAlertModal()"
+          ></button>
         </div>
+        <p id="alertMessage"></p>
+        <div class="alert-modal-buttons">
+          <button class="cmn--btn active" onclick="closeAlertModal()">
+            OK
+          </button>
+        </div>
+      </div>
     </div>
     <div class="header">
-        <div class="container">
-            <div class="header-bottom">
-                <div class="header-bottom-area align-items-center">
-                    <div class="logo"><a href="/"><img src="/assets/images/logo.png" alt="logo" /></a></div>
-                    <ul class="menu">
-                        <li><a href="/">Home</a></li>
-                        <li><a href="/about/" class="active">About</a></li>
-                        <li><a href="/games/">Games <span class="badge badge--sm badge--base text-dark">NEW</span></a></li>
-                        <li><a href="/contact/">Contact</a></li>
-                        <button class="btn-close btn-close-white d-lg-none"></button>
-                    </ul>
-                    <div class="header-trigger-wrapper d-flex align-items-center">
-                        <div id="user-account" class="ms-3 d-flex align-items-center">
-                            <div id="auth-container">
-                                <a href="javascript:void(0)" id="auth-btn" class="cmn--btn active btn--md ms-2 d-sm-block" onclick="showAuthModal()">Login/Register</a>
-                            </div>
-                            <div id="user-circle" class="user-circle d-none">
-                                <span id="user-name"></span>
-                                <div class="user-dropdown">
-                                    <div id="user-details"></div>
-                                    <a href="javascript:void(0)" id="logout-btn" onclick="logout()">Logout</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="header-trigger me-4 d-lg-none"><span></span></div>
-                    </div>
-                </div>
+      <div class="container">
+        <div class="header-bottom">
+          <div
+            class="header-bottom-area d-flex align-items-center justify-content-between"
+          >
+            <!-- Logo Left -->
+            <div class="logo">
+              <a href="/"><img src="/assets/images/logo.png" alt="logo" /></a>
             </div>
+
+            <!-- Navigation Centered -->
+            <ul
+              class="menu d-flex align-items-center justify-content-center flex-grow-1 mb-0"
+            >
+              <li><a href="/">Home</a></li>
+              <li><a href="/about/">About</a></li>
+              <li>
+                <a href="/games/">
+                  Games
+                  <span class="badge badge--sm badge--base text-dark">NEW</span>
+                </a>
+              </li>
+              <li><a href="/contact/">Contact</a></li>
+
+              <!-- ✅ Login/Register (Mobile Only) -->
+              <li class="d-lg-none">
+                <a
+                  href="javascript:void(0)"
+                  onclick="showAuthModal()"
+                  class="cmn--btn active btn--md ms-2"
+                  >Login/Register</a
+                >
+              </li>
+
+              <!-- Close Button for Mobile Menu -->
+              <button
+                class="btn-close btn-close-white d-lg-none ms-auto"
+              ></button>
+            </ul>
+
+            <!-- ✅ Right Side (Desktop Only) -->
+            <div class="d-none d-lg-flex align-items-center">
+              <!-- Login/Register (Desktop Only) -->
+              <div id="auth-container">
+                <a
+                  href="javascript:void(0)"
+                  id="auth-btn"
+                  class="cmn--btn active btn--md ms-3"
+                  onclick="showAuthModal()"
+                  >Login/Register</a
+                >
+              </div>
+
+              <!-- User Dropdown (if logged in) -->
+              <div id="user-account" class="ms-3 d-flex align-items-center">
+                <div id="user-circle" class="user-circle d-none">
+                  <span id="user-name"></span>
+                  <div class="user-dropdown">
+                    <div id="user-details"></div>
+                    <a
+                      href="javascript:void(0)"
+                      id="logout-btn"
+                      onclick="logout()"
+                      >Logout</a
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Hamburger Menu Trigger for Mobile -->
+            <div class="header-trigger d-lg-none ms-3"><span></span></div>
+          </div>
         </div>
+      </div>
     </div>
-    <section class="inner-banner bg_img" style="background: url('/assets/images/inner-banner/bg2.jpg') top;">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-lg-7 col-xl-6 text-center">
-                    <h2 class="title text-white">About Page</h2>
-                    
-                </div>
-            </div>
+
+    <section
+      class="inner-banner bg_img"
+      style="background: url('/assets/images/inner-banner/bg2.jpg') top"
+    >
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-7 col-xl-6 text-center">
+            <h2 class="title text-white">About Page</h2>
+          </div>
         </div>
+      </div>
     </section>
     <section class="about-section padding-top padding-bottom overflow-hidden">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-lg-6">
-                    <div class="about-content">
-                        <div class="section-header mb-4">
-                            <h2 class="section-header__title">About The Casino</h2>
-                            <p>A casino is a facility for certain types of gambling. Casinos are often built near or combined with hotels, resorts, restaurants, retail shopping, cruise ships, and other tourist attractions.</p>
-                        </div>
-                        <p>Eaque laudantium quo voluptatibus fugit perferendis atque numquam vel porro eius, quidem deleniti, adipisci deserunt omnis sunt. Cum, sapiente rerum maiores fuga debitis dicta nemo molestiae temporibus accusamus natus placeat doloremque vel quo. Cumque, molestias facere. Aliquid sequi delectus voluptate voluptatem eius eaque, qui assumenda ad officia, dicta, sunt eos corrupti fuga ex cum exercitationem?</p>
-                    </div>
-                    <a href="/games/" class="cmn--btn active mt-sm-5 mt-4">Get Started</a>
-                </div>
-                <div class="col-lg-6">
-                    <div class="aobut-thumb section-thumb">
-                        <img src="/assets/images/about/thumb.png" alt="about" class="ms-lg-5" />
-                    </div>
-                </div>
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-6">
+            <div class="about-content">
+              <div class="section-header mb-4">
+                <h2 class="section-header__title">About The Casino</h2>
+                <p>
+                  A casino is a facility for certain types of gambling. Casinos
+                  are often built near or combined with hotels, resorts,
+                  restaurants, retail shopping, cruise ships, and other tourist
+                  attractions.
+                </p>
+              </div>
+              <p>
+                Eaque laudantium quo voluptatibus fugit perferendis atque
+                numquam vel porro eius, quidem deleniti, adipisci deserunt omnis
+                sunt. Cum, sapiente rerum maiores fuga debitis dicta nemo
+                molestiae temporibus accusamus natus placeat doloremque vel quo.
+                Cumque, molestias facere. Aliquid sequi delectus voluptate
+                voluptatem eius eaque, qui assumenda ad officia, dicta, sunt eos
+                corrupti fuga ex cum exercitationem?
+              </p>
             </div>
+            <a href="/games/" class="cmn--btn active mt-sm-5 mt-4"
+              >Get Started</a
+            >
+          </div>
+          <div class="col-lg-6">
+            <div class="aobut-thumb section-thumb">
+              <img
+                src="/assets/images/about/thumb.png"
+                alt="about"
+                class="ms-lg-5"
+              />
+            </div>
+          </div>
         </div>
-        <div class="shapes">
-            <img src="/assets/images/about/shape.png" alt="about" class="shape shape1" />
-        </div>
+      </div>
+      <div class="shapes">
+        <img
+          src="/assets/images/about/shape.png"
+          alt="about"
+          class="shape shape1"
+        />
+      </div>
     </section>
     <section class="why-section padding-top padding-bottom overflow-hidden">
-        <div class="container">
-            <div class="row justify-content-between gy-5">
-                <div class="col-lg-5 col-xl-4">
-                    <div class="section-header mb-4">
-                        <h2 class="section-header__title">Why Play Our Casino</h2>
-                        <p>Welcome to a social casino platform where entertainment comes first and money isn't part of the equation. Our games are designed purely for fun and excitement, with no real money involved and no cash-out options. You get all the thrills of classic casino-style gaming in a risk-free environment.</p>
-                    </div>
-                </div>
-                <div class="col-lg-7 col-xl-7">
-                    <div class="row gy-4 gy-md-5 gy-lg-4 gy-xl-5">
-                        <div class="col-lg-6 col-sm-6">
-                            <div class="why-item">
-                                <div class="why-item__thumb">
-                                    <i class="las la-shield-alt"></i>
-                                </div>
-                                <div class="why-item__content">
-                                    <h4 class="title">Safe & Secure</h4>
-                                    <p>Play with peace of mind using virtual currency in a secure environment with robust privacy protections.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-6 col-sm-6">
-                            <div class="why-item">
-                                <div class="why-item__thumb">
-                                    <i class="las la-dice-six"></i>
-                                </div>
-                                <div class="why-item__content">
-                                    <h4 class="title">Diverse Games</h4>
-                                    <p>Enjoy slots, poker, blackjack, and more with vibrant graphics and engaging gameplay.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-6 col-sm-6">
-                            <div class="why-item">
-                                <div class="why-item__thumb">
-                                    <i class="las la-trophy"></i>
-                                </div>
-                                <div class="why-item__content">
-                                    <h4 class="title">Social Features</h4>
-                                    <p>Connect with friends, compete on leaderboards, and share wins in our community.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-6 col-sm-6">
-                            <div class="why-item">
-                                <div class="why-item__thumb">
-                                    <i class="las la-coins"></i>
-                                </div>
-                                <div class="why-item__content">
-                                    <h4 class="title">Daily Rewards</h4>
-                                    <p>Earn free coins and bonuses daily to keep the fun going without spending a dime.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+      <div class="container">
+        <div class="row justify-content-between gy-5">
+          <div class="col-lg-5 col-xl-4">
+            <div class="section-header mb-4">
+              <h2 class="section-header__title">Why Play Our Casino</h2>
+              <p>
+                Welcome to a social casino platform where entertainment comes
+                first and money isn't part of the equation. Our games are
+                designed purely for fun and excitement, with no real money
+                involved and no cash-out options. You get all the thrills of
+                classic casino-style gaming in a risk-free environment.
+              </p>
             </div>
+          </div>
+          <div class="col-lg-7 col-xl-7">
+            <div class="row gy-4 gy-md-5 gy-lg-4 gy-xl-5">
+              <div class="col-lg-6 col-sm-6">
+                <div class="why-item">
+                  <div class="why-item__thumb">
+                    <i class="las la-shield-alt"></i>
+                  </div>
+                  <div class="why-item__content">
+                    <h4 class="title">Safe & Secure</h4>
+                    <p>
+                      Play with peace of mind using virtual currency in a secure
+                      environment with robust privacy protections.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-6 col-sm-6">
+                <div class="why-item">
+                  <div class="why-item__thumb">
+                    <i class="las la-dice-six"></i>
+                  </div>
+                  <div class="why-item__content">
+                    <h4 class="title">Diverse Games</h4>
+                    <p>
+                      Enjoy slots, poker, blackjack, and more with vibrant
+                      graphics and engaging gameplay.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-6 col-sm-6">
+                <div class="why-item">
+                  <div class="why-item__thumb">
+                    <i class="las la-trophy"></i>
+                  </div>
+                  <div class="why-item__content">
+                    <h4 class="title">Social Features</h4>
+                    <p>
+                      Connect with friends, compete on leaderboards, and share
+                      wins in our community.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-6 col-sm-6">
+                <div class="why-item">
+                  <div class="why-item__thumb">
+                    <i class="las la-coins"></i>
+                  </div>
+                  <div class="why-item__content">
+                    <h4 class="title">Daily Rewards</h4>
+                    <p>
+                      Earn free coins and bonuses daily to keep the fun going
+                      without spending a dime.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="shapes">
-            <img src="/assets/images/why/shape.png" alt="why" class="shape shape1">
-        </div>
+      </div>
+      <div class="shapes">
+        <img
+          src="/assets/images/why/shape.png"
+          alt="why"
+          class="shape shape1"
+        />
+      </div>
     </section>
     <section class="faq-section padding-top padding-bottom overflow-hidden">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-lg-7 col-xl-6">
-                    <div class="section-header text-center">
-                        <h2 class="section-header__title">Frequently Asked Questions</h2>
-                        <p>Find answers to common questions about Spinnshare’s social casino platform.</p>
-                    </div>
-                </div>
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-7 col-xl-6">
+            <div class="section-header text-center">
+              <h2 class="section-header__title">Frequently Asked Questions</h2>
+              <p>
+                Find answers to common questions about Spinnshare’s social
+                casino platform.
+              </p>
             </div>
-            <div class="faq-wrapper row justify-content-between">
-                <div class="col-lg-6">
-                    <div class="faq-item">
-                        <div class="faq-item__title">
-                            <h5 class="title">How do I create a Spinnshare account?</h5>
-                        </div>
-                        <div class="faq-item__content">
-                            <p>Click the "Login/Register" button, select "Register," and fill in your username, email, and password. Once submitted, you’ll receive 5000 virtual coins to start playing.</p>
-                        </div>
-                    </div>
-                    <div class="faq-item">
-                        <div class="faq-item__title">
-                            <h5 class="title">Is Spinnshare free to play?</h5>
-                        </div>
-                        <div class="faq-item__content">
-                            <p>Yes, Spinnshare is completely free. Our games use virtual coins with no cash value, and there are no real-money transactions or cash-out options.</p>
-                        </div>
-                    </div>
-                    <div class="faq-item">
-                        <div class="faq-item__title">
-                            <h5 class="title">What games are available on Spinnshare?</h5>
-                        </div>
-                        <div class="faq-item__content">
-                            <p>We offer a variety of games, including slots, poker, blackjack, and more, all designed for fun with vibrant graphics and engaging gameplay.</p>
-                        </div>
-                    </div>
-                    <div class="faq-item mb-2 mb-lg-0">
-                        <div class="faq-item__title">
-                            <h5 class="title">How do I earn more virtual coins?</h5>
-                        </div>
-                        <div class="faq-item__content">
-                            <p>You can earn free coins through daily rewards, bonuses, and in-game achievements. Check the platform daily for new opportunities.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6">
-                    <div class="faq-item">
-                        <div class="faq-item__title">
-                            <h5 class="title">Can I play with friends on Spinnshare?</h5>
-                        </div>
-                        <div class="faq-item__content">
-                            <p>Absolutely! Spinnshare offers social features like leaderboards and the ability to connect with friends to share wins and compete.</p>
-                        </div>
-                    </div>
-                    <div class="faq-item">
-                        <div class="faq-item__title">
-                            <h5 class="title">How do I contact support?</h5>
-                        </div>
-                        <div class="faq-item__content">
-                            <p>Visit our Contact page to submit a message or email us at support@spinnshare.org. Our team will respond promptly.</p>
-                        </div>
-                    </div>
-                    <div class="faq-item">
-                        <div class="faq-item__title">
-                            <h5 class="title">Is my data secure on Spinnshare?</h5>
-                        </div>
-                        <div class="faq-item__content">
-                            <p>We prioritize your privacy with robust security measures. Check our Privacy Policy for details on how we protect your data.</p>
-                        </div>
-                    </div>
-                    <div class="faq-item">
-                        <div class="faq-item__title">
-                            <h5 class="title">What are the system requirements for playing?</h5>
-                        </div>
-                        <div class="faq-item__content">
-                            <p>Spinnshare works on most modern browsers and devices, including desktops, tablets, and smartphones, with no special software needed.</p>
-                        </div>
-                    </div>
-                </div>
+          </div>
+        </div>
+        <div class="faq-wrapper row justify-content-between">
+          <div class="col-lg-6">
+            <div class="faq-item">
+              <div class="faq-item__title">
+                <h5 class="title">How do I create a Spinnshare account?</h5>
+              </div>
+              <div class="faq-item__content">
+                <p>
+                  Click the "Login/Register" button, select "Register," and fill
+                  in your username, email, and password. Once submitted, you’ll
+                  receive 5000 virtual coins to start playing.
+                </p>
+              </div>
             </div>
+            <div class="faq-item">
+              <div class="faq-item__title">
+                <h5 class="title">Is Spinnshare free to play?</h5>
+              </div>
+              <div class="faq-item__content">
+                <p>
+                  Yes, Spinnshare is completely free. Our games use virtual
+                  coins with no cash value, and there are no real-money
+                  transactions or cash-out options.
+                </p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <div class="faq-item__title">
+                <h5 class="title">What games are available on Spinnshare?</h5>
+              </div>
+              <div class="faq-item__content">
+                <p>
+                  We offer a variety of games, including slots, poker,
+                  blackjack, and more, all designed for fun with vibrant
+                  graphics and engaging gameplay.
+                </p>
+              </div>
+            </div>
+            <div class="faq-item mb-2 mb-lg-0">
+              <div class="faq-item__title">
+                <h5 class="title">How do I earn more virtual coins?</h5>
+              </div>
+              <div class="faq-item__content">
+                <p>
+                  You can earn free coins through daily rewards, bonuses, and
+                  in-game achievements. Check the platform daily for new
+                  opportunities.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="faq-item">
+              <div class="faq-item__title">
+                <h5 class="title">Can I play with friends on Spinnshare?</h5>
+              </div>
+              <div class="faq-item__content">
+                <p>
+                  Absolutely! Spinnshare offers social features like
+                  leaderboards and the ability to connect with friends to share
+                  wins and compete.
+                </p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <div class="faq-item__title">
+                <h5 class="title">How do I contact support?</h5>
+              </div>
+              <div class="faq-item__content">
+                <p>
+                  Visit our Contact page to submit a message or email us at
+                  support@spinnshare.org. Our team will respond promptly.
+                </p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <div class="faq-item__title">
+                <h5 class="title">Is my data secure on Spinnshare?</h5>
+              </div>
+              <div class="faq-item__content">
+                <p>
+                  We prioritize your privacy with robust security measures.
+                  Check our Privacy Policy for details on how we protect your
+                  data.
+                </p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <div class="faq-item__title">
+                <h5 class="title">
+                  What are the system requirements for playing?
+                </h5>
+              </div>
+              <div class="faq-item__content">
+                <p>
+                  Spinnshare works on most modern browsers and devices,
+                  including desktops, tablets, and smartphones, with no special
+                  software needed.
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="shapes">
-            <img src="/assets/images/faq/shape.png" alt="faq" class="shape shape1" />
-        </div>
+      </div>
+      <div class="shapes">
+        <img
+          src="/assets/images/faq/shape.png"
+          alt="faq"
+          class="shape shape1"
+        />
+      </div>
     </section>
     <section class="testimonial-section padding-bottom overflow-hidden">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-lg-7 col-xl-6">
-                    <div class="section-header text-center">
-                        <h2 class="section-header__title">What Spinnshare Players Say</h2>
-                        <p>Hear from our community about their experiences with Spinnshare’s social casino games.</p>
-                    </div>
-                </div>
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-7 col-xl-6">
+            <div class="section-header text-center">
+              <h2 class="section-header__title">What Spinnshare Players Say</h2>
+              <p>
+                Hear from our community about their experiences with
+                Spinnshare’s social casino games.
+              </p>
             </div>
-            <div class="testimonial-slider">
-                <div class="single-slide">
-                    <div class="testimonial-item bg_img" style="background: url(/assets/images/testimonial/bg.png) center">
-                        <div class="testimonial-inner">
-                            <div class="testimonial-item__content">
-                                <div class="quote-icon">
-                                    <i class="las la-quote-left"></i>
-                                </div>
-                                <p>The leaderboard keeps me coming back—it's so fun trying to beat my own score! I love seeing my progress and challenging others.</p>
-                            </div>
-                            <div class="thumb-wrapper">
-                                <div class="thumb">
-                                    <img src="/assets/images/top/item1.png" alt="top" />
-                                </div>
-                                <div class="content">
-                                    <h6 class="name">Suraiya Nesa</h6>
-                                    <span class="designation">Top Roulette</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+          </div>
+        </div>
+        <div class="testimonial-slider">
+          <div class="single-slide">
+            <div
+              class="testimonial-item bg_img"
+              style="background: url(/assets/images/testimonial/bg.png) center"
+            >
+              <div class="testimonial-inner">
+                <div class="testimonial-item__content">
+                  <div class="quote-icon">
+                    <i class="las la-quote-left"></i>
+                  </div>
+                  <p>
+                    The leaderboard keeps me coming back—it's so fun trying to
+                    beat my own score! I love seeing my progress and challenging
+                    others.
+                  </p>
                 </div>
-                <div class="single-slide">
-                    <div class="testimonial-item bg_img" style="background: url(/assets/images/testimonial/bg.png) center">
-                        <div class="testimonial-inner">
-                            <div class="testimonial-item__content">
-                                <div class="quote-icon">
-                                    <i class="las la-quote-left"></i>
-                                </div>
-                                <p>Perfect for casual players like me who just want to enjoy the thrill of casino games without any financial risk.</p>
-                            </div>
-                            <div class="thumb-wrapper">
-                                <div class="thumb">
-                                    <img src="/assets/images/top/item2.png" alt="top" />
-                                </div>
-                                <div class="content">
-                                    <h6 class="name">Munna Ahmed</h6>
-                                    <span class="designation">Top Dice Roller</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                <div class="thumb-wrapper">
+                  <div class="thumb">
+                    <img src="/assets/images/top/item1.png" alt="top" />
+                  </div>
+                  <div class="content">
+                    <h6 class="name">Suraiya Nesa</h6>
+                    <span class="designation">Top Roulette</span>
+                  </div>
                 </div>
-                <div class="single-slide">
-                    <div class="testimonial-item bg_img" style="background: url(/assets/images/testimonial/bg.png) center">
-                        <div class="testimonial-inner">
-                            <div class="testimonial-item__content">
-                                <div class="quote-icon">
-                                    <i class="las la-quote-left"></i>
-                                </div>
-                                <p>The social features are a blast! I love competing with friends and sharing my big wins.</p>
-                            </div>
-                            <div class="thumb-wrapper">
-                                <div class="thumb">
-                                    <img src="/assets/images/top/item3.png" alt="top" />
-                                </div>
-                                <div class="content">
-                                    <h6 class="name">Rafuj Raihan</h6>
-                                    <span class="designation">Top Poker</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="single-slide">
-                    <div class="testimonial-item bg_img" style="background: url(/assets/images/testimonial/bg.png) center">
-                        <div class="testimonial-inner">
-                            <div class="testimonial-item__content">
-                                <div class="quote-icon">
-                                    <i class="las la-quote-left"></i>
-                                </div>
-                                <p>I appreciate the daily rewards that keep me engaged. It's great to have a reason to log in every day!</p>
-                            </div>
-                            <div class="thumb-wrapper">
-                                <div class="thumb">
-                                    <img src="/assets/images/top/item2.png" alt="top" />
-                                </div>
-                                <div class="content">
-                                    <h6 class="name">Fahad Foiz</h6>
-                                    <span class="designation">Top Card Gamer</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+              </div>
             </div>
+          </div>
+          <div class="single-slide">
+            <div
+              class="testimonial-item bg_img"
+              style="background: url(/assets/images/testimonial/bg.png) center"
+            >
+              <div class="testimonial-inner">
+                <div class="testimonial-item__content">
+                  <div class="quote-icon">
+                    <i class="las la-quote-left"></i>
+                  </div>
+                  <p>
+                    Perfect for casual players like me who just want to enjoy
+                    the thrill of casino games without any financial risk.
+                  </p>
+                </div>
+                <div class="thumb-wrapper">
+                  <div class="thumb">
+                    <img src="/assets/images/top/item2.png" alt="top" />
+                  </div>
+                  <div class="content">
+                    <h6 class="name">Munna Ahmed</h6>
+                    <span class="designation">Top Dice Roller</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="single-slide">
+            <div
+              class="testimonial-item bg_img"
+              style="background: url(/assets/images/testimonial/bg.png) center"
+            >
+              <div class="testimonial-inner">
+                <div class="testimonial-item__content">
+                  <div class="quote-icon">
+                    <i class="las la-quote-left"></i>
+                  </div>
+                  <p>
+                    The social features are a blast! I love competing with
+                    friends and sharing my big wins.
+                  </p>
+                </div>
+                <div class="thumb-wrapper">
+                  <div class="thumb">
+                    <img src="/assets/images/top/item3.png" alt="top" />
+                  </div>
+                  <div class="content">
+                    <h6 class="name">Rafuj Raihan</h6>
+                    <span class="designation">Top Poker</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="single-slide">
+            <div
+              class="testimonial-item bg_img"
+              style="background: url(/assets/images/testimonial/bg.png) center"
+            >
+              <div class="testimonial-inner">
+                <div class="testimonial-item__content">
+                  <div class="quote-icon">
+                    <i class="las la-quote-left"></i>
+                  </div>
+                  <p>
+                    I appreciate the daily rewards that keep me engaged. It's
+                    great to have a reason to log in every day!
+                  </p>
+                </div>
+                <div class="thumb-wrapper">
+                  <div class="thumb">
+                    <img src="/assets/images/top/item2.png" alt="top" />
+                  </div>
+                  <div class="content">
+                    <h6 class="name">Fahad Foiz</h6>
+                    <span class="designation">Top Card Gamer</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="shapes">
-            <img src="/assets/images/why/shape.png" alt="why" class="shape shape1" />
-        </div>
+      </div>
+      <div class="shapes">
+        <img
+          src="/assets/images/why/shape.png"
+          alt="why"
+          class="shape shape1"
+        />
+      </div>
     </section>
-    <footer class="footer-section bg_img" style="background: url(/assets/images/footer/bg.jpg) center;">
-        <div class="footer-top">
-            <div class="container">
-                <div class="footer-wrapper d-flex flex-wrap align-items-center justify-content-md-between justify-content-center">
-                    <div class="logo mb-3 mb-md-0"><a href="/"><img src="/assets/images/logo.png" alt="logo"></a></div>
-                    <ul class="footer-links d-flex flex-wrap justify-content-center">
-                        <li><a href="/games/">Games</a></li>
-                        <li><a href="/terms-conditions/">Terms of Service</a></li>
-                        <li><a href="/policy/">Privacy Policy</a></li>
-                        <li><a href="/cookies-policy/">Cookies Policy</a></li>
-                        <li><a href="/responsible-gaming/">Responsible Gaming</a></li>
-                    </ul>
-                </div>
+    <footer
+      class="footer-section bg_img"
+      style="background: url(/assets/images/footer/bg.jpg) center"
+    >
+      <div class="footer-top">
+        <div class="container">
+          <div
+            class="footer-wrapper d-flex flex-wrap align-items-center justify-content-md-between justify-content-center"
+          >
+            <div class="logo mb-3 mb-md-0">
+              <a href="/"><img src="/assets/images/logo.png" alt="logo" /></a>
             </div>
+            <ul class="footer-links d-flex flex-wrap justify-content-center">
+              <li><a href="/games/">Games</a></li>
+              <li><a href="/terms-conditions/">Terms of Service</a></li>
+              <li><a href="/policy/">Privacy Policy</a></li>
+              <li><a href="/cookies-policy/">Cookies Policy</a></li>
+              <li><a href="/responsible-gaming/">Responsible Gaming</a></li>
+            </ul>
+          </div>
         </div>
-        <div class="footer-bottom">
-            <div class="container">
-                <div class="footer-wrapper d-flex flex-wrap justify-content-center align-items-center text-center">
-                    <p class="copyright text-white">Copyrights &copy; 2025 All Rights Reserved. | Virtual coins have no cash value | For entertainment purposes only | info@spinnshare.org</p>
-                </div>
-            </div>
+      </div>
+      <div class="footer-bottom">
+        <div class="container">
+          <div
+            class="footer-wrapper d-flex flex-wrap justify-content-center align-items-center text-center"
+          >
+            <p class="copyright text-white">
+              Copyrights &copy; 2025 All Rights Reserved. | Virtual coins have
+              no cash value | For entertainment purposes only |
+              info@spinnshare.org
+            </p>
+          </div>
         </div>
-        <div class="shapes">
-            <img src="/assets/images/footer/bg.jpg" alt="footer" class="shape1">
-        </div>
+      </div>
     </footer>
     <script src="/assets/js/lib/jquery-3.6.0.min.js"></script>
     <script src="/assets/js/lib/bootstrap.min.js"></script>
     <script src="/assets/js/lib/slick.min.js"></script>
     <script src="/assets/js/main.js"></script>
     <script src="/script.js"></script>
-</body>
+  </body>
 </html>
