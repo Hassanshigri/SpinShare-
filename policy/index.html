@@ -94,36 +94,70 @@
         </div>
     </div>
     <div class="header">
-        <div class="container">
-            <div class="header-bottom">
-                <div class="header-bottom-area align-items-center">
-                    <div class="logo"><a href="/"><img src="/assets/images/logo.png" alt="logo" /></a></div>
-                    <ul class="menu">
-                        <li><a href="/">Home</a></li>
-                        <li><a href="/about/">About</a></li>
-                        <li><a href="/games/">Games <span class="badge badge--sm badge--base text-dark">NEW</span></a></li>
-                        <li><a href="/contact/">Contact</a></li>
-                        <button class="btn-close btn-close-white d-lg-none"></button>
-                    </ul>
-                    <div class="header-trigger-wrapper d-flex align-items-center">
-                        <div id="user-account" class="ms-3 d-flex align-items-center">
-                            <div id="auth-container">
-                                <a href="javascript:void(0)" id="auth-btn" class="cmn--btn active btn--md ms-2 d-sm-block" onclick="showAuthModal()">Login/Register</a>
-                            </div>
-                            <div id="user-circle" class="user-circle d-none">
-                                <span id="user-name"></span>
-                                <div class="user-dropdown">
-                                    <div id="user-details"></div>
-                                    <a href="javascript:void(0)" id="logout-btn" onclick="logout()">Logout</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="header-trigger me-4 d-lg-none"><span></span></div>
-                    </div>
-                </div>
-            </div>
+  <div class="container">
+    <div class="header-bottom">
+      <div class="header-bottom-area d-flex align-items-center justify-content-between">
+        <!-- Logo Left -->
+        <div class="logo">
+          <a href="/"><img src="/assets/images/logo.png" alt="logo" /></a>
         </div>
+
+        <!-- Navigation Centered -->
+        <ul class="menu d-flex align-items-center justify-content-center flex-grow-1 mb-0">
+          <li><a href="/">Home</a></li>
+          <li><a href="/about/">About</a></li>
+          <li>
+            <a href="/games/">
+              Games
+              <span class="badge badge--sm badge--base text-dark">NEW</span>
+            </a>
+          </li>
+          <li><a href="/contact/">Contact</a></li>
+
+          <!-- ✅ Login/Register (Mobile Only) -->
+          <li class="d-lg-none">
+            <a
+              href="javascript:void(0)"
+              onclick="showAuthModal()"
+              class="cmn--btn active btn--md ms-2"
+            >Login/Register</a>
+          </li>
+
+          <!-- Close Button for Mobile Menu -->
+          <button class="btn-close btn-close-white d-lg-none ms-auto"></button>
+        </ul>
+
+        <!-- ✅ Right Side (Desktop Only) -->
+        <div class="d-none d-lg-flex align-items-center">
+          <!-- Login/Register (Desktop Only) -->
+          <div id="auth-container">
+            <a
+              href="javascript:void(0)"
+              id="auth-btn"
+              class="cmn--btn active btn--md ms-3"
+              onclick="showAuthModal()"
+            >Login/Register</a>
+          </div>
+
+          <!-- User Dropdown (if logged in) -->
+          <div id="user-account" class="ms-3 d-flex align-items-center">
+            <div id="user-circle" class="user-circle d-none">
+              <span id="user-name"></span>
+              <div class="user-dropdown">
+                <div id="user-details"></div>
+                <a href="javascript:void(0)" id="logout-btn" onclick="logout()">Logout</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hamburger Menu Trigger for Mobile -->
+        <div class="header-trigger d-lg-none ms-3"><span></span></div>
+      </div>
     </div>
+  </div>
+</div>
+
     <section class="inner-banner bg_img" style="background: url('/assets/images/inner-banner/bg2.jpg') top;">
         <div class="container">
             <div class="row justify-content-center">
@@ -137,41 +171,107 @@
     <section class="privacy-policy-section padding-top padding-bottom">
         <div class="container">
             <div class="row">
-                <div class="col-lg-4">
-                    <div class="privacy-policy-sidebar">
-                        <ul class="privacy-policy-sidebar-menu">
-                            <li><a href="#information">Information We Collect</a></li>
-                            <li><a href="#use">How We Use Your Information</a></li>
-                            <li><a href="#sharing">Information Sharing</a></li>
-                            <li><a href="#security">Data Security</a></li>
-                            <li><a href="#rights">Your Rights</a></li>
-                        </ul>
-                    </div>
-                </div>
+                
                 <div class="col-lg-8">
-                    <div class="privacy-policy-content">
-                        <div class="item" id="information">
-                            <h3 class="title">Information We Collect</h3>
-                            <p>We collect personal information such as your username, email address, and device information when you register or use Spinnshare. We also collect usage data to improve our services.</p>
-                        </div>
-                        <div class="item" id="use">
-                            <h3 class="title">How We Use Your Information</h3>
-                            <p>Your information is used to provide and enhance our services, personalize your gaming experience, and communicate with you about updates or support issues.</p>
-                        </div>
-                        <div class="item" id="sharing">
-                            <h3 class="title">Information Sharing</h3>
-                            <p>We do not sell or share your personal information with third parties except as required by law or to provide our services (e.g., with service providers under strict confidentiality agreements).</p>
-                        </div>
-                        <div class="item" id="security">
-                            <h3 class="title">Data Security</h3>
-                            <p>We implement robust security measures to protect your data, including encryption and secure servers. However, no system is completely secure, and you use our platform at your own risk.</p>
-                        </div>
-                        <div class="item" id="rights">
-                            <h3 class="title">Your Rights</h3>
-                            <p>You have the right to access, update, or delete your personal information. Contact us at support@spinnshare.org to exercise these rights or for any privacy concerns.</p>
-                        </div>
-                    </div>
-                </div>
+  <div class="privacy-policy-content">
+    <div class="item" id="introduction">
+      <h3 class="title">Introduction</h3>
+      <p>
+        Welcome to <strong>Spinnshare</strong>. Your privacy is important to us. This Privacy Policy explains how we collect, use, share, and protect your personal information when you use our platform. By accessing and using Spinnshare, you agree to the practices described in this policy. Our goal is to ensure a secure and fun social casino gaming experience without involving real money gambling or payouts.
+      </p>
+    </div>
+
+    <div class="item" id="information">
+      <h3 class="title">Information We Collect</h3>
+      <p>
+        When you register on Spinnshare, we collect certain personal information including your username, email address, device type, IP address, and browser information. This helps us identify unique users, personalize your experience, and ensure fair play.
+      </p>
+      <p>
+        Additionally, we collect usage data such as the games you play, the time spent on our site, virtual coins earned or spent, and interaction patterns. This data is collected through cookies, local storage, and analytics tools to enhance our services.
+      </p>
+    </div>
+
+    <div class="item" id="use">
+      <h3 class="title">How We Use Your Information</h3>
+      <p>
+        Your information is primarily used to:
+        <ul>
+          <li>Create and manage your user account</li>
+          <li>Personalize the gaming experience</li>
+          <li>Display user-specific content like leaderboards and achievements</li>
+          <li>Communicate with you regarding platform updates, feature releases, and support</li>
+          <li>Prevent fraudulent activity and maintain fair usage of virtual coins</li>
+        </ul>
+        All user interactions are simulated; there are no real-money transactions or gambling mechanics involved.
+      </p>
+    </div>
+
+    <div class="item" id="sharing">
+      <h3 class="title">Information Sharing</h3>
+      <p>
+        We do not sell your personal data to third parties. Your data is only shared in the following limited circumstances:
+        <ul>
+          <li>With third-party service providers who assist in hosting, analytics, and support — all under strict confidentiality agreements</li>
+          <li>If legally required by government authorities or law enforcement</li>
+          <li>To protect the rights and safety of our users, platform, and community</li>
+        </ul>
+        We take great care to ensure that any sharing of data is minimal, controlled, and done with your privacy in mind.
+      </p>
+    </div>
+
+    <div class="item" id="security">
+      <h3 class="title">Data Security</h3>
+      <p>
+        Spinnshare implements strong security practices to protect your personal information. This includes HTTPS encryption, secure user authentication, and server-side protections against unauthorized access.
+      </p>
+      <p>
+        However, please note that no system is entirely secure. We recommend using a strong password and logging out after each session. By using Spinnshare, you acknowledge that data transmission over the internet may not always be perfectly secure and that you use the platform at your own risk.
+      </p>
+    </div>
+
+    <div class="item" id="rights">
+      <h3 class="title">Your Rights and Choices</h3>
+      <p>
+        As a user, you have the right to:
+        <ul>
+          <li>Access and view the data associated with your account</li>
+          <li>Update your account details</li>
+          <li>Delete your account and associated data</li>
+        </ul>
+        To exercise any of these rights, contact us at <strong>support@spinnshare.org</strong>. We will respond to your request within 7 business days.
+      </p>
+    </div>
+
+    <div class="item" id="cookies">
+      <h3 class="title">Cookies and Tracking Technologies</h3>
+      <p>
+        Spinnshare uses cookies and local storage to enhance user experience by saving your preferences, storing authentication data, and tracking session performance. You can control cookie settings through your browser at any time. Please note that disabling cookies may limit some features of the platform.
+      </p>
+    </div>
+
+    <div class="item" id="children">
+      <h3 class="title">Children’s Privacy</h3>
+      <p>
+        Our platform is intended for users aged 18 and above. We do not knowingly collect or store personal information from minors. Age verification is required before accessing gameplay features. If we become aware that a user is under the required age, we will take immediate action to remove their information from our systems.
+      </p>
+    </div>
+
+    <div class="item" id="changes">
+      <h3 class="title">Policy Updates</h3>
+      <p>
+        This Privacy Policy may be updated periodically to reflect changes in legal requirements, our practices, or the platform’s functionality. We encourage you to review this page regularly. Continued use of Spinnshare after any changes constitutes acceptance of the revised policy.
+      </p>
+    </div>
+
+    <div class="item" id="contact">
+      <h3 class="title">Contact Us</h3>
+      <p>
+        If you have any questions, concerns, or feedback about our Privacy Policy or data practices, feel free to contact us at <strong>support@spinnshare.org</strong>.
+      </p>
+    </div>
+  </div>
+</div>
+
             </div>
         </div>
     </section>
@@ -197,9 +297,7 @@
                 </div>
             </div>
         </div>
-        <div class="shapes">
-            <img src="/assets/images/footer/bg.jpg" alt="footer" class="shape1">
-        </div>
+        
     </footer>
     <script src="/assets/js/lib/jquery-3.6.0.min.js"></script>
     <script src="/assets/js/lib/bootstrap.min.js"></script>
