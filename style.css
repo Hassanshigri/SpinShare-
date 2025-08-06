@@ -183,8 +183,8 @@
 
 .user-circle span {
     display: inline-block;
-    width: 42px;
-    height: 42px;
+    width: 55px;
+    height: 54px;
     line-height: 42px;
     text-align: center;
     background: linear-gradient(45deg, #FFC827, #FFD966);
@@ -296,6 +296,7 @@
     .modal-content, .alert-modal-content, .success-popup, .game-modal-content {
         max-width: 95%;
         padding: 20px;
+        align-content: center;
     }
     .cookie-popup {
         max-width: 90%;
@@ -334,3 +335,346 @@
         font-size: 0.85rem;
     }
 }
+
+
+
+here is my style.css
+.custom--modal, .alert-modal, .success-popup, .game-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.85);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 10000;
+    backdrop-filter: blur(5px);
+}
+
+.modal-content, .alert-modal-content, .success-popup, .game-modal-content {
+    background: linear-gradient(180deg, #370A2C 0%, #2A0722 100%);
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+    width: 90%;
+    max-width: 500px;
+    padding: 25px;
+    animation: animate__zoomIn 0.4s ease-in-out;
+    font-family: 'Josefin Sans', sans-serif;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.modal-header, .alert-modal-header, .game-modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 0 15px;
+    border-bottom: 2px solid #FFC827;
+    margin-bottom: 20px;
+}
+
+.modal-header h5, .alert-modal-header h5, .game-modal-header h5 {
+    font-size: 1.6rem;
+    color: #FFC827;
+    margin: 0;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+.modal-header .btn-close, .alert-modal-header .btn-close, .game-modal-header .btn-close {
+    background: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23FFC827'%3e%3cpath d='M.293.293a1 1 0 011.414 0L8 6.586 14.293.293a1 1 0 111.414 1.414L9.414 8l6.293 6.293a1 1 0 01-1.414 1.414L8 9.414l-6.293 6.293a1 1 0 01-1.414-1.414L6.586 8 .293 1.707A1 1 0 01.293.293z'/%3e%3c/svg%3e") no-repeat center;
+    background-size: 18px;
+    background-color: #4A1039;
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    opacity: 0.9;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.modal-header .btn-close:hover, .alert-modal-header .btn-close:hover, .game-modal-header .btn-close:hover {
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+.modal-body {
+    padding: 20px 0;
+}
+
+.auth-tabs {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 25px;
+    gap: 10px;
+}
+
+.tab-link {
+    background: #4A1039;
+    border: none;
+    padding: 12px 25px;
+    font-size: 1rem;
+    color: #fff;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border-radius: 8px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+.tab-link.active {
+    background: linear-gradient(45deg, #FFC827, #FFD966);
+    color: #370A2C;
+}
+
+.tab-link:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(255, 200, 39, 0.3);
+}
+
+.tab-content {
+    display: none;
+    padding: 20px;
+    background: #2A0722;
+    border-radius: 8px;
+    box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.tab-content.active {
+    display: block;
+}
+
+.tab-content input {
+    width: 100%;
+    padding: 14px;
+    margin-bottom: 15px;
+    border: 1px solid #FFC827;
+    border-radius: 8px;
+    font-size: 1rem;
+    color: #fff;
+    background: #370A2C;
+    transition: all 0.3s ease;
+}
+
+.tab-content input:focus {
+    outline: none;
+    border-color: #FFD966;
+    box-shadow: 0 0 8px rgba(255, 200, 39, 0.4);
+}
+
+.tab-content input::placeholder {
+    color: #aaa;
+}
+
+.cmn--btn.active {
+    background: linear-gradient(45deg, #FFC827, #FFD966);
+    color: #370A2C;
+    border: none;
+    padding: 12px 25px;
+    font-size: 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 600;
+    box-shadow: 0 4px 10px rgba(255, 200, 39, 0.2);
+}
+
+.cmn--btn.active:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(255, 200, 39, 0.4);
+}
+
+.cmn--btn:not(.active) {
+    background: #555;
+    color: #fff;
+    border-radius: 8px;
+    padding: 12px 25px;
+    transition: all 0.3s ease;
+}
+
+.cmn--btn:not(.active):hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.form-link {
+    text-align: center;
+    margin-top: 15px;
+}
+
+.form-link a {
+    color: #FFC827;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: color 0.2s ease;
+}
+
+.form-link a:hover {
+    color: #FFD966;
+    text-decoration: underline;
+}
+
+.user-circle {
+    position: relative;
+    cursor: pointer;
+}
+
+.user-circle span {
+    display: inline-block;
+    width: 55px;
+    height: 54px;
+    line-height: 42px;
+    text-align: center;
+    background: linear-gradient(45deg, #FFC827, #FFD966);
+    color: #370A2C;
+    border-radius: 50%;
+    font-size: 1.1rem;
+    font-weight: 600;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.user-dropdown {
+    display: none;
+    position: absolute;
+    top: 50px;
+    right: 0;
+    background: #370A2C;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+    z-index: 10001;
+    min-width: 220px;
+}
+
+.user-circle.show .user-dropdown {
+    display: block !important;
+}
+
+.user-dropdown div,
+.user-dropdown a {
+    color: #FFC827;
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+    transition: color 0.2s ease;
+}
+
+.user-dropdown a:hover {
+    color: #FFD966;
+    text-decoration: underline;
+}
+
+.cookie-popup {
+    position: fixed;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    max-width: 450px;
+    background: linear-gradient(180deg, #370A2C 0%, #2A0722 100%);
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+    z-index: 10000;
+    padding: 25px;
+    animation: animate__fadeInUp 0.4s ease-in-out;
+}
+
+.cookie-content h5 {
+    font-size: 1.3rem;
+    color: #FFC827;
+    margin: 0 0 15px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+.cookie-content p {
+    font-size: 0.95rem;
+    color: #fff;
+    margin: 0 0 20px;
+    line-height: 1.5;
+}
+
+.cookie-buttons {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+}
+
+.cookie-buttons .cmn--btn {
+    padding: 10px 25px;
+    font-size: 0.95rem;
+}
+
+.success-popup p {
+    font-size: 1rem;
+    color: #fff;
+    margin: 0 0 20px;
+    text-align: center;
+    line-height: 1.5;
+}
+
+.alert-modal-content p {
+    font-size: 1rem;
+    color: #fff;
+    margin: 0 0 20px;
+    text-align: center;
+    line-height: 1.5;
+}
+
+.alert-modal-buttons {
+    display: flex;
+    justify-content: center;
+}
+
+.alert-modal-buttons .cmn--btn {
+    padding: 10px 25px;
+    font-size: 0.95rem;
+}
+
+@media (max-width: 768px) {
+    .modal-content, .alert-modal-content, .success-popup, .game-modal-content {
+        max-width: 95%;
+        padding: 20px;
+        align-content: center;
+    }
+    .cookie-popup {
+        max-width: 90%;
+        padding: 20px;
+        bottom: 20px;
+    }
+    .modal-header h5, .alert-modal-header h5, .game-modal-header h5 {
+        font-size: 1.4rem;
+    }
+    .tab-link {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+    }
+    .cmn--btn.active {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .cookie-content h5 {
+        font-size: 1.2rem;
+    }
+    .cookie-content p {
+        font-size: 0.85rem;
+    }
+    .cookie-buttons .cmn--btn {
+        padding: 8px 20px;
+        font-size: 0.85rem;
+    }
+    .success-popup p {
+        font-size: 0.9rem;
+    }
+    .success-popup .cmn--btn {
+        padding: 8px 20px;
+        font-size: 0.85rem;
+    }
+}
+
+
