@@ -262,36 +262,70 @@
         </div>
     </div>
     <div class="header">
-        <div class="container">
-            <div class="header-bottom">
-                <div class="header-bottom-area align-items-center">
-                    <div class="logo"><a href="/"><img src="/assets/images/logo.png" alt="logo" /></a></div>
-                    <ul class="menu">
-                        <li><a href="/">Home</a></li>
-                        <li><a href="/about/">About</a></li>
-                        <li><a href="/games/" class="active">Games <span class="badge badge--sm badge--base text-dark">NEW</span></a></li>
-                        <li><a href="/contact/">Contact</a></li>
-                        <button class="btn-close btn-close-white d-lg-none"></button>
-                    </ul>
-                    <div class="header-trigger-wrapper d-flex align-items-center">
-                        <div id="user-account" class="ms-3 d-flex align-items-center">
-                            <div id="auth-container">
-                                <a href="javascript:void(0)" id="auth-btn" class="cmn--btn active btn--md ms-2 d-sm-block" onclick="showAuthModal()">Login/Register</a>
-                            </div>
-                            <div id="user-circle" class="user-circle d-none">
-                                <span id="user-name"></span>
-                                <div class="user-dropdown">
-                                    <div id="user-details"></div>
-                                    <a href="javascript:void(0)" id="logout-btn" onclick="logout()">Logout</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="header-trigger me-4 d-lg-none"><span></span></div>
-                    </div>
-                </div>
-            </div>
+  <div class="container">
+    <div class="header-bottom">
+      <div class="header-bottom-area d-flex align-items-center justify-content-between">
+        <!-- Logo Left -->
+        <div class="logo">
+          <a href="/"><img src="/assets/images/logo.png" alt="logo" /></a>
         </div>
+
+        <!-- Navigation Centered -->
+        <ul class="menu d-flex align-items-center justify-content-center flex-grow-1 mb-0">
+          <li><a href="/">Home</a></li>
+          <li><a href="/about/">About</a></li>
+          <li>
+            <a href="/games/">
+              Games
+              <span class="badge badge--sm badge--base text-dark">NEW</span>
+            </a>
+          </li>
+          <li><a href="/contact/">Contact</a></li>
+
+          <!-- ✅ Login/Register (Mobile Only) -->
+          <li class="d-lg-none">
+            <a
+              href="javascript:void(0)"
+              onclick="showAuthModal()"
+              class="cmn--btn active btn--md ms-2"
+            >Login/Register</a>
+          </li>
+
+          <!-- Close Button for Mobile Menu -->
+          <button class="btn-close btn-close-white d-lg-none ms-auto"></button>
+        </ul>
+
+        <!-- ✅ Right Side (Desktop Only) -->
+        <div class="d-none d-lg-flex align-items-center">
+          <!-- Login/Register (Desktop Only) -->
+          <div id="auth-container">
+            <a
+              href="javascript:void(0)"
+              id="auth-btn"
+              class="cmn--btn active btn--md ms-3"
+              onclick="showAuthModal()"
+            >Login/Register</a>
+          </div>
+
+          <!-- User Dropdown (if logged in) -->
+          <div id="user-account" class="ms-3 d-flex align-items-center">
+            <div id="user-circle" class="user-circle d-none">
+              <span id="user-name"></span>
+              <div class="user-dropdown">
+                <div id="user-details"></div>
+                <a href="javascript:void(0)" id="logout-btn" onclick="logout()">Logout</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hamburger Menu Trigger for Mobile -->
+        <div class="header-trigger d-lg-none ms-3"><span></span></div>
+      </div>
     </div>
+  </div>
+</div>
+
     <section class="inner-banner bg_img" style="background: url('/assets/images/inner-banner/bg2.jpg') top;">
         <div class="container">
             <div class="row justify-content-center">
@@ -331,7 +365,7 @@
                                 <h4 class="title">Bullets and Bounty Game</h4>
                                 <p class="invest-info">Hacksaw Gaming</p>
                                 <p class="invest-amount"></p>
-                                <a href="javascript:void(0)" class="cmn--btn active btn--md radius-0" onclick="playGame('https://demo.hacksawgaming.com/casino/ContainerLauncher?game=bullets-and-bounty&demo=2&brand=spinnshare&lobby=https%3A%2F%2Fspinnshare.org%2Fgames&practice=1', 'Bullets and Bounty')">Play Now</a>
+                                <a href="javascript:void(0)" class="cmn--btn active btn--md radius-0" onclick="playGame('https://d2q0k52vlk25jc.cloudfront.net/launcher/static-launcher.html?gameid=1799&channel=desktop&language=de&currency=USD&partner=gamdom_prod&mode=demo&token=&lobbyurl=http%3A%2F%2Fgamdom.com/casino', 'Bullets and Bounty')">Play Now</a>
                             </div>
                         </div>
                         <div class="ball"></div>
@@ -347,7 +381,7 @@
                                 <h4 class="title">Zombie School Megaways</h4>
                                 <p class="invest-info">Pragmatic Play</p>
                                 <p class="invest-amount"></p>
-                                <a href="javascript:void(0)" class="cmn--btn active btn--md radius-0" onclick="playGame('https://demogames.pragmaticplay.net/casino/ContainerLauncher?game=zombie-school-megaways&demo=2&brand=spinnshare&lobby=https%3A%2F%2Fspinnshare.org%2Fgames&practice=1', 'Zombie School Megaways')">Play Now</a>
+                                <a href="javascript:void(0)" class="cmn--btn active btn--md radius-0" onclick="playGame('https://demogamesfree.pugdifbiyd.net/gs2c/openGame.do?gameSymbol=vswayspompmr2&lang=de&cur=USD&lobbyUrl=https://gamdom.com/casino&stylename=gmdm_gamdom&jurisdiction=99&isGameUrlApiCalled=true', 'Zombie School Megaways')">Play Now</a>
                             </div>
                         </div>
                         <div class="ball"></div>
@@ -363,7 +397,7 @@
                                 <h4 class="title">Zeus vs Hades - Gods of War</h4>
                                 <p class="invest-info">Pragmatic Play</p>
                                 <p class="invest-amount"></p>
-                                <a href="javascript:void(0)" class="cmn--btn active btn--md radius-0" onclick="playGame('https://demogames.pragmaticplay.net/casino/ContainerLauncher?game=zeus-vs-hades-gods-of-war&demo=2&brand=spinnshare&lobby=https%3A%2F%2Fspinnshare.org%2Fgames&practice=1', 'Zeus vs Hades - Gods of War')">Play Now</a>
+                                <a href="javascript:void(0)" class="cmn--btn active btn--md radius-0" onclick="playGame('https://demogamesfree.pugdifbiyd.net/gs2c/openGame.do?gameSymbol=vs15godsofwar&lang=de&cur=USD&lobbyUrl=https://gamdom.com/casino&stylename=gmdm_gamdom&jurisdiction=99&isGameUrlApiCalled=true', 'Zeus vs Hades - Gods of War')">Play Now</a>
                             </div>
                         </div>
                         <div class="ball"></div>
@@ -379,7 +413,7 @@
                                 <h4 class="title">Gates of Olympus </h4>
                                 <p class="invest-info">Pragmatic Play</p>
                                 <p class="invest-amount"></p>
-                                <a href="javascript:void(0)" class="cmn--btn active btn--md radius-0" onclick="playGame('https://demogames.pragmaticplay.net/casino/ContainerLauncher?game=gates-of-olympus-1000&demo=2&brand=spinnshare&lobby=https%3A%2F%2Fspinnshare.org%2Fgames&practice=1', 'Gates of Olympus 1000')">Play Now</a>
+                                <a href="javascript:void(0)" class="cmn--btn active btn--md radius-0" onclick="playGame('https://demogamesfree.pugdifbiyd.net/gs2c/openGame.do?gameSymbol=vs20olympgate&lang=de&cur=USD&lobbyUrl=https://gamdom.com/casino&stylename=gmdm_gamdom&jurisdiction=99&isGameUrlApiCalled=true', 'Gates of Olympus 1000')">Play Now</a>
                             </div>
                         </div>
                         <div class="ball"></div>
@@ -395,7 +429,7 @@
                                 <h4 class="title">Le Pharaoh</h4>
                                 <p class="invest-info">Hacksaw Gaming</p>
                                 <p class="invest-amount"></p>
-                                <a href="javascript:void(0)" class="cmn--btn active btn--md radius-0" onclick="playGame('https://demo.hacksawgaming.com/casino/ContainerLauncher?game=le-pharaoh&demo=2&brand=spinnshare&lobby=https%3A%2F%2Fspinnshare.org%2Fgames&practice=1', 'Le Pharaoh')">Play Now</a>
+                                <a href="javascript:void(0)" class="cmn--btn active btn--md radius-0" onclick="playGame('https://d2q0k52vlk25jc.cloudfront.net/launcher/static-launcher.html?gameid=1562&channel=desktop&language=de&currency=USD&partner=gamdom_prod&mode=demo&token=&lobbyurl=http%3A%2F%2Fgamdom.com/casino', 'Le Pharaoh')">Play Now</a>
                             </div>
                         </div>
                         <div class="ball"></div>
@@ -411,7 +445,7 @@
                                 <h4 class="title">Le Bandit</h4>
                                 <p class="invest-info">Hacksaw Gaming</p>
                                 <p class="invest-amount"></p>
-                                <a href="javascript:void(0)" class="cmn--btn active btn--md radius-0" onclick="playGame('https://demo.hacksawgaming.com/casino/ContainerLauncher?game=le-bandit&demo=2&brand=spinnshare&lobby=https%3A%2F%2Fspinnshare.org%2Fgames&practice=1', 'Le Bandit')">Play Now</a>
+                                <a href="javascript:void(0)" class="cmn--btn active btn--md radius-0" onclick="playGame('https://d2q0k52vlk25jc.cloudfront.net/launcher/static-launcher.html?gameid=1309&channel=desktop&language=de&currency=USD&partner=gamdom_prod&mode=demo&token=&lobbyurl=http%3A%2F%2Fgamdom.com/casino', 'Le Bandit')">Play Now</a>
                             </div>
                         </div>
                         <div class="ball"></div>
@@ -443,7 +477,7 @@
                                 <h4 class="title">Slayers Inc Boosted</h4>
                                 <p class="invest-info">Hacksaw Gaming</p>
                                 <p class="invest-amount"></p>
-                                <a href="javascript:void(0)" class="cmn--btn active btn--md radius-0" onclick="playGame('https://demo.hacksawgaming.com/casino/ContainerLauncher?game=slayers-inc-boosted&demo=2&brand=spinnshare&lobby=https%3A%2F%2Fspinnshare.org%2Fgames&practice=1', 'Slayers Inc Boosted')">Play Now</a>
+                                <a href="javascript:void(0)" class="cmn--btn active btn--md radius-0" onclick="playGame('https://d2q0k52vlk25jc.cloudfront.net/launcher/static-launcher-gamdom.html?gameid=1953&channel=desktop&language=de&currency=USD&partner=gamdom_prod&mode=demo&token=&lobbyurl=http%3A%2F%2Fgamdom.com/casino', 'Slayers Inc Boosted')">Play Now</a>
                             </div>
                         </div>
                         <div class="ball"></div>
@@ -459,7 +493,7 @@
                                 <h4 class="title">Hounds of Hell</h4>
                                 <p class="invest-info">Hacksaw Gaming</p>
                                 <p class="invest-amount"></p>
-                                <a href="javascript:void(0)" class="cmn--btn active btn--md radius-0" onclick="playGame('https://demo.hacksawgaming.com/casino/ContainerLauncher?game=hounds-of-hell-boosted&demo=2&brand=spinnshare&lobby=https%3A%2F%2Fspinnshare.org%2Fgames&practice=1', 'Hounds of Hell Boosted')">Play Now</a>
+                                <a href="javascript:void(0)" class="cmn--btn active btn--md radius-0" onclick="playGame('https://d2q0k52vlk25jc.cloudfront.net/launcher/static-launcher-gamdom.html?gameid=1952&channel=desktop&language=de&currency=USD&partner=gamdom_prod&mode=demo&token=&lobbyurl=http%3A%2F%2Fgamdom.com/casino', 'Hounds of Hell Boosted')">Play Now</a>
                             </div>
                         </div>
                         <div class="ball"></div>
@@ -475,7 +509,7 @@
                                 <h4 class="title">Rotten</h4>
                                 <p class="invest-info">Hacksaw Gaming</p>
                                 <p class="invest-amount"></p>
-                                <a href="javascript:void(0)" class="cmn--btn active btn--md radius-0" onclick="playGame('https://demo.hacksawgaming.com/casino/ContainerLauncher?game=rotten&demo=2&brand=spinnshare&lobby=https%3A%2F%2Fspinnshare.org%2Fgames&practice=1', 'Rotten')">Play Now</a>
+                                <a href="javascript:void(0)" class="cmn--btn active btn--md radius-0" onclick="playGame('https://d2q0k52vlk25jc.cloudfront.net/launcher/static-launcher.html?gameid=1209&channel=desktop&language=de&currency=USD&partner=gamdom_prod&mode=demo&token=&lobbyurl=http%3A%2F%2Fgamdom.com/casino', 'Rotten')">Play Now</a>
                             </div>
                         </div>
                         <div class="ball"></div>
@@ -491,26 +525,14 @@
                                 <h4 class="title">Wanted</h4>
                                 <p class="invest-info">Hacksaw Gaming</p>
                                 <p class="invest-amount"></p>
-                                <a href="javascript:void(0)" class="cmn--btn active btn--md radius-0" onclick="playGame('https://demo.hacksawgaming.com/casino/ContainerLauncher?game=wanted&demo=2&brand=spinnshare&lobby=https%3A%2F%2Fspinnshare.org%2Fgames&practice=1', 'Wanted')">Play Now</a>
+                                <a href="javascript:void(0)" class="cmn--btn active btn--md radius-0" onclick="playGame('https://d2q0k52vlk25jc.cloudfront.net/launcher/static-launcher-gamdom.html?gameid=1547&channel=desktop&language=de&currency=USD&partner=gamdom_prod&mode=demo&token=&lobbyurl=http%3A%2F%2Fgamdom.com/casino', 'Wanted')">Play Now</a>
                             </div>
                         </div>
                         <div class="ball"></div>
                     </div>
                 </div>
             </div>
-            <ul class="pagination">
-                <li class="page-item disabled">
-                    <a href="#0" class="page-link"><i class="las la-arrow-left"></i></a>
-                </li>
-                <li class="page-item active">
-                    <a href="#0" class="page-link">01</a>
-                </li>
-                <li class="page-item"><a href="#0" class="page-link">02</a></li>
-                <li class="page-item"><a href="#0" class="page-link">03</a></li>
-                <li class="page-item">
-                    <a href="#0" class="page-link"><i class="las la-arrow-right"></i></a>
-                </li>
-            </ul>
+          
         </div>
     </section>
     <footer class="footer-section bg_img" style="background: url(/assets/images/footer/bg.jpg) center;">
@@ -535,9 +557,7 @@
                 </div>
             </div>
         </div>
-        <div class="shapes">
-            <img src="/assets/images/footer/bg.jpg" alt="footer" class="shape1">
-        </div>
+        
     </footer>
     <script src="/assets/js/lib/jquery-3.6.0.min.js"></script>
     <script src="/assets/js/lib/bootstrap.min.js"></script>

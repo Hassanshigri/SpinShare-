@@ -32,6 +32,160 @@
     <link rel="stylesheet" href="/assets/css/main.css" />
     <link rel="stylesheet" href="/style.css" />
     <!-- Modal CSS -->
+     <style>
+        .custom--modal, .game-modal, .alert-modal { 
+            position: fixed; top: 0; left: 0; width: 100%; height: 100%; 
+            background: rgba(0, 0, 0, 0.85); display: none; 
+            justify-content: center; align-items: center; z-index: 10000; 
+            backdrop-filter: blur(5px); 
+        }
+        
+        .game-modal-content { 
+            background: linear-gradient(180deg, #370A2C 0%, #2A0722 100%); 
+            border-radius: 15px; box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4); 
+            width: 90%; max-width: 1200px; max-height: 90vh; padding: 15px; 
+            position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); 
+            display: flex; flex-direction: column; align-items: center; 
+            overflow-y: auto; 
+        }
+        .modal-header, .alert-modal-header { 
+            display: flex; justify-content: space-between; align-items: center; 
+            padding: 0 0 15px; border-bottom: 2px solid #FFC827; 
+            margin-bottom: 20px; 
+        }
+        .modal-header h5, .alert-modal-header h5 { 
+            font-size: 1.6rem; color: #FFC827; margin: 0; 
+            font-weight: 700; letter-spacing: 0.5px; 
+        }
+        .modal-header .btn-close, .alert-modal-header .btn-close { 
+            background: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23FFC827'%3e%3cpath d='M.293.293a1 1 0 011.414 0L8 6.586 14.293.293a1 1 0 111.414 1.414L9.414 8l6.293 6.293a1 1 0 01-1.414 1.414L8 9.414l-6.293 6.293a1 1 0 01-1.414-1.414L6.586 8 .293 1.707A1 1 0 01.293.293z'/%3e%3c/svg%3e") no-repeat center; 
+            background-size: 18px; background-color: #4A1039; 
+            border-radius: 50%; width: 32px; height: 32px; 
+            opacity: 0.9; transition: transform 0.2s ease, opacity 0.2s ease; 
+        }
+        .modal-header .btn-close:hover, .alert-modal-header .btn-close:hover { 
+            opacity: 1; transform: scale(1.1); 
+        }
+        .modal-body { padding: 20px 0; }
+        .auth-tabs { 
+            display: flex; justify-content: center; margin-bottom: 25px; 
+            gap: 10px; 
+        }
+        .tab-link { 
+            background: #4A1039; border: none; padding: 12px 25px; 
+            font-size: 1rem; color: #fff; cursor: pointer; 
+            transition: all 0.3s ease; border-radius: 8px; 
+            font-weight: 600; letter-spacing: 0.5px; 
+        }
+        .tab-link.active { 
+            background: linear-gradient(45deg, #FFC827, #FFD966); 
+            color: #370A2C; 
+        }
+        .tab-link:hover { 
+            transform: translateY(-2px); box-shadow: 0 4px 10px rgba(255, 200, 39, 0.3); 
+        }
+        .tab-content { 
+            display: none; padding: 20px; background: #2A0722; 
+            border-radius: 8px; box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.2); 
+        }
+        .tab-content.active { display: block; }
+        .tab-content input { 
+            width: 100%; padding: 14px; margin-bottom: 15px; 
+            border: 1px solid #FFC827; border-radius: 8px; font-size: 1rem; 
+            color: #fff; background: #370A2C; transition: all 0.3s ease; 
+        }
+        .tab-content input:focus { 
+            outline: none; border-color: #FFD966; 
+            box-shadow: 0 0 8px rgba(255, 200, 39, 0.4); 
+        }
+        .tab-content input::placeholder { color: #aaa; }
+        .cmn--btn.active { 
+            background: linear-gradient(45deg, #FFC827, #FFD966); 
+            color: #370A2C; border: none; padding: 12px 25px; 
+            font-size: 1rem; border-radius: 8px; cursor: pointer; 
+            transition: all 0.3s ease; font-weight: 600; 
+            box-shadow: 0 4px 10px rgba(255, 200, 39, 0.2); 
+        }
+        .cmn--btn.active:hover { 
+            transform: translateY(-2px); box-shadow: 0 6px 15px rgba(255, 200, 39, 0.4); 
+        }
+        .cmn--btn:not(.active) { 
+            background: #555; color: #fff; border-radius: 8px; 
+            padding: 12px 25px; transition: all 0.3s ease; 
+        }
+        .cmn--btn:not(.active):hover { 
+            transform: translateY(-2px); box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); 
+        }
+        .form-link { text-align: center; margin-top: 15px; }
+        .form-link a { 
+            color: #FFC827; text-decoration: none; font-size: 0.9rem; 
+            transition: color 0.2s ease; 
+        }
+        .form-link a:hover { color: #FFD966; text-decoration: underline; }
+        .user-circle { position: relative; cursor: pointer; }
+        .user-circle span { 
+            display: inline-block; width: 42px; height: 42px; line-height: 42px; 
+            text-align: center; background: linear-gradient(45deg, #FFC827, #FFD966); 
+            color: #370A2C; border-radius: 50%; font-size: 1.1rem; 
+            font-weight: 600; box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); 
+        }
+        .user-dropdown { 
+            display: none; position: absolute; top: 50px; right: 0; 
+            background: #370A2C; padding: 15px; border-radius: 8px; 
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3); z-index: 1001; 
+            min-width: 220px; 
+        }
+        .user-circle.show .user-dropdown { display: block !important; }
+        .user-dropdown div, .user-dropdown a { 
+            color: #FFC827; font-size: 0.9rem; margin-bottom: 10px; 
+            transition: color 0.2s ease; 
+        }
+        .user-dropdown a:hover { color: #FFD966; text-decoration: underline; }
+        .cookie-popup { 
+            position: fixed; bottom: 30px; left: 50%; transform: translateX(-50%); 
+            width: 90%; max-width: 450px; background: linear-gradient(180deg, #370A2C 0%, #2A0722 100%); 
+            border-radius: 15px; box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4); 
+            z-index: 10000; padding: 25px; animation: animate__fadeInUp 0.4s ease-in-out; 
+        }
+        .cookie-content h5 { 
+            font-size: 1.3rem; color: #FFC827; margin: 0 0 15px; 
+            font-weight: 700; letter-spacing: 0.5px; 
+        }
+        .cookie-content p { 
+            font-size: 0.95rem; color: #fff; margin: 0 0 20px; line-height: 1.5; 
+        }
+        .cookie-buttons { display: flex; gap: 15px; justify-content: center; }
+        .cookie-buttons .cmn--btn { padding: 10px 25px; font-size: 0.95rem; }
+        .alert-modal-content p { 
+            font-size: 1rem; color: #fff; margin: 0 0 20px; text-align: center; 
+            line-height: 1.5; 
+        }
+        .alert-modal-buttons { display: flex; justify-content: center; }
+        .alert-modal-buttons .cmn--btn { padding: 10px 25px; font-size: 0.95rem; }
+        .hub88_png_frame { 
+            width: 100%; height: 70vh; border: none; border-radius: 8px; 
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); 
+        }
+        @media (max-width: 1200px) {
+            .game-modal-content { max-width: 95%; }
+            .hub88_png_frame { height: 65vh; }
+        }
+        @media (max-width: 768px) {
+            .modal-content, .alert-modal-content { max-width: 95%; padding: 20px; }
+            .game-modal-content { max-width: 98%; max-height: 85vh; }
+            .hub88_png_frame { height: 60vh; }
+            .cookie-popup { max-width: 90%; padding: 20px; bottom: 20px; }
+            .modal-header h5, .alert-modal-header h5 { font-size: 1.4rem; }
+            .tab-link { padding: 10px 20px; font-size: 0.9rem; }
+            .cmn--btn.active { padding: 10px 20px; font-size: 0.9rem; }
+        }
+        @media (max-width: 576px) {
+            .hub88_png_frame { height: 50vh; }
+            .cookie-content h5 { font-size: 1.2rem; }
+            .cookie-content p { font-size: 0.85rem; }
+            .cookie-buttons .cmn--btn { padding: 8px 20px; font-size: 0.85rem; }
+        }
+    </style>
   </head>
 
   <div class="overlay"></div>
@@ -138,66 +292,80 @@
         </div>
       </div>
     </div>
+    <div class="game-modal" id="gameModal" style="display: none;">
+        <div class="game-modal-content">
+            <div class="modal-header">
+                <h5 id="gameModalTitle">Game Title</h5>
+                <button type="button" class="btn-close" onclick="closeGameModal()"></button>
+            </div>
+            <iframe id="pngGameFrame" onload="iframeLoaded();" allowfullscreen class="hub88_png_frame" src=""></iframe>
+        </div>
+    </div>
 
     <div class="header">
-      <div class="container">
-        <div class="header-bottom">
-          <div class="header-bottom-area align-items-center">
-            <div class="logo">
-              <a href="/"><img src="/assets/images/logo.png" alt="logo" /></a>
-            </div>
-            <ul class="menu">
-              <li>
-                <a href="/" class="active">Home</a>
-              </li>
-              <li>
-                <a href="/about/">About</a>
-              </li>
-              <li>
-                <a href="/games/"
-                  >Games
-                  <span class="badge badge--sm badge--base text-dark"
-                    >NEW</span
-                  ></a
-                >
-              </li>
-              <li>
-                <a href="/contact/">Contact</a>
-              </li>
-              <button class="btn-close btn-close-white d-lg-none"></button>
-            </ul>
-            <div class="header-trigger-wrapper d-flex align-items-center">
-              <div id="user-account" class="ms-3 d-flex align-items-center">
-                <div id="auth-container">
-                  <a
-                    href="javascript:void(0)"
-                    id="auth-btn"
-                    class="cmn--btn active btn--md ms-2 d-sm-block"
-                    onclick="showAuthModal()"
-                    >Login/Register</a
-                  >
-                </div>
-                <div id="user-circle" class="user-circle d-none">
-                  <span id="user-name"></span>
-                  <div class="user-dropdown">
-                    <div id="user-details"></div>
-                    <a
-                      href="javascript:void(0)"
-                      id="logout-btn"
-                      onclick="logout()"
-                      >Logout</a
-                    >
-                  </div>
-                </div>
-              </div>
-              <div class="header-trigger me-4 d-lg-none">
-                <span></span>
+  <div class="container">
+    <div class="header-bottom">
+      <div class="header-bottom-area d-flex align-items-center justify-content-between">
+        <!-- Logo Left -->
+        <div class="logo">
+          <a href="/"><img src="/assets/images/logo.png" alt="logo" /></a>
+        </div>
+
+        <!-- Navigation Centered -->
+        <ul class="menu d-flex align-items-center justify-content-center flex-grow-1 mb-0">
+          <li><a href="/">Home</a></li>
+          <li><a href="/about/">About</a></li>
+          <li>
+            <a href="/games/">
+              Games
+              <span class="badge badge--sm badge--base text-dark">NEW</span>
+            </a>
+          </li>
+          <li><a href="/contact/">Contact</a></li>
+
+          <!-- ✅ Login/Register (Mobile Only) -->
+          <li class="d-lg-none">
+            <a
+              href="javascript:void(0)"
+              onclick="showAuthModal()"
+              class="cmn--btn active btn--md ms-2"
+            >Login/Register</a>
+          </li>
+
+          <!-- Close Button for Mobile Menu -->
+          <button class="btn-close btn-close-white d-lg-none ms-auto"></button>
+        </ul>
+
+        <!-- ✅ Right Side (Desktop Only) -->
+        <div class="d-none d-lg-flex align-items-center">
+          <!-- Login/Register (Desktop Only) -->
+          <div id="auth-container">
+            <a
+              href="javascript:void(0)"
+              id="auth-btn"
+              class="cmn--btn active btn--md ms-3"
+              onclick="showAuthModal()"
+            >Login/Register</a>
+          </div>
+
+          <!-- User Dropdown (if logged in) -->
+          <div id="user-account" class="ms-3 d-flex align-items-center">
+            <div id="user-circle" class="user-circle d-none">
+              <span id="user-name"></span>
+              <div class="user-dropdown">
+                <div id="user-details"></div>
+                <a href="javascript:void(0)" id="logout-btn" onclick="logout()">Logout</a>
               </div>
             </div>
           </div>
         </div>
+
+        <!-- Hamburger Menu Trigger for Mobile -->
+        <div class="header-trigger d-lg-none ms-3"><span></span></div>
       </div>
     </div>
+  </div>
+</div>
 
     <!-- Banner Section Starts Here -->
     <section
@@ -282,141 +450,204 @@
             </div>
           </div>
         </div>
-         <div class="row gy-4 justify-content-center">
-                <div class="col-lg-4 col-xl-3 col-md-6 col-sm-6">
-                    <div class="game-item">
-                        <div class="game-inner">
-                            <div class="game-item__thumb">
-                                <img src="/assets/images/game/barbarossa-revenge-slot-by-peter-sons-logo.webp" alt="Barbarossa Revenge Power Up RTP" />
-                            </div>
-                            <div class="game-item__content">
-                                <h4 class="title">Barbarossa Revenge Power Up RTP</h4>
-                                <p class="invest-info">Peter and Sons</p>
-                                <p class="invest-amount"></p>
-                                <a href="javascript:void(0)" class="cmn--btn active btn--md radius-0" onclick="playGame('https://demo.peterandsons.com/casino/ContainerLauncher?game=barbarossa-revenge-power-up-rtp&demo=2&brand=spinnshare&lobby=https%3A%2F%2Fspinnshare.org%2Fgames&practice=1', 'Barbarossa Revenge Power Up RTP')">Play Now</a>
-                            </div>
-                        </div>
-                        <div class="ball"></div>
-                    </div>
+        <div class="row gy-4 justify-content-center">
+          <div class="col-lg-4 col-xl-3 col-md-6 col-sm-6">
+            <div class="game-item">
+              <div class="game-inner">
+                <div class="game-item__thumb">
+                  <img
+                    src="/assets/images/game/barbarossa-revenge-slot-by-peter-sons-logo.webp"
+                    alt="Barbarossa Revenge Power Up RTP"
+                  />
                 </div>
-               
-                <div class="col-lg-4 col-xl-3 col-md-6 col-sm-6">
-                    <div class="game-item">
-                        <div class="game-inner">
-                            <div class="game-item__thumb">
-                                <img src="/assets/images/game/zombie-school-megaways.jpg" alt="Zombie School Megaways" />
-                            </div>
-                            <div class="game-item__content">
-                                <h4 class="title">Zombie School Megaways</h4>
-                                <p class="invest-info">Pragmatic Play</p>
-                                <p class="invest-amount"></p>
-                                <a href="javascript:void(0)" class="cmn--btn active btn--md radius-0" onclick="playGame('https://demogames.pragmaticplay.net/casino/ContainerLauncher?game=zombie-school-megaways&demo=2&brand=spinnshare&lobby=https%3A%2F%2Fspinnshare.org%2Fgames&practice=1', 'Zombie School Megaways')">Play Now</a>
-                            </div>
-                        </div>
-                        <div class="ball"></div>
-                    </div>
+                <div class="game-item__content">
+                  <h4 class="title">Barbarossa Revenge Power Up RTP</h4>
+                  <p class="invest-info">Peter and Sons</p>
+                  <p class="invest-amount"></p>
+                  <a
+                    href="javascript:void(0)"
+                    class="cmn--btn active btn--md radius-0"
+                    onclick="playGame('https://launcher-eu1.gsplauncher.de/games/encrypted/launcher?payload=QTEyOEdDTQ.JMDepRh2dPReBftcX1gMOHr8tHUk7QaQ248MhUmiizgALgNL-s3jr4qa1pk.WMj74_uFAFFkxmJs.kUByg2nHYcJiml3tGNJlhVDn_3-iw_Ro0Fq5R1u5Dp7NXrrahmTwMXDU-6ZOeGUh8bDgpeoDFXscIjKZp2m-iLROMQf4Ghtka_LtEklurbly0hkFXe16UXKrWv8kphuiis9KyWNgrj8mtesNdINof7oJE6HRi0CLlBWAey0EteikU0Tzd2J-Ccy-Eou57KbaZkhYvSqE0MmpwVn34ZYPXf4O36f6xYk-76WifqehmHwW2nO6RLE1abjsQJN6GhY6D5Ft9NADkWo4ppODXmaJJcP6o3PLBrXyE5KHR8LQcLG3hupaZhLpjzT00T70A5eI-qtl2QvYGmIwyOAf75DOTHTWbbOU7WoYASMom2jTCW4qecLH853FaCUf88arjxxBEQNANh3hzwx9xpnAG7GiKBCR0BssXusdf02S7ROMSeN0CkqEhaPBLD1rmnbera7dxek.zcT1pRkaaqyC9BHUMtY9rg&', 'Barbarossa Revenge Power Up RTP')"
+                    >Play Now</a
+                  >
                 </div>
-                <div class="col-lg-4 col-xl-3 col-md-6 col-sm-6">
-                    <div class="game-item">
-                        <div class="game-inner">
-                            <div class="game-item__thumb">
-                                <img src="/assets/images/game/zeus-vs-hades.jpg" alt="Zeus vs Hades - Gods of War" />
-                            </div>
-                            <div class="game-item__content">
-                                <h4 class="title">Zeus vs Hades - Gods of War</h4>
-                                <p class="invest-info">Pragmatic Play</p>
-                                <p class="invest-amount"></p>
-                                <a href="javascript:void(0)" class="cmn--btn active btn--md radius-0" onclick="playGame('https://demogames.pragmaticplay.net/casino/ContainerLauncher?game=zeus-vs-hades-gods-of-war&demo=2&brand=spinnshare&lobby=https%3A%2F%2Fspinnshare.org%2Fgames&practice=1', 'Zeus vs Hades - Gods of War')">Play Now</a>
-                            </div>
-                        </div>
-                        <div class="ball"></div>
-                    </div>
-                </div>
-               
-                <div class="col-lg-4 col-xl-3 col-md-6 col-sm-6">
-                    <div class="game-item">
-                        <div class="game-inner">
-                            <div class="game-item__thumb">
-                                <img src="/assets/images/game/le-pharaoh.jpg" alt="Le Pharaoh" />
-                            </div>
-                            <div class="game-item__content">
-                                <h4 class="title">Le Pharaoh</h4>
-                                <p class="invest-info">Hacksaw Gaming</p>
-                                <p class="invest-amount"></p>
-                                <a href="javascript:void(0)" class="cmn--btn active btn--md radius-0" onclick="playGame('https://demo.hacksawgaming.com/casino/ContainerLauncher?game=le-pharaoh&demo=2&brand=spinnshare&lobby=https%3A%2F%2Fspinnshare.org%2Fgames&practice=1', 'Le Pharaoh')">Play Now</a>
-                            </div>
-                        </div>
-                        <div class="ball"></div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-xl-3 col-md-6 col-sm-6">
-                    <div class="game-item">
-                        <div class="game-inner">
-                            <div class="game-item__thumb">
-                                <img src="/assets/images/game/le-bandit.jpeg" alt="Le Bandit" />
-                            </div>
-                            <div class="game-item__content">
-                                <h4 class="title">Le Bandit</h4>
-                                <p class="invest-info">Hacksaw Gaming</p>
-                                <p class="invest-amount"></p>
-                                <a href="javascript:void(0)" class="cmn--btn active btn--md radius-0" onclick="playGame('https://demo.hacksawgaming.com/casino/ContainerLauncher?game=le-bandit&demo=2&brand=spinnshare&lobby=https%3A%2F%2Fspinnshare.org%2Fgames&practice=1', 'Le Bandit')">Play Now</a>
-                            </div>
-                        </div>
-                        <div class="ball"></div>
-                    </div>
-                </div>
-                
-                <div class="col-lg-4 col-xl-3 col-md-6 col-sm-6">
-                    <div class="game-item">
-                        <div class="game-inner">
-                            <div class="game-item__thumb">
-                                <img src="/assets/images/game/slayers-inc-boosted.jpeg" alt="Slayers Inc Boosted" />
-                            </div>
-                            <div class="game-item__content">
-                                <h4 class="title">Slayers Inc Boosted</h4>
-                                <p class="invest-info">Hacksaw Gaming</p>
-                                <p class="invest-amount"></p>
-                                <a href="javascript:void(0)" class="cmn--btn active btn--md radius-0" onclick="playGame('https://demo.hacksawgaming.com/casino/ContainerLauncher?game=slayers-inc-boosted&demo=2&brand=spinnshare&lobby=https%3A%2F%2Fspinnshare.org%2Fgames&practice=1', 'Slayers Inc Boosted')">Play Now</a>
-                            </div>
-                        </div>
-                        <div class="ball"></div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-xl-3 col-md-6 col-sm-6">
-                    <div class="game-item">
-                        <div class="game-inner">
-                            <div class="game-item__thumb">
-                                <img src="/assets/images/game/hounds-of-hell-boosted.png" alt="Hounds of Hell Boosted" />
-                            </div>
-                            <div class="game-item__content">
-                                <h4 class="title">Hounds of Hell </h4>
-                                <p class="invest-info">Hacksaw Gaming</p>
-                                <p class="invest-amount"></p>
-                                <a href="javascript:void(0)" class="cmn--btn active btn--md radius-0" onclick="playGame('https://demo.hacksawgaming.com/casino/ContainerLauncher?game=hounds-of-hell-boosted&demo=2&brand=spinnshare&lobby=https%3A%2F%2Fspinnshare.org%2Fgames&practice=1', 'Hounds of Hell Boosted')">Play Now</a>
-                            </div>
-                        </div>
-                        <div class="ball"></div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-xl-3 col-md-6 col-sm-6">
-                    <div class="game-item">
-                        <div class="game-inner">
-                            <div class="game-item__thumb">
-                                <img src="/assets/images/game/rotten.webp" alt="Rotten" />
-                            </div>
-                            <div class="game-item__content">
-                                <h4 class="title">Rotten</h4>
-                                <p class="invest-info">Hacksaw Gaming</p>
-                                <p class="invest-amount"></p>
-                                <a href="javascript:void(0)" class="cmn--btn active btn--md radius-0" onclick="playGame('https://demo.hacksawgaming.com/casino/ContainerLauncher?game=rotten&demo=2&brand=spinnshare&lobby=https%3A%2F%2Fspinnshare.org%2Fgames&practice=1', 'Rotten')">Play Now</a>
-                            </div>
-                        </div>
-                        <div class="ball"></div>
-                    </div>
-                </div>
-                
-                </div>
+              </div>
+              <div class="ball"></div>
             </div>
+          </div>
+          <div class="col-lg-4 col-xl-3 col-md-6 col-sm-6">
+            <div class="game-item">
+              <div class="game-inner">
+                <div class="game-item__thumb">
+                  <img
+                    src="/assets/images/game/bullets-and-bounty.png"
+                    alt="Bullets and Bounty"
+                  />
+                </div>
+                <div class="game-item__content">
+                  <h4 class="title">Bullets and Bounty Game</h4>
+                  <p class="invest-info">Hacksaw Gaming</p>
+                  <p class="invest-amount"></p>
+                  <a
+                    href="javascript:void(0)"
+                    class="cmn--btn active btn--md radius-0"
+                    onclick="playGame('https://d2q0k52vlk25jc.cloudfront.net/launcher/static-launcher.html?gameid=1799&channel=desktop&language=de&currency=USD&partner=gamdom_prod&mode=demo&token=&lobbyurl=http%3A%2F%2Fgamdom.com/casino', 'Bullets and Bounty')"
+                    >Play Now</a
+                  >
+                </div>
+              </div>
+              <div class="ball"></div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-xl-3 col-md-6 col-sm-6">
+            <div class="game-item">
+              <div class="game-inner">
+                <div class="game-item__thumb">
+                  <img
+                    src="/assets/images/game/zombie-school-megaways.jpg"
+                    alt="Zombie School Megaways"
+                  />
+                </div>
+                <div class="game-item__content">
+                  <h4 class="title">Zombie School Megaways</h4>
+                  <p class="invest-info">Pragmatic Play</p>
+                  <p class="invest-amount"></p>
+                  <a
+                    href="javascript:void(0)"
+                    class="cmn--btn active btn--md radius-0"
+                    onclick="playGame('https://demogamesfree.pugdifbiyd.net/gs2c/openGame.do?gameSymbol=vswayspompmr2&lang=de&cur=USD&lobbyUrl=https://gamdom.com/casino&stylename=gmdm_gamdom&jurisdiction=99&isGameUrlApiCalled=true', 'Zombie School Megaways')"
+                    >Play Now</a
+                  >
+                </div>
+              </div>
+              <div class="ball"></div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-xl-3 col-md-6 col-sm-6">
+            <div class="game-item">
+              <div class="game-inner">
+                <div class="game-item__thumb">
+                  <img
+                    src="/assets/images/game/zeus-vs-hades.jpg"
+                    alt="Zeus vs Hades - Gods of War"
+                  />
+                </div>
+                <div class="game-item__content">
+                  <h4 class="title">Zeus vs Hades - Gods of War</h4>
+                  <p class="invest-info">Pragmatic Play</p>
+                  <p class="invest-amount"></p>
+                  <a
+                    href="javascript:void(0)"
+                    class="cmn--btn active btn--md radius-0"
+                    onclick="playGame('https://demogamesfree.pugdifbiyd.net/gs2c/openGame.do?gameSymbol=vs15godsofwar&lang=de&cur=USD&lobbyUrl=https://gamdom.com/casino&stylename=gmdm_gamdom&jurisdiction=99&isGameUrlApiCalled=true', 'Zeus vs Hades - Gods of War')"
+                    >Play Now</a
+                  >
+                </div>
+              </div>
+              <div class="ball"></div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-xl-3 col-md-6 col-sm-6">
+            <div class="game-item">
+              <div class="game-inner">
+                <div class="game-item__thumb">
+                  <img
+                    src="/assets/images/game/gates-of-olympus.avif"
+                    alt="Gates of Olympus 1000"
+                  />
+                </div>
+                <div class="game-item__content">
+                  <h4 class="title">Gates of Olympus</h4>
+                  <p class="invest-info">Pragmatic Play</p>
+                  <p class="invest-amount"></p>
+                  <a
+                    href="javascript:void(0)"
+                    class="cmn--btn active btn--md radius-0"
+                    onclick="playGame('https://demogamesfree.pugdifbiyd.net/gs2c/openGame.do?gameSymbol=vs20olympgate&lang=de&cur=USD&lobbyUrl=https://gamdom.com/casino&stylename=gmdm_gamdom&jurisdiction=99&isGameUrlApiCalled=true', 'Gates of Olympus 1000')"
+                    >Play Now</a
+                  >
+                </div>
+              </div>
+              <div class="ball"></div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-xl-3 col-md-6 col-sm-6">
+            <div class="game-item">
+              <div class="game-inner">
+                <div class="game-item__thumb">
+                  <img
+                    src="/assets/images/game/le-pharaoh.jpg"
+                    alt="Le Pharaoh"
+                  />
+                </div>
+                <div class="game-item__content">
+                  <h4 class="title">Le Pharaoh</h4>
+                  <p class="invest-info">Hacksaw Gaming</p>
+                  <p class="invest-amount"></p>
+                  <a
+                    href="javascript:void(0)"
+                    class="cmn--btn active btn--md radius-0"
+                    onclick="playGame('https://d2q0k52vlk25jc.cloudfront.net/launcher/static-launcher.html?gameid=1562&channel=desktop&language=de&currency=USD&partner=gamdom_prod&mode=demo&token=&lobbyurl=http%3A%2F%2Fgamdom.com/casino', 'Le Pharaoh')"
+                    >Play Now</a
+                  >
+                </div>
+              </div>
+              <div class="ball"></div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-xl-3 col-md-6 col-sm-6">
+            <div class="game-item">
+              <div class="game-inner">
+                <div class="game-item__thumb">
+                  <img
+                    src="/assets/images/game/le-bandit.jpeg"
+                    alt="Le Bandit"
+                  />
+                </div>
+                <div class="game-item__content">
+                  <h4 class="title">Le Bandit</h4>
+                  <p class="invest-info">Hacksaw Gaming</p>
+                  <p class="invest-amount"></p>
+                  <a
+                    href="javascript:void(0)"
+                    class="cmn--btn active btn--md radius-0"
+                    onclick="playGame('https://d2q0k52vlk25jc.cloudfront.net/launcher/static-launcher.html?gameid=1309&channel=desktop&language=de&currency=USD&partner=gamdom_prod&mode=demo&token=&lobbyurl=http%3A%2F%2Fgamdom.com/casino', 'Le Bandit')"
+                    >Play Now</a
+                  >
+                </div>
+              </div>
+              <div class="ball"></div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-xl-3 col-md-6 col-sm-6">
+            <div class="game-item">
+              <div class="game-inner">
+                <div class="game-item__thumb">
+                  <img
+                    src="/assets/images/game/duck-hunters.webp"
+                    alt="Duck Hunters"
+                  />
+                </div>
+                <div class="game-item__content">
+                  <h4 class="title">Duck Hunters</h4>
+                  <p class="invest-info">Nolimit City</p>
+                  <p class="invest-amount"></p>
+                  <a
+                    href="javascript:void(0)"
+                    class="cmn--btn active btn--md radius-0"
+                    onclick="playGame('https://launcher-eu1.gsplauncher.de/games/encrypted/launcher?payload=QTEyOEdDTQ.ESY9DozniZNDsgtXWHQLLm8owqa9zDlHEVVMk61zZSlhgFTjaIxbZtz2lI0.8ZPmYu75uDlyOHUD.uHNUCANX2sJ26KYua28Le2hh-HEzVLrYLM7noIuE9HmI9oGOx-x6pIRa50Gq1Rb_FUS1M5QV3Sr51f2gKlx6FHGubDbsW_U8fYad16aeGXPo0nx89OCDp0C96WXT646mWtaBzNY-O5sEfEtnchQZQl0X_TQ8DJkqOS2oQWRzeb5DaRRZnALQIDkZ3I_P2oTYN3Xij8JOT3rwQ1SH_oJUrwc8pAQcYi7qWWxJleisg-L7FfAE5P8S3xrGzImbBSu1Ir2hmoE1ulBvaIR1dwSKYFNPrcQy5WBqZTMXeMi6CmoCpbtroGgPtTFTUE8VsKKKZocm-deFYW3IVjZJAgxMwfIdP9zS70YeqGOrxDEUrO7R1Pr3TfoFvZ-5hnQjG16q7n_Q3oJXmLreWfHKzJDxRINy8h_GqpWWSayBAaogrvWZTwrDeSVnhdWU7w.l6TLre-dJvS6kpUTN_aKlQ&', 'Duck Hunters')"
+                    >Play Now</a
+                  >
+                </div>
+              </div>
+              <div class="ball"></div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-xl-3 col-md-6 col-sm-6">
+            
+          
+         
+        </div>
       </div>
     </section>
     <!-- Game Section Ends Here -->
@@ -698,12 +929,12 @@
       <div class="container">
         <div class="row align-items-center gy-5">
           <div class="col-lg-4">
-            <h3 class="part-title mb-4">Latest Winner</h3>
+            <h3 class="part-title mb-4">Top Players</h3>
             <div class="top-investor-slider">
               <div class="investor-item">
                 <div class="investor-item__thumb">
                   <img src="/assets/images/top/item1.png" alt="top" />
-                  <p class="amount">$150</p>
+                  <p class="amount">120,000 coins</p>
                 </div>
                 <div class="investor-item__content">
                   <h6 class="name">Munna Ahmed</h6>
@@ -712,7 +943,7 @@
               <div class="investor-item">
                 <div class="investor-item__thumb">
                   <img src="/assets/images/top/item2.png" alt="top" />
-                  <p class="amount">$270</p>
+                  <p class="amount">270,000 coins</p>
                 </div>
                 <div class="investor-item__content">
                   <h6 class="name">Fahad Bin</h6>
@@ -721,7 +952,7 @@
               <div class="investor-item">
                 <div class="investor-item__thumb">
                   <img src="/assets/images/top/item3.png" alt="top" />
-                  <p class="amount">$52000</p>
+                  <p class="amount">500,000 coins</p>
                 </div>
                 <div class="investor-item__content">
                   <h6 class="name">Rafuj Raiha</h6>
@@ -730,7 +961,7 @@
               <div class="investor-item">
                 <div class="investor-item__thumb">
                   <img src="/assets/images/top/item1.png" alt="top" />
-                  <p class="amount">$150</p>
+                  <p class="amount">150,000 coins</p>
                 </div>
                 <div class="investor-item__content">
                   <h6 class="name">Munna Ahmed</h6>
@@ -739,7 +970,7 @@
               <div class="investor-item">
                 <div class="investor-item__thumb">
                   <img src="/assets/images/top/item3.png" alt="top" />
-                  <p class="amount">$50</p>
+                  <p class="amount">96,000 coins</p>
                 </div>
                 <div class="investor-item__content">
                   <h6 class="name">Rafuj Raihan</h6>
@@ -750,8 +981,8 @@
           <div class="col-lg-4">
             <div class="cla-wrapper text-center">
               <h3 class="title mb-4">
-                WIN !!! & <br />
-                Get Rewards
+                Play for Fun <br />
+                No Real Money Involved
               </h3>
               <a href="/games/" class="cmn--btn active btn--md radius-0"
                 >Play Now</a
@@ -762,12 +993,12 @@
             </div>
           </div>
           <div class="col-lg-4">
-            <h3 class="part-title mb-4">Top Investor</h3>
+            <h3 class="part-title mb-4">High Score Achievers</h3>
             <div class="top-investor-slider">
               <div class="investor-item">
                 <div class="investor-item__thumb">
                   <img src="/assets/images/top/item1.png" alt="top" />
-                  <p class="amount">$150</p>
+                  <p class="amount">100,000 coins</p>
                 </div>
                 <div class="investor-item__content">
                   <h6 class="name">Munna Ahmed</h6>
@@ -776,7 +1007,7 @@
               <div class="investor-item">
                 <div class="investor-item__thumb">
                   <img src="/assets/images/top/item2.png" alt="top" />
-                  <p class="amount">$270</p>
+                  <p class="amount">27,000 coins</p>
                 </div>
                 <div class="investor-item__content">
                   <h6 class="name">Fahad Bin</h6>
@@ -785,7 +1016,7 @@
               <div class="investor-item">
                 <div class="investor-item__thumb">
                   <img src="/assets/images/top/item3.png" alt="top" />
-                  <p class="amount">$52000</p>
+                  <p class="amount">52,000 coins</p>
                 </div>
                 <div class="investor-item__content">
                   <h6 class="name">Rafuj Raiha</h6>
@@ -794,7 +1025,7 @@
               <div class="investor-item">
                 <div class="investor-item__thumb">
                   <img src="/assets/images/top/item1.png" alt="top" />
-                  <p class="amount">$150</p>
+                  <p class="amount">150,000 coins</p>
                 </div>
                 <div class="investor-item__content">
                   <h6 class="name">Munna Ahmed</h6>
@@ -803,7 +1034,7 @@
               <div class="investor-item">
                 <div class="investor-item__thumb">
                   <img src="/assets/images/top/item3.png" alt="top" />
-                  <p class="amount">$50</p>
+                  <p class="amount">50,000 coins</p>
                 </div>
                 <div class="investor-item__content">
                   <h6 class="name">Rafuj Raihan</h6>
@@ -953,31 +1184,41 @@
     </section>
     <!-- Testimonial Section Ends Here -->
 
- <footer class="footer-section bg_img" style="background: url(/assets/images/footer/bg.jpg) center;">
-        <div class="footer-top">
-            <div class="container">
-                <div class="footer-wrapper d-flex flex-wrap align-items-center justify-content-md-between justify-content-center">
-                    <div class="logo mb-3 mb-md-0"><a href="/"><img src="/assets/images/logo.png" alt="logo"></a></div>
-                    <ul class="footer-links d-flex flex-wrap justify-content-center">
-                        <li><a href="/games/">Games</a></li>
-                        <li><a href="/terms-conditions/">Terms of Service</a></li>
-                        <li><a href="/policy/" class="active">Privacy Policy</a></li>
-                        <li><a href="/cookies-policy/">Cookies Policy</a></li>
-                        <li><a href="/responsible-gaming/">Responsible Gaming</a></li>
-                    </ul>
-                </div>
+    <footer
+      class="footer-section bg_img"
+      style="background: url(/assets/images/footer/bg.jpg) center"
+    >
+      <div class="footer-top">
+        <div class="container">
+          <div
+            class="footer-wrapper d-flex flex-wrap align-items-center justify-content-md-between justify-content-center"
+          >
+            <div class="logo mb-3 mb-md-0">
+              <a href="/"><img src="/assets/images/logo.png" alt="logo" /></a>
             </div>
+            <ul class="footer-links d-flex flex-wrap justify-content-center">
+              <li><a href="/games/">Games</a></li>
+              <li><a href="/terms-conditions/">Terms of Service</a></li>
+              <li><a href="/policy/" class="active">Privacy Policy</a></li>
+              <li><a href="/cookies-policy/">Cookies Policy</a></li>
+              <li><a href="/responsible-gaming/">Responsible Gaming</a></li>
+            </ul>
+          </div>
         </div>
-        <div class="footer-bottom">
-            <div class="container">
-                <div class="footer-wrapper d-flex flex-wrap justify-content-center align-items-center text-center">
-                    <p class="copyright text-white">Copyrights &copy; 2025 All Rights Reserved. | Virtual coins have no cash value | For entertainment purposes only | info@spinnshare.org</p>
-                </div>
-            </div>
+      </div>
+      <div class="footer-bottom">
+        <div class="container">
+          <div
+            class="footer-wrapper d-flex flex-wrap justify-content-center align-items-center text-center"
+          >
+            <p class="copyright text-white">
+              Copyrights &copy; 2025 All Rights Reserved. | Virtual coins have
+              no cash value | For entertainment purposes only |
+              info@spinnshare.org
+            </p>
+          </div>
         </div>
-        <div class="shapes">
-            <img src="/assets/images/footer/bg.jpg" alt="footer" class="shape1">
-        </div>
+      </div>
     </footer>
     <!-- Footer Section Ends Here -->
 
@@ -991,5 +1232,141 @@
     <script src="/assets/js/main.js"></script>
     <script src="/script.js"></script>
     <!-- Modal JavaScript -->
+    <script>
+        'use strict';
+        function iframeLoaded() {
+            console.log('Game iframe loaded successfully');
+        }
+        function showAuthModal() {
+            $('#authModal').fadeIn(300);
+            $('.overlay').addClass('active');
+            openTab('login'); // Default to login tab
+        }
+        function closeModal() {
+            $('#authModal').fadeOut(300);
+            $('.overlay').removeClass('active');
+        }
+        function showAlertModal(message) {
+            $('#alertMessage').text(message);
+            $('#alertModal').fadeIn(300);
+            $('.overlay').addClass('active');
+        }
+        function closeAlertModal() {
+            $('#alertModal').fadeOut(300);
+            $('.overlay').removeClass('active');
+        }
+        function openTab(tabName) {
+            $('.tab-link').removeClass('active');
+            $('.tab-content').removeClass('active');
+            $(`.tab-link[onclick="openTab('${tabName}')"]`).addClass('active');
+            $(`#${tabName}`).addClass('active');
+        }
+        function login() {
+            const email = $('#loginEmail').val();
+            const password = $('#loginPassword').val();
+            if (email && password) {
+                localStorage.setItem('userState', JSON.stringify({
+                    isLoggedIn: true,
+                    username: email.split('@')[0],
+                    email: email,
+                    coins: 5000
+                }));
+                $('#user-name').text(email.split('@')[0]);
+                $('#user-details').text(`Name: ${email.split('@')[0]}\nEmail: ${email}\nCoins: 5000`);
+                $('#auth-container').addClass('d-none');
+                $('#user-circle').removeClass('d-none');
+                closeModal();
+            } else {
+                showAlertModal('Please enter both email and password.');
+            }
+        }
+        function register() {
+            const username = $('#registerUsername').val();
+            const email = $('#registerEmail').val();
+            const password = $('#registerPassword').val();
+            if (username && email && password) {
+                localStorage.setItem('userState', JSON.stringify({
+                    isLoggedIn: true,
+                    username: username,
+                    email: email,
+                    coins: 5000
+                }));
+                $('#user-name').text(username);
+                $('#user-details').text(`Name: ${username}\nEmail: ${email}\nCoins: ${5000}`);
+                $('#auth-container').addClass('d-none');
+                $('#user-circle').removeClass('d-none');
+                closeModal();
+            } else {
+                showAlertModal('Please fill in all fields.');
+            }
+        }
+        function logout() {
+            localStorage.removeItem('userState');
+            $('#user-name').text('');
+            $('#user-details').text('');
+            $('#auth-container').removeClass('d-none');
+            $('#user-circle').addClass('d-none').removeClass('show');
+        }
+        function restoreUserState() {
+            const userState = JSON.parse(localStorage.getItem('userState'));
+            if (userState && userState.isLoggedIn) {
+                $('#user-name').text(userState.username);
+                $('#user-details').text(`Name: ${userState.username}\nEmail: ${userState.email}\nCoins: ${userState.coins}`);
+                $('#auth-container').addClass('d-none');
+                $('#user-circle').removeClass('d-none');
+            } else {
+                $('#user-name').text('');
+                $('#user-details').text('');
+                $('#auth-container').removeClass('d-none');
+                $('#user-circle').addClass('d-none').removeClass('show');
+            }
+        }
+        function toggleDropdown(event) {
+            event.stopPropagation();
+            console.log('User circle clicked, toggling dropdown');
+            $('#user-circle').toggleClass('show');
+        }
+        function playGame(url, title) {
+            const userState = JSON.parse(localStorage.getItem('userState'));
+            if (!userState || !userState.isLoggedIn) {
+                showAlertModal('Register now to play games');
+                showAuthModal();
+                return;
+            }
+            $('#gameModalTitle').text(title);
+            $('#pngGameFrame').attr('src', url);
+            $('#gameModal').fadeIn(300);
+            $('.overlay').addClass('active');
+        }
+        function closeGameModal() {
+            $('#gameModal').fadeOut(300);
+            $('.overlay').removeClass('active');
+            $('#pngGameFrame').attr('src', '');
+        }
+        function acceptCookies() {
+            localStorage.setItem('cookieConsent', 'accepted');
+            $('#cookiePopup').fadeOut(300);
+        }
+        function declineCookies() {
+            localStorage.setItem('cookieConsent', 'declined');
+            $('#cookiePopup').fadeOut(300);
+        }
+        $(document).ready(function() {
+            restoreUserState();
+            $('#user-circle').on('click', toggleDropdown);
+            $(document).on('click', function(event) {
+                if (!$(event.target).closest('#user-circle').length) {
+                    console.log('Clicked outside user-circle, hiding dropdown');
+                    $('#user-circle').removeClass('show');
+                }
+            });
+            const consent = localStorage.getItem('cookieConsent');
+            if (!consent) {
+                $('#cookiePopup').fadeIn(300);
+            }
+        });
+    </script>
   </body>
 </html>
+
+
