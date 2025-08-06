@@ -106,36 +106,70 @@
         </div>
     </div>
     <div class="header">
-        <div class="container">
-            <div class="header-bottom">
-                <div class="header-bottom-area align-items-center">
-                    <div class="logo"><a href="/"><img src="/assets/images/logo.png" alt="logo" /></a></div>
-                    <ul class="menu">
-                        <li><a href="/">Home</a></li>
-                        <li><a href="/about/">About</a></li>
-                        <li><a href="/games/">Games <span class="badge badge--sm badge--base text-dark">NEW</span></a></li>
-                        <li><a href="/contact/">Contact</a></li>
-                        <button class="btn-close btn-close-white d-lg-none"></button>
-                    </ul>
-                    <div class="header-trigger-wrapper d-flex align-items-center">
-                        <div id="user-account" class="ms-3 d-flex align-items-center">
-                            <div id="auth-container">
-                                <a href="javascript:void(0)" id="auth-btn" class="cmn--btn active btn--md ms-2 d-sm-block" onclick="showAuthModal()">Login/Register</a>
-                            </div>
-                            <div id="user-circle" class="user-circle d-none">
-                                <span id="user-name"></span>
-                                <div class="user-dropdown">
-                                    <div id="user-details"></div>
-                                    <a href="javascript:void(0)" id="logout-btn" onclick="logout()">Logout</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="header-trigger me-4 d-lg-none"><span></span></div>
-                    </div>
-                </div>
-            </div>
+  <div class="container">
+    <div class="header-bottom">
+      <div class="header-bottom-area d-flex align-items-center justify-content-between">
+        <!-- Logo Left -->
+        <div class="logo">
+          <a href="/"><img src="/assets/images/logo.png" alt="logo" /></a>
         </div>
+
+        <!-- Navigation Centered -->
+        <ul class="menu d-flex align-items-center justify-content-center flex-grow-1 mb-0">
+          <li><a href="/">Home</a></li>
+          <li><a href="/about/">About</a></li>
+          <li>
+            <a href="/games/">
+              Games
+              <span class="badge badge--sm badge--base text-dark">NEW</span>
+            </a>
+          </li>
+          <li><a href="/contact/">Contact</a></li>
+
+          <!-- ✅ Login/Register (Mobile Only) -->
+          <li class="d-lg-none">
+            <a
+              href="javascript:void(0)"
+              onclick="showAuthModal()"
+              class="cmn--btn active btn--md ms-2"
+            >Login/Register</a>
+          </li>
+
+          <!-- Close Button for Mobile Menu -->
+          <button class="btn-close btn-close-white d-lg-none ms-auto"></button>
+        </ul>
+
+        <!-- ✅ Right Side (Desktop Only) -->
+        <div class="d-none d-lg-flex align-items-center">
+          <!-- Login/Register (Desktop Only) -->
+          <div id="auth-container">
+            <a
+              href="javascript:void(0)"
+              id="auth-btn"
+              class="cmn--btn active btn--md ms-3"
+              onclick="showAuthModal()"
+            >Login/Register</a>
+          </div>
+
+          <!-- User Dropdown (if logged in) -->
+          <div id="user-account" class="ms-3 d-flex align-items-center">
+            <div id="user-circle" class="user-circle d-none">
+              <span id="user-name"></span>
+              <div class="user-dropdown">
+                <div id="user-details"></div>
+                <a href="javascript:void(0)" id="logout-btn" onclick="logout()">Logout</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hamburger Menu Trigger for Mobile -->
+        <div class="header-trigger d-lg-none ms-3"><span></span></div>
+      </div>
     </div>
+  </div>
+</div>
+
     <section class="inner-banner bg_img" style="background: url('/assets/images/inner-banner/bg2.jpg') top;">
         <div class="container">
             <div class="row justify-content-center">
@@ -149,36 +183,63 @@
     <section class="privacy-policy-section padding-top padding-bottom">
         <div class="container">
             <div class="row">
-                <div class="col-lg-4">
-                    <div class="privacy-policy-sidebar">
-                        <ul class="privacy-policy-sidebar-menu">
-                            <li><a href="#commitment">Our Commitment</a></li>
-                            <li><a href="#limits">Setting Limits</a></li>
-                            <li><a href="#resources">Support Resources</a></li>
-                            <li><a href="#underage">Preventing Underage Gaming</a></li>
-                        </ul>
-                    </div>
-                </div>
+                
                 <div class="col-lg-8">
-                    <div class="privacy-policy-content">
-                        <div class="item" id="commitment">
-                            <h3 class="title">Our Commitment</h3>
-                            <p>Spinnshare is committed to promoting responsible gaming. Our platform is designed for entertainment, using virtual coins with no cash value, ensuring a fun and risk-free experience.</p>
-                        </div>
-                        <div class="item" id="limits">
-                            <h3 class="title">Setting Limits</h3>
-                            <p>We encourage players to set personal time and engagement limits. You can contact support@spinnshare.org to request account restrictions or self-exclusion if needed.</p>
-                        </div>
-                        <div class="item" id="resources">
-                            <h3 class="title">Support Resources</h3>
-                            <p>If you feel gaming is impacting your well-being, reach out to organizations like GamCare or Gamblers Anonymous. Our support team is also available at support@spinnshare.org.</p>
-                        </div>
-                        <div class="item" id="underage">
-                            <h3 class="title">Preventing Underage Gaming</h3>
-                            <p>Spinnshare is strictly for users 18 and older. We implement age verification during registration and encourage parents to monitor device usage to prevent underage access.</p>
-                        </div>
-                    </div>
-                </div>
+  <div class="privacy-policy-content">
+    
+    <div class="item" id="commitment">
+      <h3 class="title">Our Commitment to Responsible Gaming</h3>
+      <p>
+        At <strong>Spinnshare</strong>, we are committed to providing a fun, safe, and socially responsible gaming environment. Our platform uses only <strong>virtual coins</strong> that carry no real-world cash value and cannot be withdrawn or exchanged for money. This ensures that players can enjoy the thrill of gameplay without financial risk or gambling behavior. 
+      </p>
+      <p>
+        As a social casino platform, Spinnshare is intended strictly for entertainment purposes. We do not support or allow any form of betting, gambling, or wagering with real money. We believe in promoting healthy gaming habits, balanced digital engagement, and full transparency in how our system works.
+      </p>
+    </div>
+
+    <div class="item" id="limits">
+      <h3 class="title">Setting Personal Limits</h3>
+      <p>
+        We encourage all users to practice moderation while enjoying our platform. You are in control of your time and activity, and we recommend taking breaks and monitoring your daily screen time. 
+      </p>
+      <p>
+        If you ever feel that your usage is becoming excessive or negatively affecting your day-to-day life, you can contact our support team at <strong>support@spinnshare.org</strong>. We can assist you in applying temporary play limits, restricting access, or self-excluding your account based on your request — no questions asked.
+      </p>
+    </div>
+
+    <div class="item" id="resources">
+      <h3 class="title">External Support Resources</h3>
+      <p>
+        If gaming is affecting your emotional well-being, it’s okay to seek help. Although Spinnshare does not involve real-money risks, we understand that online gaming can still lead to overuse or unhealthy patterns for some individuals. We recommend reaching out to trusted mental health or addiction support services such as:
+        <ul>
+          <li><a href="https://www.gamcare.org.uk/" target="_blank" rel="noopener">GamCare</a></li>
+          <li><a href="https://www.begambleaware.org/" target="_blank" rel="noopener">BeGambleAware</a></li>
+          <li><a href="https://www.gamblersanonymous.org/" target="_blank" rel="noopener">Gamblers Anonymous</a></li>
+        </ul>
+        These organizations provide free, confidential advice and support to individuals who may be struggling with gaming-related behavior.
+      </p>
+    </div>
+
+    <div class="item" id="underage">
+      <h3 class="title">Preventing Underage Access</h3>
+      <p>
+        Spinnshare is designed for adults aged 18 and over. We strictly prohibit underage users from accessing our platform. During the registration process, we implement an age verification check to prevent minors from creating accounts.
+      </p>
+      <p>
+        We also encourage parents and guardians to monitor the devices their children use. Using parental control tools, browser filters, and open dialogue can help reduce the risk of underage access to gaming platforms.
+      </p>
+    </div>
+
+    <div class="item" id="ongoing-effort">
+      <h3 class="title">An Ongoing Responsibility</h3>
+      <p>
+        Responsible gaming is a shared responsibility between us and our users. At Spinnshare, we are constantly reviewing and improving our features to ensure user safety, transparency, and ethical standards. If you have suggestions on how we can make Spinnshare safer and more responsible, we welcome your feedback at <strong>support@spinnshare.org</strong>.
+      </p>
+    </div>
+
+  </div>
+</div>
+
             </div>
         </div>
     </section>
@@ -204,9 +265,7 @@
                 </div>
             </div>
         </div>
-        <div class="shapes">
-            <img src="/assets/images/footer/bg.jpg" alt="footer" class="shape1">
-        </div>
+        
     </footer>
     <script src="/assets/js/lib/jquery-3.6.0.min.js"></script>
     <script src="/assets/js/lib/bootstrap.min.js"></script>
