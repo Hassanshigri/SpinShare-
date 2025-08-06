@@ -25,6 +25,8 @@ $('.menu li a').on('click', function() {
     }
 });
 
+
+
 // Responsive Menu
 var headerTrigger = $('.header-trigger');
 headerTrigger.on('click', function() {
