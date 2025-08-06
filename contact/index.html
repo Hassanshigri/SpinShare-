@@ -508,14 +508,7 @@
           ></button>
         </div>
         <div class="modal-body">
-          <div class="auth-tabs">
-            <button class="tab-link active" onclick="openTab('login')">
-              Login
-            </button>
-            <button class="tab-link" onclick="openTab('register')">
-              Register
-            </button>
-          </div>
+          
           <div id="login" class="tab-content active">
             <input type="email" id="loginEmail" placeholder="Email" required />
             <input
@@ -795,41 +788,51 @@
       </div>
     </div>
     <footer
-      class="footer-section bg_img"
-      style="background: url(/assets/images/footer/bg.jpg) center"
-    >
-      <div class="footer-top">
-        <div class="container">
-          <div
-            class="footer-wrapper d-flex flex-wrap align-items-center justify-content-md-between justify-content-center"
-          >
-            <div class="logo mb-3 mb-md-0">
-              <a href="/"><img src="/assets/images/logo.png" alt="logo" /></a>
-            </div>
-            <ul class="footer-links d-flex flex-wrap justify-content-center">
-              <li><a href="/games/">Games</a></li>
-              <li><a href="/terms-conditions/">Terms of Service</a></li>
-              <li><a href="/policy/">Privacy Policy</a></li>
-              <li><a href="/cookies-policy/">Cookies Policy</a></li>
-              <li><a href="/responsible-gaming/">Responsible Gaming</a></li>
-            </ul>
-          </div>
+  class="footer-section bg_img"
+  style="background: url(/assets/images/footer/bg.jpg) center"
+>
+  <div class="footer-top">
+    <div class="container">
+      <div
+        class="footer-wrapper d-flex flex-wrap align-items-center justify-content-md-between justify-content-center"
+      >
+        <div class="logo mb-3 mb-md-0">
+          <a href="/"><img src="/assets/images/logo.png" alt="logo" /></a>
         </div>
+        <ul class="footer-links d-flex flex-wrap justify-content-center">
+          <li><a href="/games/">Games</a></li>
+          <li>
+            <a href="/terms-conditions/" class="active">Terms of Service</a>
+          </li>
+          <li><a href="/policy/">Privacy Policy</a></li>
+          <li><a href="/cookies-policy/">Cookies Policy</a></li>
+          <li><a href="/responsible-gaming/">Responsible Gaming</a></li>
+        </ul>
       </div>
-      <div class="footer-bottom">
-        <div class="container">
-          <div
-            class="footer-wrapper d-flex flex-wrap justify-content-center align-items-center text-center"
-          >
-            <p class="copyright text-white">
-              Copyrights &copy; 2025 All Rights Reserved. | Virtual coins have
-              no cash value | For entertainment purposes only |
-              info@spinnshare.org
-            </p>
-          </div>
-        </div>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <div class="container">
+      <div
+        class="footer-wrapper d-flex flex-wrap justify-content-center align-items-center text-center"
+      >
+        <p class="copyright text-white">
+          Copyrights &copy; 2025 All Rights Reserved. |
+          Virtual coins have no cash value |
+          For entertainment purposes only |
+          info@spinnshare.org
+        </p>
+
+        <!-- 🔽 Disclaimer Added Here -->
+        <p class="text-white mt-2 small" style="max-width: 800px;">
+          The ultimate social casino gaming experience. Play for fun, compete with friends, and enjoy the thrill of games without any real money risk. No real money involved.
+        </p>
       </div>
-    </footer>
+    </div>
+  </div>
+</footer>
+
     <script src="/assets/js/lib/jquery-3.6.0.min.js"></script>
     <script src="/assets/js/lib/bootstrap.min.js"></script>
     <script src="/assets/js/lib/slick.min.js"></script>
