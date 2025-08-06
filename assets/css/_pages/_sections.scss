@@ -183,43 +183,61 @@
 // Transection Section Ends Here
 
 
-// Why Section Ends Here
+// Why Section start Here
 .why-section {
-    position: relative;
-    .shape1 {
-        left: -100px;
-        top: 50px;
-        z-index: -1;
-        opacity: .1;
-    }
+  position: relative;
+
+  .shape1 {
+    left: -100px;
+    top: 50px;
+    z-index: -1;
+    opacity: 0.1;
+  }
+
+  @include breakpoint(max-md) {
+    text-align: center;
+  }
 }
+
 .why-item {
-    max-width: 350px;
-    &__thumb {
-        color: $dark;
-        border: 6px solid $body-bg;
-        @extend %gradient-base;
-        font-size: 34px;
-        width: 65px;
-        height:65px;
-        border-radius: 50%;
-        @extend %flex-center;
-        @extend %shadow2;
-        margin-bottom: 20px;
-        @include breakpoint(max-md) {
-            margin-bottom: 15px;
-        }
+  max-width: 350px;
+
+  @include breakpoint(max-md) {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  &__thumb {
+    color: $dark;
+    border: 6px solid $body-bg;
+    @extend %gradient-base;
+    font-size: 34px;
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    @extend %flex-center;
+    @extend %shadow2;
+    margin-bottom: 20px;
+
+    @include breakpoint(max-md) {
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: 15px;
     }
-    &__content {
-        .title {
-            margin-bottom: 7px;
-            font-size: 26px;
-            @include breakpoint(max-xl) {
-                font-size: 22px;
-            }
-        }
+  }
+
+  &__content {
+    .title {
+      margin-bottom: 7px;
+      font-size: 26px;
+
+      @include breakpoint(max-xl) {
+        font-size: 22px;
+      }
     }
+  }
 }
+
 // Why Section Ends Here
 
 
