@@ -185,7 +185,7 @@
     display: inline-block;
     width: 55px;
     height: 54px;
-    line-height: 42px;
+    line-height: 55px;
     text-align: center;
     background: linear-gradient(45deg, #FFC827, #FFD966);
     color: #370A2C;
@@ -526,7 +526,7 @@ here is my style.css
     display: inline-block;
     width: 55px;
     height: 54px;
-    line-height: 42px;
+    line-height: 54px;
     text-align: center;
     background: linear-gradient(45deg, #FFC827, #FFD966);
     color: #370A2C;
