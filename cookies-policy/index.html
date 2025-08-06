@@ -1,205 +1,375 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Cookies Policy | Spinnshare - Social Casino Gaming Platform</title>
-    <meta name="description" content="Understand how Spinnshare uses cookies to enhance your gaming experience on our social casino platform.">
-    <meta name="keywords" content="Spinnshare, Cookies Policy, Social Casino, Data Privacy, Online Gaming">
-    <meta name="author" content="Spinnshare Team">
-    <meta property="og:title" content="Cookies Policy | Spinnshare - Social Casino Gaming Platform">
-    <meta property="og:description" content="Learn about Spinnshare’s use of cookies to improve your experience on our free gaming platform.">
-    <meta property="og:image" content="/assets/images/logo.png">
-    <meta property="og:url" content="https://spinnshare.org/cookies-policy">
-    <meta property="og:type" content="website">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Cookies Policy | Spinnshare - Social Casino Gaming Platform">
-    <meta name="twitter:description" content="Learn about Spinnshare’s use of cookies to improve your experience on our free gaming platform.">
-    <meta name="twitter:image" content="/assets/images/logo.png">
-    <link rel="icon" href="/assets/images/favicon.png" type="image/png">
+    <meta
+      name="description"
+      content="Understand how Spinnshare uses cookies to enhance your gaming experience on our social casino platform."
+    />
+    <meta
+      name="keywords"
+      content="Spinnshare, Cookies Policy, Social Casino, Data Privacy, Online Gaming"
+    />
+    <meta name="author" content="Spinnshare Team" />
+    <meta
+      property="og:title"
+      content="Cookies Policy | Spinnshare - Social Casino Gaming Platform"
+    />
+    <meta
+      property="og:description"
+      content="Learn about Spinnshare’s use of cookies to improve your experience on our free gaming platform."
+    />
+    <meta property="og:image" content="/assets/images/logo.png" />
+    <meta property="og:url" content="https://spinnshare.org/cookies-policy" />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="Cookies Policy | Spinnshare - Social Casino Gaming Platform"
+    />
+    <meta
+      name="twitter:description"
+      content="Learn about Spinnshare’s use of cookies to improve your experience on our free gaming platform."
+    />
+    <meta name="twitter:image" content="/assets/images/logo.png" />
+    <link rel="icon" href="/assets/images/favicon.png" type="image/png" />
     <link rel="stylesheet" href="/assets/css/lib/bootstrap.min.css" />
     <link rel="stylesheet" href="/assets/css/all.min.css" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/line-awesome@1.3.0/dist/line-awesome/css/line-awesome.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/line-awesome@1.3.0/dist/line-awesome/css/line-awesome.min.css"
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <link rel="stylesheet" href="/assets/css/lib/animate.css" />
     <link rel="stylesheet" href="/assets/css/lib/slick.css" />
     <link rel="stylesheet" href="/assets/css/main.css" />
     <link rel="stylesheet" href="/style.css" />
-</head>
-<body data-bs-spy="scroll" data-bs-offset="170" data-bs-target=".privacy-policy-sidebar-menu">
+  </head>
+  <body
+    data-bs-spy="scroll"
+    data-bs-offset="170"
+    data-bs-target=".privacy-policy-sidebar-menu"
+  >
     <div class="overlay"></div>
     <div class="cookie-popup" id="cookiePopup" style="display: none">
-        <div class="cookie-content">
-            <h5>We Use Cookies</h5>
-            <p>We use cookies to enhance your experience. By continuing, you agree to our <a href="/cookies-policy/" style="color: #FFC827; text-decoration: underline;">Cookies Policy</a>.</p>
-            <div class="cookie-buttons">
-                <button class="cmn--btn active" onclick="acceptCookies()">Accept</button>
-                <button class="cmn--btn" onclick="declineCookies()">Decline</button>
-            </div>
+      <div class="cookie-content">
+        <h5>We Use Cookies</h5>
+        <p>
+          We use cookies to enhance your experience. By continuing, you agree to
+          our
+          <a
+            href="/cookies-policy/"
+            style="color: #ffc827; text-decoration: underline"
+            >Cookies Policy</a
+          >.
+        </p>
+        <div class="cookie-buttons">
+          <button class="cmn--btn active" onclick="acceptCookies()">
+            Accept
+          </button>
+          <button class="cmn--btn" onclick="declineCookies()">Decline</button>
         </div>
+      </div>
     </div>
     <div class="preloader">
-        <div class="scene" id="scene">
-            <input type="checkbox" id="andicator" />
-            <div class="cube">
-                <div class="cube__face cube__face--front"><i></i></div>
-                <div class="cube__face cube__face--back"><i></i><i></i></div>
-                <div class="cube__face cube__face--right"><i></i><i></i><i></i><i></i><i></i></div>
-                <div class="cube__face cube__face--left"><i></i><i></i><i></i><i></i><i></i><i></i></div>
-                <div class="cube__face cube__face--top"><i></i><i></i><i></i></div>
-                <div class="cube__face cube__face--bottom"><i></i><i></i><i></i><i></i></div>
-            </div>
+      <div class="scene" id="scene">
+        <input type="checkbox" id="andicator" />
+        <div class="cube">
+          <div class="cube__face cube__face--front"><i></i></div>
+          <div class="cube__face cube__face--back"><i></i><i></i></div>
+          <div class="cube__face cube__face--right">
+            <i></i><i></i><i></i><i></i><i></i>
+          </div>
+          <div class="cube__face cube__face--left">
+            <i></i><i></i><i></i><i></i><i></i><i></i>
+          </div>
+          <div class="cube__face cube__face--top"><i></i><i></i><i></i></div>
+          <div class="cube__face cube__face--bottom">
+            <i></i><i></i><i></i><i></i>
+          </div>
         </div>
+      </div>
     </div>
     <div class="custom--modal" id="authModal" style="display: none">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 id="modalTitle">Sign In</h5>
-                <button type="button" class="btn-close" onclick="closeModal()"></button>
-            </div>
-            <div class="modal-body">
-                <div class="auth-tabs">
-                    <button class="tab-link active" onclick="openTab('login')">Login</button>
-                    <button class="tab-link" onclick="openTab('register')">Register</button>
-                </div>
-                <div id="login" class="tab-content active">
-                    <input type="email" id="loginEmail" placeholder="Email" required />
-                    <input type="password" id="loginPassword" placeholder="Password" required />
-                    <button class="cmn--btn active" onclick="login()">Login</button>
-                    <div class="form-link">
-                        <a href="javascript:void(0)" onclick="openTab('register')">Don't have an account? Register here</a>
-                    </div>
-                </div>
-                <div id="register" class="tab-content">
-                    <input type="text" id="registerUsername" placeholder="Username" required />
-                    <input type="email" id="registerEmail" placeholder="Email" required />
-                    <input type="password" id="registerPassword" placeholder="Password" required />
-                    <button class="cmn--btn active" onclick="register()">Register</button>
-                    <div class="form-link">
-                        <a href="javascript:void(0)" onclick="openTab('login')">Already have an account? Login here</a>
-                    </div>
-                </div>
-            </div>
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 id="modalTitle">Sign In</h5>
+          <button
+            type="button"
+            class="btn-close"
+            onclick="closeModal()"
+          ></button>
         </div>
+        <div class="modal-body">
+          <div class="auth-tabs">
+            <button class="tab-link active" onclick="openTab('login')">
+              Login
+            </button>
+            <button class="tab-link" onclick="openTab('register')">
+              Register
+            </button>
+          </div>
+          <div id="login" class="tab-content active">
+            <input type="email" id="loginEmail" placeholder="Email" required />
+            <input
+              type="password"
+              id="loginPassword"
+              placeholder="Password"
+              required
+            />
+            <button class="cmn--btn active" onclick="login()">Login</button>
+            <div class="form-link">
+              <a href="javascript:void(0)" onclick="openTab('register')"
+                >Don't have an account? Register here</a
+              >
+            </div>
+          </div>
+          <div id="register" class="tab-content">
+            <input
+              type="text"
+              id="registerUsername"
+              placeholder="Username"
+              required
+            />
+            <input
+              type="email"
+              id="registerEmail"
+              placeholder="Email"
+              required
+            />
+            <input
+              type="password"
+              id="registerPassword"
+              placeholder="Password"
+              required
+            />
+            <button class="cmn--btn active" onclick="register()">
+              Register
+            </button>
+            <div class="form-link">
+              <a href="javascript:void(0)" onclick="openTab('login')"
+                >Already have an account? Login here</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
     <div class="alert-modal" id="alertModal" style="display: none">
-        <div class="alert-modal-content">
-            <div class="alert-modal-header">
-                <h5>Notice</h5>
-                <button type="button" class="btn-close" onclick="closeAlertModal()"></button>
-            </div>
-            <p id="alertMessage"></p>
-            <div class="alert-modal-buttons">
-                <button class="cmn--btn active" onclick="closeAlertModal()">OK</button>
-            </div>
+      <div class="alert-modal-content">
+        <div class="alert-modal-header">
+          <h5>Notice</h5>
+          <button
+            type="button"
+            class="btn-close"
+            onclick="closeAlertModal()"
+          ></button>
         </div>
+        <p id="alertMessage"></p>
+        <div class="alert-modal-buttons">
+          <button class="cmn--btn active" onclick="closeAlertModal()">
+            OK
+          </button>
+        </div>
+      </div>
     </div>
     <div class="header">
-        <div class="container">
-            <div class="header-bottom">
-                <div class="header-bottom-area align-items-center">
-                    <div class="logo"><a href="/"><img src="/assets/images/logo.png" alt="logo" /></a></div>
-                    <ul class="menu">
-                        <li><a href="/">Home</a></li>
-                        <li><a href="/about/">About</a></li>
-                        <li><a href="/games/">Games <span class="badge badge--sm badge--base text-dark">NEW</span></a></li>
-                        <li><a href="/contact/">Contact</a></li>
-                        <button class="btn-close btn-close-white d-lg-none"></button>
-                    </ul>
-                    <div class="header-trigger-wrapper d-flex align-items-center">
-                        <div id="user-account" class="ms-3 d-flex align-items-center">
-                            <div id="auth-container">
-                                <a href="javascript:void(0)" id="auth-btn" class="cmn--btn active btn--md ms-2 d-sm-block" onclick="showAuthModal()">Login/Register</a>
-                            </div>
-                            <div id="user-circle" class="user-circle d-none">
-                                <span id="user-name"></span>
-                                <div class="user-dropdown">
-                                    <div id="user-details"></div>
-                                    <a href="javascript:void(0)" id="logout-btn" onclick="logout()">Logout</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="header-trigger me-4 d-lg-none"><span></span></div>
-                    </div>
-                </div>
-            </div>
+  <div class="container">
+    <div class="header-bottom">
+      <div class="header-bottom-area d-flex align-items-center justify-content-between">
+        <!-- Logo Left -->
+        <div class="logo">
+          <a href="/"><img src="/assets/images/logo.png" alt="logo" /></a>
         </div>
+
+        <!-- Navigation Centered -->
+        <ul class="menu d-flex align-items-center justify-content-center flex-grow-1 mb-0">
+          <li><a href="/">Home</a></li>
+          <li><a href="/about/">About</a></li>
+          <li>
+            <a href="/games/">
+              Games
+              <span class="badge badge--sm badge--base text-dark">NEW</span>
+            </a>
+          </li>
+          <li><a href="/contact/">Contact</a></li>
+
+          <!-- ✅ Login/Register (Mobile Only) -->
+          <li class="d-lg-none">
+            <a
+              href="javascript:void(0)"
+              onclick="showAuthModal()"
+              class="cmn--btn active btn--md ms-2"
+            >Login/Register</a>
+          </li>
+
+          <!-- Close Button for Mobile Menu -->
+          <button class="btn-close btn-close-white d-lg-none ms-auto"></button>
+        </ul>
+
+        <!-- ✅ Right Side (Desktop Only) -->
+        <div class="d-none d-lg-flex align-items-center">
+          <!-- Login/Register (Desktop Only) -->
+          <div id="auth-container">
+            <a
+              href="javascript:void(0)"
+              id="auth-btn"
+              class="cmn--btn active btn--md ms-3"
+              onclick="showAuthModal()"
+            >Login/Register</a>
+          </div>
+
+          <!-- User Dropdown (if logged in) -->
+          <div id="user-account" class="ms-3 d-flex align-items-center">
+            <div id="user-circle" class="user-circle d-none">
+              <span id="user-name"></span>
+              <div class="user-dropdown">
+                <div id="user-details"></div>
+                <a href="javascript:void(0)" id="logout-btn" onclick="logout()">Logout</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hamburger Menu Trigger for Mobile -->
+        <div class="header-trigger d-lg-none ms-3"><span></span></div>
+      </div>
     </div>
-    <section class="inner-banner bg_img" style="background: url('/assets/images/inner-banner/bg2.jpg') top;">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-lg-7 col-xl-6 text-center">
-                    <h2 class="title text-white">Cookies Policy</h2>
-                    
-                </div>
-            </div>
+  </div>
+</div>
+
+    <section
+      class="inner-banner bg_img"
+      style="background: url('/assets/images/inner-banner/bg2.jpg') top"
+    >
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-7 col-xl-6 text-center">
+            <h2 class="title text-white">Cookies Policy</h2>
+          </div>
         </div>
+      </div>
     </section>
     <section class="privacy-policy-section padding-top padding-bottom">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-4">
-                    <div class="privacy-policy-sidebar">
-                        <ul class="privacy-policy-sidebar-menu">
-                            <li><a href="#what">What Are Cookies</a></li>
-                            <li><a href="#types">Types of Cookies</a></li>
-                            <li><a href="#use">How We Use Cookies</a></li>
-                            <li><a href="#manage">Managing Cookies</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-lg-8">
-                    <div class="privacy-policy-content">
-                        <div class="item" id="what">
-                            <h3 class="title">What Are Cookies</h3>
-                            <p>Cookies are small text files stored on your device when you visit Spinnshare. They help us enhance your experience by remembering your preferences and usage patterns.</p>
-                        </div>
-                        <div class="item" id="types">
-                            <h3 class="title">Types of Cookies</h3>
-                            <p>We use essential cookies for site functionality, performance cookies to analyze usage, and preference cookies to personalize your experience. No marketing cookies are used.</p>
-                        </div>
-                        <div class="item" id="use">
-                            <h3 class="title">How We Use Cookies</h3>
-                            <p>Cookies enable features like login sessions, game progress tracking, and site performance optimization. They do not collect sensitive personal information.</p>
-                        </div>
-                        <div class="item" id="manage">
-                            <h3 class="title">Managing Cookies</h3>
-                            <p>You can accept or decline cookies via the popup when you visit Spinnshare. You can also manage cookies through your browser settings. Declining cookies may limit some features.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8">
+            <div class="privacy-policy-content">
+  <div class="item" id="introduction">
+    <h3 class="title">Cookies Policy</h3>
+    <p>
+      This Cookies Policy explains how <strong>Spinnshare</strong> uses cookies and similar technologies to provide, improve, and secure our social casino platform. When you visit our website, we may store cookies on your device to recognize you, enhance functionality, and analyze user interaction with our platform. By continuing to use Spinnshare, you consent to our use of cookies in accordance with this policy.
+    </p>
+  </div>
+
+  <div class="item" id="what">
+    <h3 class="title">What Are Cookies?</h3>
+    <p>
+      Cookies are small text files stored on your computer, smartphone, or tablet when you visit a website. They contain data that helps websites remember information about your visit—such as your preferred settings or login state. Cookies are a common and essential part of modern web functionality.
+    </p>
+  </div>
+
+  <div class="item" id="types">
+    <h3 class="title">Types of Cookies We Use</h3>
+    <p>
+      We use a limited range of cookie types strictly necessary to operate Spinnshare as a secure and user-friendly platform:
+      <ul>
+        <li><strong>Essential Cookies:</strong> Required for basic platform features like login authentication, game session management, and age verification.</li>
+        <li><strong>Performance Cookies:</strong> Help us track how users interact with the site, such as which games are most played or which pages load slowly. This information is used to improve performance and user experience.</li>
+        <li><strong>Preference Cookies:</strong> Remember your language settings, theme preferences, or other customized features across sessions.</li>
+      </ul>
+      We do <strong>not</strong> use advertising or marketing cookies. Your data is never sold, and we do not track you across third-party sites.
+    </p>
+  </div>
+
+  <div class="item" id="use">
+    <h3 class="title">How We Use Cookies</h3>
+    <p>
+      Cookies on Spinnshare allow us to:
+      <ul>
+        <li>Maintain secure login sessions</li>
+        <li>Track progress in virtual games</li>
+        <li>Improve page load times and detect performance issues</li>
+        <li>Remember your interaction preferences</li>
+      </ul>
+      None of the cookies we use collect sensitive personal information such as passwords, payment data, or real identity details. All data is anonymous or pseudonymized for your privacy and security.
+    </p>
+  </div>
+
+  <div class="item" id="manage">
+    <h3 class="title">Managing and Controlling Cookies</h3>
+    <p>
+      When you first visit Spinnshare, you will see a cookie popup allowing you to accept or reject non-essential cookies. Your choice will be saved using local storage on your device to avoid repeated prompts.
+    </p>
+    <p>
+      You can also manage or delete cookies manually through your browser settings. Each browser has different options for controlling cookies, such as clearing them entirely or limiting them to specific sites. Please note that disabling essential cookies may limit core functionality, such as login access or game progress tracking.
+    </p>
+  </div>
+
+  <div class="item" id="updates">
+    <h3 class="title">Policy Updates</h3>
+    <p>
+      We may update this Cookies Policy from time to time to reflect changes in technology, legal requirements, or platform functionality. Updates will be posted on this page with a revised effective date. We recommend reviewing this policy periodically.
+    </p>
+  </div>
+
+  <div class="item" id="contact">
+    <h3 class="title">Contact</h3>
+    <p>
+      If you have any questions or concerns about how we use cookies, please contact us at <strong>support@spinnshare.org</strong>.
+    </p>
+  </div>
+</div>
+
+          </div>
         </div>
+      </div>
     </section>
-    <footer class="footer-section bg_img" style="background: url(/assets/images/footer/bg.jpg) center;">
-        <div class="footer-top">
-            <div class="container">
-                <div class="footer-wrapper d-flex flex-wrap align-items-center justify-content-md-between justify-content-center">
-                    <div class="logo mb-3 mb-md-0"><a href="/"><img src="/assets/images/logo.png" alt="logo"></a></div>
-                    <ul class="footer-links d-flex flex-wrap justify-content-center">
-                        <li><a href="/games/">Games</a></li>
-                        <li><a href="/terms-conditions/">Terms of Service</a></li>
-                        <li><a href="/policy/">Privacy Policy</a></li>
-                        <li><a href="/cookies-policy/" class="active">Cookies Policy</a></li>
-                        <li><a href="/responsible-gaming/">Responsible Gaming</a></li>
-                    </ul>
-                </div>
+    <footer
+      class="footer-section bg_img"
+      style="background: url(/assets/images/footer/bg.jpg) center"
+    >
+      <div class="footer-top">
+        <div class="container">
+          <div
+            class="footer-wrapper d-flex flex-wrap align-items-center justify-content-md-between justify-content-center"
+          >
+            <div class="logo mb-3 mb-md-0">
+              <a href="/"><img src="/assets/images/logo.png" alt="logo" /></a>
             </div>
+            <ul class="footer-links d-flex flex-wrap justify-content-center">
+              <li><a href="/games/">Games</a></li>
+              <li><a href="/terms-conditions/">Terms of Service</a></li>
+              <li><a href="/policy/">Privacy Policy</a></li>
+              <li>
+                <a href="/cookies-policy/" class="active">Cookies Policy</a>
+              </li>
+              <li><a href="/responsible-gaming/">Responsible Gaming</a></li>
+            </ul>
+          </div>
         </div>
-        <div class="footer-bottom">
-            <div class="container">
-                <div class="footer-wrapper d-flex flex-wrap justify-content-center align-items-center text-center">
-                    <p class="copyright text-white">Copyrights &copy; 2025 All Rights Reserved. | Virtual coins have no cash value | For entertainment purposes only | info@spinnshare.org</p>
-                </div>
-            </div>
+      </div>
+      <div class="footer-bottom">
+        <div class="container">
+          <div
+            class="footer-wrapper d-flex flex-wrap justify-content-center align-items-center text-center"
+          >
+            <p class="copyright text-white">
+              Copyrights &copy; 2025 All Rights Reserved. | Virtual coins have
+              no cash value | For entertainment purposes only |
+              info@spinnshare.org
+            </p>
+          </div>
         </div>
-        <div class="shapes">
-            <img src="/assets/images/footer/bg.jpg" alt="footer" class="shape1">
-        </div>
+      </div>
     </footer>
     <script src="/assets/js/lib/jquery-3.6.0.min.js"></script>
     <script src="/assets/js/lib/bootstrap.min.js"></script>
     <script src="/assets/js/lib/slick.min.js"></script>
     <script src="/assets/js/main.js"></script>
     <script src="/script.js"></script>
-</body>
+  </body>
 </html>
