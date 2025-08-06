@@ -124,7 +124,7 @@
         .form-link a:hover { color: #FFD966; text-decoration: underline; }
         .user-circle { position: relative; cursor: pointer; }
         .user-circle span { 
-            display: inline-block; width: 42px; height: 42px; line-height: 42px; 
+            display: inline-block; width: 55px; height: 54px; line-height: 54px; 
             text-align: center; background: linear-gradient(45deg, #FFC827, #FFD966); 
             color: #370A2C; border-radius: 50%; font-size: 1.1rem; 
             font-weight: 600; box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); 
@@ -564,7 +564,7 @@
     <script src="/assets/js/lib/slick.min.js"></script>
     <script src="/assets/js/main.js"></script>
     <script src="/script.js"></script>
-    <script>
+   <script>
         'use strict';
         function iframeLoaded() {
             console.log('Game iframe loaded successfully');
@@ -653,11 +653,7 @@
                 $('#user-circle').addClass('d-none').removeClass('show');
             }
         }
-        function toggleDropdown(event) {
-            event.stopPropagation();
-            console.log('User circle clicked, toggling dropdown');
-            $('#user-circle').toggleClass('show');
-        }
+        
         function playGame(url, title) {
             const userState = JSON.parse(localStorage.getItem('userState'));
             if (!userState || !userState.isLoggedIn) {
@@ -683,20 +679,7 @@
             localStorage.setItem('cookieConsent', 'declined');
             $('#cookiePopup').fadeOut(300);
         }
-        $(document).ready(function() {
-            restoreUserState();
-            $('#user-circle').on('click', toggleDropdown);
-            $(document).on('click', function(event) {
-                if (!$(event.target).closest('#user-circle').length) {
-                    console.log('Clicked outside user-circle, hiding dropdown');
-                    $('#user-circle').removeClass('show');
-                }
-            });
-            const consent = localStorage.getItem('cookieConsent');
-            if (!consent) {
-                $('#cookiePopup').fadeIn(300);
-            }
-        });
+        
     </script>
 </body>
 </html>
