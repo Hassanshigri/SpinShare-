@@ -1081,7 +1081,7 @@ i {
 
 .header-bottom {
     width: 100%;
-    padding: 20px 0;
+    padding: 5px 0;
 }
 
 @media (max-width: 991px) {
@@ -1101,15 +1101,16 @@ i {
 }
 
 .logo img {
-    max-width: 180px;
-    max-height: 90px;
+    width: 120px; /* increase as needed */
+    height: auto; /* maintain aspect ratio */
 }
 
 @media (max-width: 1199px) {
     .logo img {
-        max-width: 160px;
+        max-width: 125px;
     }
 }
+
 
 @media (max-width: 767px) {
     .logo img {
